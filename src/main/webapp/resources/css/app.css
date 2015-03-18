@@ -40,7 +40,7 @@ body{
 }
 
 .main {
-    height: 1150px;
+    height: 1000px;
     background-size:100%;
     background-repeat:no-repeat;
     background-image: url('../../images/bg.jpg');

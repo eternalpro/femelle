@@ -44,6 +44,8 @@
                 </ul>
             </div>
         </div>
+
+        <!-- 中间大图内容 -->
         <div class="main">
             <div class="container">
                 <div class="row">
@@ -84,6 +86,39 @@
                 </div>
             </div>
         </div>
+
+        <!-- 新品推荐 -->
+        <div class="container">
+            <div class="row">
+                <div class="span4 margin20-t">
+                    <img src="${ctx}/resources/img/left.png" alt=""/>
+                </div>
+                <div class="span4 text-center">
+                    <h3>新品/推荐</h3>
+                    <div>NEW PRODUCT RECOMMEDATION</div>
+                </div>
+                <div class="span4 margin20-t">
+                    <img src="${ctx}/resources/img/right.png" alt=""/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 关于我们 -->
+        <div class="container">
+            <div class="row">
+                <div class="span4 margin20-t">
+                    <img src="${ctx}/resources/img/left.png" alt=""/>
+                </div>
+                <div class="span4 text-center">
+                    <h3>关于/我们</h3>
+                    <div>ABOUT US</div>
+                </div>
+                <div class="span4 margin20-t">
+                    <img src="${ctx}/resources/img/right.png" alt=""/>
+                </div>
+            </div>
+        </div>
+
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
