@@ -12,6 +12,6 @@ public class IndexController extends Controller{
 
     @ActionKey("/")
     public void index(){
-        renderText("success");
+
     }
 }
