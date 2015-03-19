@@ -17,7 +17,7 @@
 
     <script src="${ctx}/resources/js/jquery.js"></script>
     <script src="${ctx}/resources/js/bootstrap.js"></script>
-    <script src="${ctx}/resources/js/minimit-anima.js"></script>
+    <script src="${ctx}/resources/js/animatescroll.min.js"></script>
     <jsp:invoke fragment="js"/>
 </body>
 </html>

@@ -89,7 +89,7 @@
         </div>
 
         <!-- 新品推荐 -->
-        <div class="container">
+        <div class="container" id="new">
             <div class="row">
                 <div class="span4 margin20-t">
                     <img src="${ctx}/resources/img/left.png" alt=""/>
@@ -156,7 +156,7 @@
         </div>
 
         <!-- 关于我们 -->
-        <div class="container">
+        <div class="container" id="about">
             <div class="row">
                 <div class="span4 margin20-t">
                     <img src="${ctx}/resources/img/left.png" alt=""/>
@@ -215,7 +215,6 @@
                 </ul>
             </div>
         </div>
-
         <!-- footer -->
         <div class="border margin50-t margin50-b"></div>
         <div class="container margin50-b">
@@ -227,12 +226,34 @@
                 </div>
             </div>
         </div>
+
+        <a href="#"><img class="arrowdown" src="${ctx}/resources/img/arrowdown2.png" alt=""/></a>
+
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
             (function () {
-                $('.border-white').hover(function () {
-                }, function () {
+
+                // 屏幕滚动事件
+                $(document).scroll(function(){
+                    var top = $(document).scrollTop();
+                    console.log(top);
+                    if(top > 1700) {
+                        $('img.arrowdown').hide('1000');
+                    }else{
+                        $('img.arrowdown').show('1000');
+                    }
+                });
+
+                // 点击向下箭头
+                $('img.arrowdown').on('click', function(e){
+                    e.preventDefault();
+                    var top = $(document).scrollTop();
+                    if(top < 1100) {
+                        $('div#new').animatescroll();
+                    }else{
+                        $('div#about').animatescroll();
+                    }
                 });
             })();
         </script>

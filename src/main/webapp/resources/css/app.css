@@ -34,6 +34,19 @@ body{
     color:#6C6C6C;
     text-decoration:none;
 }
+.menu ul>li>a:visited{
+    color:#6C6C6C;
+    text-decoration:none;
+}
+.menu ul>li>a:focus{
+    color:#214283;
+    text-decoration:none;
+}
+
+.menu ul>li>a:hover{
+    color:#214283;
+    text-decoration:none;
+}
 
 .split {
     margin-left: 45px;
@@ -46,6 +59,18 @@ body{
     background-image: url('../../images/bg.jpg');
     color: #ffffff;
 }
+
+img.arrowdown {
+    position: fixed;
+    position: fixed;
+    bottom: 11.88px;
+    left: 50%;
+    z-index: 3;
+    width: 37.6px;
+    height: 37.6px;
+    margin-left: -18.8px;
+}
+
 .pull-right {
     float: left;
 }
