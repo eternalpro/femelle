@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <layout:front>
     <jsp:attribute name="main">
-        <header class="container margin20-t">
+        <div class="container margin20-t">
             <div class="row">
                 <div class="span12">
                     <a class="logo pull-left" href="${ctx}"></a>
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
         <div class="border"></div>
         <div class="container margin20-t menu">
             <div class="row">
@@ -232,9 +232,7 @@
         <script>
             (function () {
                 $('.border-white').hover(function () {
-                    $(this).anima({scaleX: 0.6, scaleY: 0.6}, 400);
                 }, function () {
-                    $(this).anima({scale: "1, 1"}, 400);
                 });
             })();
         </script>
