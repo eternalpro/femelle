@@ -96,6 +96,16 @@ img.arrowdown {
     *background-color: #499249;
 }
 
+
+.flip {
+    -moz-transform:scaleY(-1);
+    -webkit-transform:scaleY(-1);
+    -o-transform:scaleY(-1);
+    transform:scaleY(-1);
+    /*IE*/
+    filter:FlipV;
+}
+
 .margin10-l {
     margin-left: 10px;
 }

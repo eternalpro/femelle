@@ -239,20 +239,25 @@
                     var top = $(document).scrollTop();
                     console.log(top);
                     if(top > 1700) {
-                        $('img.arrowdown').hide('1000');
+                        $('img.arrowdown').addClass('flip');
                     }else{
-                        $('img.arrowdown').show('1000');
+                        $('img.arrowdown').removeClass('flip');
                     }
                 });
 
                 // 点击向下箭头
                 $('img.arrowdown').on('click', function(e){
                     e.preventDefault();
+                    var $this = $(this);
                     var top = $(document).scrollTop();
-                    if(top < 1100) {
-                        $('div#new').animatescroll();
+                    if($this.hasClass('flip')) {
+                        $('html').animatescroll({});
                     }else{
-                        $('div#about').animatescroll();
+                        if(top < 1100) {
+                            $('div#new').animatescroll({});
+                        }else{
+                            $('div#about').animatescroll({});
+                        }
                     }
                 });
             })();
