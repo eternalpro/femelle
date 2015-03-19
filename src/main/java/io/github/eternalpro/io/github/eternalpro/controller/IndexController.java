@@ -10,8 +10,19 @@ import com.jfinal.ext.route.ControllerBind;
 @ControllerBind(controllerKey = "/", viewPath = "")
 public class IndexController extends Controller{
 
+    /**
+     * 首页
+     */
     @ActionKey("/")
     public void index(){
+
+    }
+
+    /**
+     * 品牌介绍
+     */
+    @ActionKey("/brand")
+    public void brand(){
 
     }
 }

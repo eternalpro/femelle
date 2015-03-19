@@ -8,16 +8,15 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>法米拉服装服饰官网</title>
-    <link rel="stylesheet" href="${ctx}/resources/css/bootstrap.css"/>
-    <link rel="stylesheet" href="${ctx}/resources/css/app.css"/>
+    <common:css></common:css>
     <jsp:invoke fragment="css"/>
 </head>
 <body>
+    <layout:header />
     <jsp:invoke fragment="main"/>
 
-    <script src="${ctx}/resources/js/jquery.js"></script>
-    <script src="${ctx}/resources/js/bootstrap.js"></script>
-    <script src="${ctx}/resources/js/animatescroll.min.js"></script>
+    <layout:footer />
+    <common:js></common:js>
     <jsp:invoke fragment="js"/>
 </body>
 </html>

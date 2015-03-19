@@ -2,48 +2,6 @@
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <layout:front>
     <jsp:attribute name="main">
-        <div class="container margin20-t">
-            <div class="row">
-                <div class="span12">
-                    <a class="logo pull-left" href="${ctx}"></a>
-
-                    <div class="pull-right margin40-t">
-                        <a href="#" class="color-black"><strong>登录</strong></a> |
-                        <a href="#" class="color-black"><strong>注册</strong></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="border"></div>
-        <div class="container margin20-t menu">
-            <div class="row">
-                <ul class="span12">
-                    <li>
-                        <a href="#">品牌介绍</a>
-                        <span class="split">|</span>
-                    </li>
-                    <li>
-                        <a href="#">当季推荐</a>
-                        <span class="split">|</span>
-                    </li>
-                    <li>
-                        <a href="#">产品介绍</a>
-                        <span class="split">|</span>
-                    </li>
-                    <li>
-                        <a href="#">最新资讯</a>
-                        <span class="split">|</span>
-                    </li>
-                    <li>
-                        <a href="#">合作支持</a>
-                        <span class="split">|</span>
-                    </li>
-                    <li>
-                        <a href="#">会员中心</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
 
         <!-- 中间大图内容 -->
         <div class="main">
@@ -213,17 +171,6 @@
                         </div>
                     </li>
                 </ul>
-            </div>
-        </div>
-        <!-- footer -->
-        <div class="border margin50-t margin50-b"></div>
-        <div class="container margin50-b">
-            <div class="row">
-                <div class="span12 text-center">
-                    <h3>关注我们</h3>
-                    <a href="#"><img src="${ctx}/resources/img/weibo.png" alt=""/></a>
-                    <a href="#"><img src="${ctx}/resources/img/wechat.png" alt=""/></a>
-                </div>
             </div>
         </div>
 

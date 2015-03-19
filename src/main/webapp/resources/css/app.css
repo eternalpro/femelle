@@ -106,6 +106,8 @@ img.arrowdown {
     filter:FlipV;
 }
 
+
+
 .margin10-l {
     margin-left: 10px;
 }
@@ -160,4 +162,20 @@ img.arrowdown {
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+/*第二页*/
+.bg-grey {
+    background: #F4F4F4;
+}
+
+.bg-nav {
+
+    background-image: url('../img/nav-2.png');
+    background-repeat: no-repeat;
+    margin-left: 80px;
+}
+.bg-nav .row {
+    width: 960px;
+    margin-left: 100px;
 }
