@@ -52,8 +52,23 @@ body{
 .pull-right {
     float: right;
 }
+.text-center {
+    text-align: center;
+}
 .color-black {
     color: #6C6C6C;
+}
+
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+    color: #ffffff;
+    background-color: #51a351;
+    *background-color: #499249;
 }
 
 .margin10-l {
@@ -67,13 +82,47 @@ body{
 .margin20-t {
     margin-top: 20px;
 }
+.margin30-t {
+    margin-top: 30px;
+}
+.margin30-l {
+    margin-left: 30px;
+}
+.margin30-r {
+    margin-right: 30px;
+}
 .margin40-t {
     margin-top: 40px;
+}
+.margin40-l {
+    margin-left: 40px;
 }
 .margin50-t {
     margin-top: 50px;
 }
+.margin50-l {
+    margin-left: 50px;
+}
+.margin50-b {
+    margin-bottom: 50px;
+}
 
 .margin60-t {
     margin-top: 60px;
+}
+.margin60-l {
+    margin-left: 60px;
+}
+.margin100-t {
+    margin-top: 100px;
+}
+.margin100-l {
+    margin-left: 100px;
+}
+
+.pad10 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

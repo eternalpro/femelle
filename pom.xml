@@ -61,7 +61,7 @@
                         </systemProperty>
                     </systemProperties>
                     <stopKey>femelle</stopKey>
-                    <stopPort>7433</stopPort>
+                    <stopPort>7533</stopPort>
                 </configuration>
             </plugin>
 
