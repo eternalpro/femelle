@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
-<layout:admin>
+<layout:admin menu="index">
     <jsp:attribute name="main">
         <div class="page-content-wrapper">
             <div class="page-content">

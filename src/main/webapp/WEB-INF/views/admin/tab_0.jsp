@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-9">
         <div class="portlet light bordered">
             <div class="portlet-title">
                 <div class="caption">
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="portlet light bordered">
             <div class="portlet-title">
                 <div class="caption">
