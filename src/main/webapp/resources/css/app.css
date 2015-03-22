@@ -52,12 +52,8 @@ body{
     margin-left: 45px;
 }
 
-.main {
-    height: 1000px;
-    background-size:100%;
-    background-repeat:no-repeat;
-    background-image: url('../../images/bg.jpg');
-    color: #ffffff;
+.main img{
+    width: 100%
 }
 
 img.arrowdown {
@@ -178,4 +174,8 @@ img.arrowdown {
 .bg-nav .row {
     width: 960px;
     margin-left: 100px;
+}
+
+.page-container {
+    margin-top: 70px;
 }

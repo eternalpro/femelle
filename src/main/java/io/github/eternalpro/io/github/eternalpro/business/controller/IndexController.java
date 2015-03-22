@@ -1,4 +1,4 @@
-package io.github.eternalpro.io.github.eternalpro.controller;
+package io.github.eternalpro.io.github.eternalpro.business.controller;
 
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
@@ -23,6 +23,10 @@ public class IndexController extends Controller{
      */
     @ActionKey("/brand")
     public void brand(){
+
+    }
+
+    public void demo(){
 
     }
 }

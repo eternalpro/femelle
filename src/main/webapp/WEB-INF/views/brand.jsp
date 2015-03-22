@@ -5,7 +5,7 @@
         <div class="bg-grey">
             <div class="bg-nav">
                 <div class="row">
-                    <div class="span3">
+                   ka  <div class="span3">
                         <ul class="nav nav-list">
                             <li><a href="#">品牌故事</a></li>
                             <li><a href="#">门店位置</a></li>

@@ -5,45 +5,7 @@
 
         <!-- 中间大图内容 -->
         <div class="main">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <div style="margin-top: 400px; font-size: 24px; letter-spacing: 4px;">
-                            INTELLECTUAL WOMEN'S GENTLE AND LOVELY AND ELEGANT
-                        </div>
-                    </div>
-                </div>
-                <div class="row margin40-t">
-                    <div class="span4">
-                        <div style="border-left: 1px solid #ffffff; height: 40px;"></div>
-                        <div style="border-bottom: 1px solid #ffffff; margin-top: -20px"></div>
-                    </div>
-                    <div class="span4">
-                        <div style="font-size: 24px; margin-top: 12px; text-align: center; letter-spacing: 6px;">
-                            法米拉女装
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div style="border-right: 1px solid #ffffff; height: 40px;"></div>
-                        <div style="border-bottom: 1px solid #ffffff; margin-top: -20px"></div>
-                    </div>
-                </div>
-                <div class="row margin60-t">
-                    <div class="span3"></div>
-                    <div class="span6">
-                        <div id="checkDetail" class="border-white"
-                             style="height: 100px; margin-left: 20px; margin-right: 20px; cursor: pointer; opacity: 0.8;">
-                            <div style="font-size: 24px; margin-top: 20px; text-align: center; letter-spacing: 6px;">
-                                CHECK THE DETAILS
-                            </div>
-                            <div style="font-size: 24px; margin-top: 20px; text-align: center; letter-spacing: 6px;">
-                                查看详情
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span3"></div>
-                </div>
-            </div>
+            <a href="#"><img src="${ctx}/images/bg.jpg" alt=""/></a>
         </div>
 
         <!-- 新品推荐 -->
@@ -54,10 +16,6 @@
                 </div>
                 <div class="span4 text-center">
                     <h3>新品/推荐</h3>
-
-                    <div>
-                        <small>NEW PRODUCT RECOMMEDATION</small>
-                    </div>
                 </div>
                 <div class="span4 margin20-t">
                     <img src="${ctx}/resources/img/right.png" alt=""/>
@@ -121,8 +79,6 @@
                 </div>
                 <div class="span4 text-center">
                     <h3>关于/我们</h3>
-
-                    <div>ABOUT US</div>
                 </div>
                 <div class="span4 margin20-t">
                     <img src="${ctx}/resources/img/right.png" alt=""/>
