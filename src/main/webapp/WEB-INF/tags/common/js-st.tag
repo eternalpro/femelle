@@ -16,3 +16,6 @@
 <script src="${ctx}/resources/mt/js/metronic.js" type="text/javascript"></script>
 <script src="${ctx}/resources/mt/js/layout.js" type="text/javascript"></script>
 <script src="${ctx}/resources/mt/js/tasks.js" type="text/javascript"></script>
+<script src="${ctx}/resources/mt/kindeditor/kindeditor.js" type="text/javascript"></script>
+<script src="${ctx}/resources/mt/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
+

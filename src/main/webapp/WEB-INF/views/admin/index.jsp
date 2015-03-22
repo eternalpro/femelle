@@ -18,62 +18,19 @@
                             <ul class="nav nav-tabs">
                                 <li class="active">
                                     <a href="#tab_0" data-toggle="tab" aria-expanded="true">
-                                        首页设置 </a>
+                                        首页 </a>
                                 </li>
                                 <li class="">
                                     <a href="#tab_1" data-toggle="tab" aria-expanded="false">
-                                        2 Cols </a>
+                                        品牌介绍 </a>
                                 </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="portlet light bordered">
-                                                <div class="portlet-title">
-                                                    <div class="caption">
-                                                        <i class="icon-equalizer font-blue-sharp"></i>
-                                                        <span class="caption-subject font-blue-sharp bold uppercase">设置首页相关信息</span>
-                                                    </div>
-                                                </div>
-                                                <div class="portlet-body form">
-                                                    <!-- BEGIN FORM-->
-                                                    <form role="form">
-                                                        <div class="form-body">
-                                                            <div class="form-group">
-                                                                <label>模块一描述：</label>
-                                                                <input type="text" class="form-control" placeholder="描述首页四组图集，建议控制在10个字以内">
-                                                            </div>
-
-                                                            <div class="form-group">
-                                                                <label>模块二描述：</label>
-                                                                <input type="text" class="form-control" placeholder="描述首页三条资讯信息，建议控制在10个字以内">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-actions">
-                                                            <button type="submit" class="btn blue">保存</button>
-                                                            <button type="button" class="btn default">取消</button>
-                                                        </div>
-                                                    </form>
-                                                    <!-- END FORM-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="portlet light bordered">
-                                                <div class="portlet-title">
-                                                    <div class="caption">
-                                                        <i class="icon-info font-green-jungle"></i>
-                                                        <span class="caption-subject font-green-jungle bold uppercase">说明</span>
-                                                    </div>
-                                                </div>
-                                                <div class="portlet-body">
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    <jsp:include page="tab_0.jsp"/>
+                                </div>
+                                <div class="tab-pane" id="tab_1">
+                                    <jsp:include page="tab_1.jsp"/>
                                 </div>
                             </div>
                         </div>
@@ -81,5 +38,23 @@
                 </div>
             </div>
         </div>
+    </jsp:attribute>
+    <jsp:attribute name="js">
+        <script>
+            (function(){
+                KindEditor.ready(function(K) {
+                    window.editor = K.create('#editor_id', {
+                        items : [ 'formatblock', 'fontname', 'fontsize',
+                            '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+                            'underline', 'strikethrough', '|', 'justifyleft',
+                            'justifycenter', 'justifyright', '|',
+                            'insertorderedlist', 'insertunorderedlist',
+                            'indent', 'outdent'],
+                        langType : 'zh_CN',
+                        width : '100%'
+                    });
+                });
+            })();
+        </script>
     </jsp:attribute>
 </layout:admin>
