@@ -9,19 +9,11 @@
                     <span class="title">控制面板</span>
                 </a>
             </li>
-            <li class="active open">
-                <a href="javascript:;">
-                    <i class="icon-globe"></i>
+            <li class="active">
+                <a href="ecommerce_index.html">
+                    <i class="icon-home"></i>
                     <span class="title">站点设置</span>
-                    <span class="arrow open"></span>
                 </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a href="ecommerce_index.html">
-                            <i class="icon-home"></i>
-                            首页</a>
-                    </li>
-                </ul>
             </li>
         </ul>
     </div>

@@ -23,6 +23,5 @@
 <link href="${ctx}/resources/mt/css/plugins-md.css" rel="stylesheet" type="text/css"/>
 <link href="${ctx}/resources/mt/css/layout.css" rel="stylesheet" type="text/css"/>
 <link href="${ctx}/resources/mt/css/light.css" rel="stylesheet" type="text/css" id="style_color"/>
-<link href="${ctx}/resources/mt/css/custom.css" rel="stylesheet" type="text/css"/>
 <link href="${ctx}/resources/css/app.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
