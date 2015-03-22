@@ -12,9 +12,9 @@
     <jsp:invoke fragment="css"/>
 </head>
 <body>
-    <jsp:include page="../../views/admin/common/nav.jsp"/>
+    <wt:nav-admin></wt:nav-admin>
     <div class="page-container">
-        <jsp:include page="../../views/admin/common/sidebar.jsp" />
+        <wt:sidebar-admin></wt:sidebar-admin>
 
         <jsp:invoke fragment="main"/>
 

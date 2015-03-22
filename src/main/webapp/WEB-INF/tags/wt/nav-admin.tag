@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@tag pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
     <div class="page-header-inner">
