@@ -17,4 +17,15 @@ public class AdminController extends Controller{
     public void index(){
 
     }
+
+    /**
+     * 登录
+     */
+    public void login(){
+
+    }
+
+    public void logout(){
+
+    }
 }
