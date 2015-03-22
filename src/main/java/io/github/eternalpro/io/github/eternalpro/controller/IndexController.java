@@ -1,4 +1,4 @@
-package io.github.eternalpro.io.github.eternalpro.business.controller;
+package io.github.eternalpro.io.github.eternalpro.controller;
 
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;

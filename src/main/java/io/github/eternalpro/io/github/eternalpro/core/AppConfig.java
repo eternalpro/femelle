@@ -1,4 +1,4 @@
-package io.github.eternalpro;
+package io.github.eternalpro.io.github.eternalpro.core;
 
 import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.util.JdbcConstants;
