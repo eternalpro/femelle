@@ -1,4 +1,4 @@
-package io.github.eternalpro.io.github.eternalpro.core;
+package io.github.eternalpro.core;
 
 import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.util.JdbcConstants;
@@ -7,7 +7,6 @@ import com.jfinal.config.*;
 import com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin;
 import com.jfinal.ext.route.AutoBindRoutes;
 import com.jfinal.plugin.activerecord.dialect.MysqlDialect;
-import com.jfinal.plugin.activerecord.dialect.PostgreSqlDialect;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.render.ViewType;
 
@@ -94,7 +93,7 @@ public class AppConfig  extends JFinalConfig {
     @Override
     public void configInterceptor(Interceptors me) {
         //me.add(new AdminInterceptor());
-//        me.add(new UserInterceptor());
+        me.add(new FlashMessageInterceptor());
     }
 
     @Override

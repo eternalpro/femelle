@@ -11,16 +11,16 @@
             </div>
             <div class="portlet-body form">
                 <!-- BEGIN FORM-->
-                <form role="form">
+                <form role="form" action="${ctx}/admin/saveHomeModule" method="post">
                     <div class="form-body">
                         <div class="form-group">
                             <label>模块一描述：</label>
-                            <input type="text" class="form-control" placeholder="建议控制在10个字以内">
+                            <input type="text" class="form-control" name="modulenews" value="${modulenewsInfo.title}" placeholder="建议控制在10个字以内">
                         </div>
 
                         <div class="form-group">
                             <label>模块二描述：</label>
-                            <input type="text" class="form-control" placeholder="建议控制在10个字以内">
+                            <input type="text" class="form-control" name="moduleabout" value="${moduleaboutInfo.title}" placeholder="建议控制在10个字以内">
                         </div>
                     </div>
                     <div class="form-actions">

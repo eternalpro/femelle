@@ -1,4 +1,4 @@
-package io.github.eternalpro.io.github.eternalpro.model;
+package io.github.eternalpro.model;
 
 import com.jfinal.plugin.activerecord.Model;
 
@@ -7,4 +7,8 @@ import com.jfinal.plugin.activerecord.Model;
  */
 public class SiteInfo extends Model<SiteInfo>{
     public static final SiteInfo dao = new SiteInfo();
+
+    public static SiteInfo findByModule(String module) {
+        return dao.findFirst("select * from siteinfo s where s.module = ?", module);
+    }
 }
