@@ -25,10 +25,10 @@ public class FlashMessageInterceptor implements Interceptor {
         ai.getController().setAttr(FlashMessage.FLASH_INFO, flash_info_message);
         ai.getController().setAttr(FlashMessage.FLASH_ERROR, flash_error_message);
 
-        logger.debug(flash_success_message);
-        logger.debug(flash_warnging_message);
-        logger.debug(flash_info_message);
-        logger.debug(flash_error_message);
+//        logger.debug(flash_success_message);
+//        logger.debug(flash_warnging_message);
+//        logger.debug(flash_info_message);
+//        logger.debug(flash_error_message);
 
         session.removeAttribute(FlashMessage.FLASH_SUCCESS);
         session.removeAttribute(FlashMessage.FLASH_WARNING);

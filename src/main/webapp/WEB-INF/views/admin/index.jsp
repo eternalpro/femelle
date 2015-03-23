@@ -63,7 +63,8 @@
                  */
                 $('#brandForm').ajaxForm({
                     success: function(data){
-                        toastr.success(data);
+                        toastr.success("保存成功！");
+                        $('#brandImage').attr("src", "${ctx}/upload/"+data)
                     },
                     error: function(data){
                         toastr.error('系统错误，请联系管理员！');
@@ -76,6 +77,7 @@
                 $('#joinusForm').ajaxForm({
                     success: function(data){
                         toastr.success(data);
+                        $('#joinusImage').attr("src", "${ctx}/upload/"+data)
                     },
                     error: function(data){
                         toastr.error('系统错误，请联系管理员！');
@@ -88,6 +90,7 @@
                 $('#affiliateForm').ajaxForm({
                     success: function(data){
                         toastr.success(data);
+                        $('#affiliateImage').attr("src", "${ctx}/upload/"+data)
                     },
                     error: function(data){
                         toastr.error('系统错误，请联系管理员！');

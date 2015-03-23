@@ -42,7 +42,12 @@
                                                 <label>展示图片：</label>
                                                 <input type="file" class="form-control" name="brandFile">
                                             </div>
-
+                                            <c:if test="${!empty(brandInfo.imagepath)}">
+                                                <div class="form-group">
+                                                    <label>预览：</label>
+                                                    <img id="brandImage" class="form-control" src="${ctx}/upload/${brandInfo.imagepath}" alt="" style="width: 80px; height: 60px;"/>
+                                                </div>
+                                            </c:if>
                                             <div class="form-group">
                                                 <label>标题：</label>
                                                 <input type="text" name="brandInfo.title" class="form-control" value="${brandInfo.title}"/>
@@ -65,11 +70,16 @@
                                 <div class="tab-pane " id="tab_1_3">
                                     <form role="form" id="joinusForm" action="${ctx}/admin/site/saveJoinus" method="post" enctype="multipart/form-data">
                                         <div class="form-body">
-                                            <div class="form-group">
+                                            <div cl ass="form-group">
                                                 <label>展示图片：</label>
                                                 <input type="file" class="form-control" name="joinusFile">
                                             </div>
-
+                                            <c:if test="${!empty(joinusInfo.imagepath)}">
+                                                <div class="form-group">
+                                                    <label>预览：</label>
+                                                    <img id="joinusImage" class="form-control" src="${ctx}/upload/${joinusInfo.imagepath}" alt="" style="width: 80px; height: 60px;"/>
+                                                </div>
+                                            </c:if>
                                             <div class="form-group">
                                                 <label>标题：</label>
                                                 <input type="text" name="joinusInfo.title" class="form-control" value="${joinusInfo.title}"/>
@@ -93,7 +103,12 @@
                                                 <label>展示图片：</label>
                                                 <input type="file" class="form-control" name="affiliateFile">
                                             </div>
-
+                                            <c:if test="${!empty(affiliateInfo.imagepath)}">
+                                                <div class="form-group">
+                                                    <label>预览：</label>
+                                                    <img id="affiliateImage" class="form-control" src="${ctx}/upload/${affiliateInfo.imagepath}" alt="" style="width: 80px; height: 60px;"/>
+                                                </div>
+                                            </c:if>
                                             <div class="form-group">
                                                 <label>标题：</label>
                                                 <input type="text" name="affiliateInfo.title" class="form-control" value="${affiliateInfo.title}"/>

@@ -40,7 +40,7 @@ public class AdminSiteController extends Controller {
         if(uploadFile != null)
             brandInfo.set("imagepath", uploadFile.getFileName());
         siteInfoService.saveBrandInfo(brandInfo);
-        renderText("保存成功！");
+        renderText(brandInfo.getStr("imagepath"));
 
     }
 
