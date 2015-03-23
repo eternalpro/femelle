@@ -53,7 +53,7 @@ public class AdminSiteController extends Controller {
         if(uploadFile != null)
             joinusInfo.set("imagepath", uploadFile.getFileName());
         siteInfoService.saveJoinus(joinusInfo);
-        renderText("保存成功！");
+        renderText(joinusInfo.getStr("imagepath"));
     }
 
     /**
@@ -65,6 +65,6 @@ public class AdminSiteController extends Controller {
         if(uploadFile != null)
             affiliateInfo.set("imagepath", uploadFile.getFileName());
         siteInfoService.saveAffiliate(affiliateInfo);
-        renderText("保存成功！");
+        renderText(affiliateInfo.getStr("imagepath"));
     }
 }

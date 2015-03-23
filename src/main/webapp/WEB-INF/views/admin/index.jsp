@@ -76,7 +76,7 @@
                  */
                 $('#joinusForm').ajaxForm({
                     success: function(data){
-                        toastr.success(data);
+                        toastr.success("保存成功！");
                         $('#joinusImage').attr("src", "${ctx}/upload/"+data)
                     },
                     error: function(data){
@@ -89,7 +89,7 @@
                  */
                 $('#affiliateForm').ajaxForm({
                     success: function(data){
-                        toastr.success(data);
+                        toastr.success("保存成功！");
                         $('#affiliateImage').attr("src", "${ctx}/upload/"+data)
                     },
                     error: function(data){

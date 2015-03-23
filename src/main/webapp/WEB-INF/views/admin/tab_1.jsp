@@ -70,7 +70,7 @@
                                 <div class="tab-pane " id="tab_1_3">
                                     <form role="form" id="joinusForm" action="${ctx}/admin/site/saveJoinus" method="post" enctype="multipart/form-data">
                                         <div class="form-body">
-                                            <div cl ass="form-group">
+                                            <div class="form-group">
                                                 <label>展示图片：</label>
                                                 <input type="file" class="form-control" name="joinusFile">
                                             </div>

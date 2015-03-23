@@ -23,11 +23,13 @@ public class AdminController extends Controller{
         SiteInfo moduleaboutInfo = SiteInfo.findByModule(Module.MODULE_ABOUT);
         SiteInfo brandInfo = SiteInfo.findByModule(Module.MODULE_BRAND);
         SiteInfo joinusInfo = SiteInfo.findByModule(Module.MODULE_JOINUS);
+        SiteInfo affiliateInfo = SiteInfo.findByModule(Module.MODULE_AFFILIATE);
 
         setAttr("modulenewsInfo", modulenewsInfo);
         setAttr("moduleaboutInfo", moduleaboutInfo);
         setAttr("brandInfo", brandInfo);
         setAttr("joinusInfo", joinusInfo);
+        setAttr("affiliateInfo", affiliateInfo);
         setAttr("success", getAttr("success"));
     }
 
