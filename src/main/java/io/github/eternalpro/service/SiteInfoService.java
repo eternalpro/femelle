@@ -48,4 +48,22 @@ public class SiteInfoService {
         }
 
     }
+
+    public void saveJoinus(SiteInfo joinusInfo) {
+        SiteInfo joinusInfoDB = SiteInfo.findByModule(Module.MODULE_JOINUS);
+        if (joinusInfoDB != null) {
+            joinusInfoDB.setAttrs(joinusInfo).update();
+        }else{
+            joinusInfo.set("module", Module.MODULE_JOINUS).save();
+        }
+    }
+
+    public void saveAffiliate(SiteInfo affiliateInfo) {
+        SiteInfo affiliateInfoDB = SiteInfo.findByModule(Module.MODULE_AFFILIATE);
+        if (affiliateInfoDB != null) {
+            affiliateInfoDB.setAttrs(affiliateInfo).update();
+        }else{
+            affiliateInfo.set("module", Module.MODULE_AFFILIATE).save();
+        }
+    }
 }

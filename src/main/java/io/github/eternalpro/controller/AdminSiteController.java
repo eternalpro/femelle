@@ -35,11 +35,36 @@ public class AdminSiteController extends Controller {
      * 保存品牌故事
      */
     public void saveBrand() {
-        UploadFile uploadFile = getFile("file");
-        SiteInfo brandInfo = getModel(SiteInfo.class);
-        brandInfo.set("imagepath", uploadFile.getFileName());
+        UploadFile uploadFile = getFile("brandFile");
+        SiteInfo brandInfo = getModel(SiteInfo.class, "brandInfo");
+        if(uploadFile != null)
+            brandInfo.set("imagepath", uploadFile.getFileName());
         siteInfoService.saveBrandInfo(brandInfo);
         renderText("保存成功！");
 
+    }
+
+    /**
+     * 保存加入我们
+     */
+    public void saveJoinus(){
+        UploadFile uploadFile = getFile("joinusFile");
+        SiteInfo joinusInfo = getModel(SiteInfo.class, "joinusInfo");
+        if(uploadFile != null)
+            joinusInfo.set("imagepath", uploadFile.getFileName());
+        siteInfoService.saveJoinus(joinusInfo);
+        renderText("保存成功！");
+    }
+
+    /**
+     * 保存加盟
+     */
+    public void saveAffiliate(){
+        UploadFile uploadFile = getFile("affiliateFile");
+        SiteInfo affiliateInfo = getModel(SiteInfo.class, "affiliateInfo");
+        if(uploadFile != null)
+            affiliateInfo.set("imagepath", uploadFile.getFileName());
+        siteInfoService.saveAffiliate(affiliateInfo);
+        renderText("保存成功！");
     }
 }

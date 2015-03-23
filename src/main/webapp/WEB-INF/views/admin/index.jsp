@@ -43,7 +43,7 @@
         <script>
             (function(){
                 KindEditor.ready(function(K) {
-                    window.editor = K.create('#editor_id', {
+                    window.editor = K.create('.editor', {
                         items : [ 'formatblock', 'fontname', 'fontsize',
                             '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
                             'underline', 'strikethrough', '|', 'justifyleft',
@@ -51,7 +51,10 @@
                             'insertorderedlist', 'insertunorderedlist',
                             'indent', 'outdent'],
                         langType : 'zh_CN',
-                        width : '100%'
+                        width : '100%',
+                        afterBlur: function(){  //利用该方法处理当富文本编辑框失焦之后，立即同步数据
+                            KindEditor.sync(".editor") ;
+                        }
                     });
                 });
 
@@ -59,6 +62,30 @@
                  * 保存品牌故事
                  */
                 $('#brandForm').ajaxForm({
+                    success: function(data){
+                        toastr.success(data);
+                    },
+                    error: function(data){
+                        toastr.error('系统错误，请联系管理员！');
+                    }
+                });
+
+                /**
+                 * 保存加入我们
+                 */
+                $('#joinusForm').ajaxForm({
+                    success: function(data){
+                        toastr.success(data);
+                    },
+                    error: function(data){
+                        toastr.error('系统错误，请联系管理员！');
+                    }
+                });
+
+                /**
+                 * 保存加盟
+                 */
+                $('#affiliateForm').ajaxForm({
                     success: function(data){
                         toastr.success(data);
                     },

@@ -36,21 +36,21 @@
                             <div class="tab-content">
                                 <!-- 品牌故事 -->
                                 <div class="tab-pane active" id="tab_1_1">
-                                    <form role="form" id="brandForm" action="${ctx}/admin/site/saveBrand" enctype="multipart/form-data">
+                                    <form role="form" id="brandForm" action="${ctx}/admin/site/saveBrand" method="post" enctype="multipart/form-data">
                                         <div class="form-body">
                                             <div class="form-group">
                                                 <label>展示图片：</label>
-                                                <input type="file" class="form-control" name="file">
+                                                <input type="file" class="form-control" name="brandFile">
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="title">标题：</label>
-                                                <input type="text" id="title" name="siteInfo.title" class="form-control" value="${brandInfo.title}"/>
+                                                <label>标题：</label>
+                                                <input type="text" name="brandInfo.title" class="form-control" value="${brandInfo.title}"/>
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="editor_id">描述文字：</label>
-                                                <textarea id="editor_id" class="form-control" name="siteInfo.content" style="height:200px;">${brandInfo.content}</textarea>
+                                                <label >描述文字：</label>
+                                                <textarea class="form-control editor" name="brandInfo.content" style="height:200px;">${brandInfo.content}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-actions">
@@ -63,10 +63,52 @@
 
                                 </div>
                                 <div class="tab-pane " id="tab_1_3">
+                                    <form role="form" id="joinusForm" action="${ctx}/admin/site/saveJoinus" method="post" enctype="multipart/form-data">
+                                        <div class="form-body">
+                                            <div class="form-group">
+                                                <label>展示图片：</label>
+                                                <input type="file" class="form-control" name="joinusFile">
+                                            </div>
 
+                                            <div class="form-group">
+                                                <label>标题：</label>
+                                                <input type="text" name="joinusInfo.title" class="form-control" value="${joinusInfo.title}"/>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>描述文字：</label>
+                                                <textarea class="form-control editor" name="joinusInfo.content" style="height:200px;">${joinusInfo.content}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn blue">保存</button>
+                                            <button type="button" class="btn default">取消</button>
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="tab-pane " id="tab_1_4">
+                                    <form role="form" id="affiliateForm" action="${ctx}/admin/site/saveAffiliate" method="post" enctype="multipart/form-data">
+                                        <div class="form-body">
+                                            <div class="form-group">
+                                                <label>展示图片：</label>
+                                                <input type="file" class="form-control" name="affiliateFile">
+                                            </div>
 
+                                            <div class="form-group">
+                                                <label>标题：</label>
+                                                <input type="text" name="affiliateInfo.title" class="form-control" value="${affiliateInfo.title}"/>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>描述文字：</label>
+                                                <textarea class="form-control editor" name="affiliateInfo.content" style="height:200px;">${affiliateInfo.content}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn blue">保存</button>
+                                            <button type="button" class="btn default">取消</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
 
