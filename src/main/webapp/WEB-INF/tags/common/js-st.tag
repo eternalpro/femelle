@@ -20,6 +20,7 @@
 <script src="${ctx}/resources/mt/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
 <script src="${ctx}/resources/mt/js/bootbox.min.js" type="text/javascript"></script>
 <script src="${ctx}/resources/mt/js/toastr.js" type="text/javascript"></script>
+<script src="${ctx}/resources/mt/js/jquery.form.js" type="text/javascript"></script>
 
 <script>
     ctx = '${ctx}';

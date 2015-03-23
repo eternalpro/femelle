@@ -9,6 +9,7 @@ public class SiteInfo extends Model<SiteInfo>{
     public static final SiteInfo dao = new SiteInfo();
 
     public static SiteInfo findByModule(String module) {
+
         return dao.findFirst("select * from siteinfo s where s.module = ?", module);
     }
 }

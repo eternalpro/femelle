@@ -34,17 +34,23 @@
                         </div>
                         <div class="col-md-9">
                             <div class="tab-content">
+                                <!-- 品牌故事 -->
                                 <div class="tab-pane active" id="tab_1_1">
-                                    <form role="form">
+                                    <form role="form" id="brandForm" action="${ctx}/admin/site/saveBrand" enctype="multipart/form-data">
                                         <div class="form-body">
                                             <div class="form-group">
-                                                <label>描述图片：</label>
-                                                <input type="file" class="form-control" >
+                                                <label>展示图片：</label>
+                                                <input type="file" class="form-control" name="file">
                                             </div>
 
                                             <div class="form-group">
-                                                <label>描述文字：</label>
-                                                <textarea id="editor_id" class="form-control" name="content" style="height:200px;"></textarea>
+                                                <label for="title">标题：</label>
+                                                <input type="text" id="title" name="siteInfo.title" class="form-control" value="${brandInfo.title}"/>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="editor_id">描述文字：</label>
+                                                <textarea id="editor_id" class="form-control" name="siteInfo.content" style="height:200px;">${brandInfo.content}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-actions">
@@ -80,13 +86,16 @@
             </div>
             <div class="portlet-body">
                 <dl>
-                    <dt>模块一</dt>
-                    <dd>指首页四组图集部分</dd>
-                    <dt>模块二</dt>
-                    <dd>指首页三组资讯部分</dd>
+                    <dt>品牌故事</dt>
+                    <dd>说明</dd>
+                    <dt>门店位置</dt>
+                    <dd>说明</dd>
+                    <dt>关于我们</dt>
+                    <dd>说明</dd>
+                    <dt>加盟</dt>
+                    <dd>说明</dd>
                 </dl>
             </div>
         </div>
     </div>
 </div>
-

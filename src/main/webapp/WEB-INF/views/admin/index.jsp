@@ -54,6 +54,18 @@
                         width : '100%'
                     });
                 });
+
+                /**
+                 * 保存品牌故事
+                 */
+                $('#brandForm').ajaxForm({
+                    success: function(data){
+                        toastr.success(data);
+                    },
+                    error: function(data){
+                        toastr.error('系统错误，请联系管理员！');
+                    }
+                });
             })();
         </script>
     </jsp:attribute>

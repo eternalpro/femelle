@@ -34,4 +34,18 @@ public class SiteInfoService {
             new SiteInfo().set("module", Module.MODULE_NEWS).set("title", modulenews).save();
         }
     }
+
+    /**
+     * 保存品牌故事
+     * @param brandInfo
+     */
+    public void saveBrandInfo(SiteInfo brandInfo) {
+        SiteInfo brandInfoDB = SiteInfo.findByModule(Module.MODULE_BRAND);
+        if (brandInfoDB != null) {
+            brandInfoDB.setAttrs(brandInfo).update();
+        }else{
+            brandInfo.set("module", Module.MODULE_BRAND).save();
+        }
+
+    }
 }

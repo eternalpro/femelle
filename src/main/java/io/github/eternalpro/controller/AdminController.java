@@ -13,7 +13,6 @@ import io.github.eternalpro.service.SiteInfoService;
  */
 @ControllerBind(controllerKey = "/admin", viewPath = "admin")
 public class AdminController extends Controller{
-    private SiteInfoService siteInfoService = new SiteInfoService();
 
     /**
      * 跳转后台
@@ -22,9 +21,11 @@ public class AdminController extends Controller{
     public void index(){
         SiteInfo modulenewsInfo = SiteInfo.findByModule(Module.MODULE_NEWS);
         SiteInfo moduleaboutInfo = SiteInfo.findByModule(Module.MODULE_ABOUT);
+        SiteInfo brandInfo = SiteInfo.findByModule(Module.MODULE_BRAND);
 
         setAttr("modulenewsInfo", modulenewsInfo);
         setAttr("moduleaboutInfo", moduleaboutInfo);
+        setAttr("brandInfo", brandInfo);
         setAttr("success", getAttr("success"));
     }
 
@@ -42,17 +43,5 @@ public class AdminController extends Controller{
 
     }
 
-    /**
-     * 保存首页相关信息
-     */
-    public void saveHomeModule() {
-        String moduleabout = getPara("moduleabout");
-        String modulenews = getPara("modulenews");
 
-        siteInfoService.saveModulenews(modulenews);
-        siteInfoService.saveModuleabout(moduleabout);
-
-        FlashMessageUtils.setSuccessMessage(this, "添加成功！");
-        redirect("/admin");
-    }
 }

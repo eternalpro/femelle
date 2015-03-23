@@ -80,8 +80,8 @@ CREATE TABLE `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键,自增',
   `title` varchar(100) DEFAULT NULL COMMENT '标题',
   `imagepath` varchar(255) DEFAULT NULL COMMENT '图片位置',
-  `content` varchar(500) DEFAULT NULL COMMENT '新闻内容',
-  `flag` varchar(45) DEFAULT NULL COMMENT '指是新闻资讯还是时尚动态',
+  `content` text COMMENT '新闻内容',
+  `flag` varchar(45) DEFAULT NULL COMMENT '指是新闻资讯还是时尚动态，或许是“服装资讯”',
   `ismain` varchar(45) DEFAULT NULL COMMENT '是否显示在首页,最多只有3个记录能显示',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='新闻资讯表';
@@ -164,6 +164,7 @@ CREATE TABLE `siteinfo` (
   `title` varchar(100) DEFAULT NULL COMMENT '标题名称',
   `module` varchar(100) DEFAULT NULL COMMENT '模块名称',
   `imagepath` varchar(255) DEFAULT NULL COMMENT '图片位置',
+  `content` text COMMENT '内容,有很多页面都是,标题,图片,和内容,如"品牌故事"',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='整个网站的表，这个表中存有整个网站中类似上面是图，下面是文字这类样式的页面。';
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -236,4 +237,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-23 11:58:15
+-- Dump completed on 2015-03-23 15:04:19

@@ -11,7 +11,7 @@
             </div>
             <div class="portlet-body form">
                 <!-- BEGIN FORM-->
-                <form role="form" action="${ctx}/admin/saveHomeModule" method="post">
+                <form role="form" action="${ctx}/admin/site/saveHomeModule" method="post">
                     <div class="form-body">
                         <div class="form-group">
                             <label>模块一描述：</label>
