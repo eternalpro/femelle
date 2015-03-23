@@ -25,7 +25,7 @@
                     </div>
                     <div class="form-actions">
                         <button type="submit" class="btn blue">保存</button>
-                        <button type="button" class="btn default">取消</button>
+                        <button type="reset" class="btn default">取消</button>
                     </div>
                 </form>
                 <!-- END FORM-->
