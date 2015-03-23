@@ -7,6 +7,10 @@ body{
     border-bottom:1px solid #DEDEDE;
 }
 
+.border-all {
+    border:1px solid #9F9F9F;
+}
+
 .border-white {
     border: 1px solid #ffffff;
 }
@@ -161,8 +165,9 @@ img.arrowdown {
 }
 
 /*第二页*/
-.bg-grey {
+.bg {
     background: #F4F4F4;
+    margin-bottom: -55px;
 }
 
 .bg-nav {
@@ -180,3 +185,64 @@ img.arrowdown {
     margin-top: 70px;
 }
 
+.bg-left {
+    width: 285px;
+    float: left;
+    background-image: url('../img/nav-2.png');
+    background-repeat: no-repeat;
+}
+
+.bg-left h4{
+    margin-left: 118px;
+    margin-top: 25px;
+}
+.bg-right {
+    width: 800px;
+    float: right;
+    margin-right: 38px;
+    border-left: 1px solid #9F9F9F;
+}
+.bg-right .image {
+    height: 500px;
+}
+
+.info {
+    margin-left: 30px;
+}
+
+#title {
+    margin-top: 20px;
+    border-left: 4px solid #9F9F9F;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#content {
+    margin-top: 10px;
+    border-top: 2px solid #9F9F9F;
+    padding-top: 20px;
+}
+.bg-sidebar {
+    border-left:1px solid #9F9F9F;
+    margin-left: 68px;
+    width:149px;
+    padding-top: 20px;
+    padding-left: 50px;
+
+}
+.bg-sidebar li {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bg-sidebar li a {
+    color: #6C6C6C;
+    text-decoration: none;
+}
+.bg-sidebar li:hover {
+    background: white;
+    width: 200px;
+}
