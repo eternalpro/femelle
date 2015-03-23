@@ -25,12 +25,11 @@ DROP TABLE IF EXISTS `album`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `album` (
-  `id` int(11) NOT NULL COMMENT '主键，自增',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键，自增',
   `title` varchar(100) DEFAULT NULL COMMENT '标题',
   `memo` varchar(200) DEFAULT NULL COMMENT '备注字段，该字段不一定有用，前期设计预留',
   `imagepath` varchar(255) DEFAULT NULL COMMENT '图片位置',
   `ismain` varchar(10) DEFAULT NULL COMMENT '是否显示在首页轮播',
-  `flag` varchar(50) DEFAULT NULL COMMENT 'flag是新品推荐，或当季推荐，类似这种类型的别名。',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='相册表，比如新品推荐，当季推荐等等。';
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -52,7 +51,7 @@ DROP TABLE IF EXISTS `image`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `image` (
-  `id` int(11) NOT NULL COMMENT '主键，自增',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键，自增',
   `path` varchar(255) DEFAULT NULL COMMENT '图片位置',
   `title` varchar(100) DEFAULT NULL COMMENT '标题',
   `albumid` int(11) DEFAULT NULL COMMENT '外键->相册ID',
@@ -78,7 +77,7 @@ DROP TABLE IF EXISTS `news`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `news` (
-  `id` int(11) NOT NULL COMMENT '主键,自增',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键,自增',
   `title` varchar(100) DEFAULT NULL COMMENT '标题',
   `imagepath` varchar(255) DEFAULT NULL COMMENT '图片位置',
   `content` varchar(500) DEFAULT NULL COMMENT '新闻内容',
@@ -105,7 +104,7 @@ DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `product` (
-  `id` int(11) NOT NULL COMMENT '主键自增',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键自增',
   `type` varchar(50) DEFAULT NULL COMMENT '类型,固定几个类型，如，大衣，毛衫等等',
   `description` varchar(255) DEFAULT NULL COMMENT '说明',
   `price` varchar(50) DEFAULT NULL COMMENT '价格',
@@ -133,11 +132,11 @@ DROP TABLE IF EXISTS `shop`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `shop` (
-  `id` int(11) NOT NULL COMMENT '主键，自增',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键，自增',
   `title` varchar(100) DEFAULT NULL COMMENT '标题',
   `address` varchar(255) DEFAULT NULL COMMENT '门店地址',
   `tel` varchar(50) DEFAULT NULL COMMENT '门店电话',
-  `provice` varchar(50) DEFAULT NULL COMMENT '省',
+  `province` varchar(50) DEFAULT NULL COMMENT '省',
   `city` varchar(50) DEFAULT NULL COMMENT '市',
   `area` varchar(50) DEFAULT NULL COMMENT '区域',
   PRIMARY KEY (`id`)
@@ -161,7 +160,7 @@ DROP TABLE IF EXISTS `siteinfo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `siteinfo` (
-  `id` int(11) NOT NULL COMMENT '主键，自增',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键，自增',
   `title` varchar(100) DEFAULT NULL COMMENT '标题名称',
   `module` varchar(100) DEFAULT NULL COMMENT '模块名称',
   `imagepath` varchar(255) DEFAULT NULL COMMENT '图片位置',
@@ -179,6 +178,30 @@ LOCK TABLES `siteinfo` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `system`
+--
+
+DROP TABLE IF EXISTS `system`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `system` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `value` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `system`
+--
+
+LOCK TABLES `system` WRITE;
+/*!40000 ALTER TABLE `system` DISABLE KEYS */;
+/*!40000 ALTER TABLE `system` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tuijian`
 --
 
@@ -186,10 +209,11 @@ DROP TABLE IF EXISTS `tuijian`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tuijian` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) DEFAULT NULL COMMENT '标题',
   `memo` varchar(100) DEFAULT NULL COMMENT '备注,前期设计时预留,没有实际意义',
   `ismain` varchar(45) DEFAULT NULL COMMENT '是否在首页显示，只能有一条记录。',
+  `flag` varchar(45) DEFAULT NULL COMMENT '这里表示是当季推荐(首页最上方的轮播),还是新品推荐,第二个四附图',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='当季推荐表';
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -212,4 +236,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-23 11:04:37
+-- Dump completed on 2015-03-23 11:58:15
