@@ -1,7 +1,6 @@
 <%@tag pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
-<link href="${ctx}/resources/mt/css/google-fonts.css" rel="stylesheet" type="text/css"/>
 <link href="${ctx}/resources/mt/css/font-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="${ctx}/resources/mt/css/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
 <link href="${ctx}/resources/mt/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>

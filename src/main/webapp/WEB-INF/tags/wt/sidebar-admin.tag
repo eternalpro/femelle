@@ -27,6 +27,12 @@
             </li>
             <li class="">
                 <a href="#">
+                    <i class="icon-basket"></i>
+                    <span class="title">门店管理</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="#">
                     <i class="icon-picture"></i>
                     <span class="title">图片管理</span>
                 </a>
