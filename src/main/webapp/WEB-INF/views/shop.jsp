@@ -14,12 +14,30 @@
                     </ul>
                 </div>
                 <div class="bg-right">
-                    <img class="image" src="${ctx}/upload/${shopInfo.imagepath}" alt="" />
+                    <img class="image" src="${ctx}/upload/${shopInfo.imagepath}" alt=""/>
+
                     <div class="info atitle">
-                        ${shopInfo.title}
+                            ${shopInfo.title}
                     </div>
                     <div class="info acontent">
-                        ${shopInfo.content}
+                            ${shopInfo.content}
+                        <br/>
+                        <br/>
+
+                        <div class="tabbable tabs-left">
+                            <ul class="nav nav-tabs nav-shop" style="background: white;width: 200px;">
+                                <c:forEach items="${provinces}" var="p">
+                                    <li <c:if test="${currentP eq p.province}">class="active"</c:if> >
+                                        <a href="#" data-province="${p.province}" class="loadShop">${p.province} > </a>
+                                    </li>
+                                </c:forEach>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="shopContent">
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -27,8 +45,24 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            (function(){
-                $('ul.bg-sidebar').height($('.bg-right').height()-75);
+            (function () {
+
+                var loadShopInfo = function (province) {
+                    $.get('${ctx}/loadShops/' + encodeURI(province), function(data){
+                        $('#shopContent').html(data)
+                        $('ul.bg-sidebar').height($('.bg-right').height() - 75);
+                        $('ul.nav-shop').minHeight($('#shopContent').height());
+                    });
+                };
+                loadShopInfo('${currentP}');
+
+                $('a.loadShop').on('click', function(e){
+                    var $this = $(this);
+                    e.preventDefault();
+                    loadShopInfo($(this).data('province'));
+                    $this.closest('ul').find('li').removeClass('active');
+                    $this.closest('li').addClass('active');
+                });
             })();
         </script>
     </jsp:attribute>

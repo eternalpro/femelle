@@ -3,11 +3,14 @@ package io.github.eternalpro.controller;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
+import com.jfinal.plugin.activerecord.DbKit;
+import com.jfinal.plugin.activerecord.Record;
 import io.github.eternalpro.constant.Module;
 import io.github.eternalpro.model.Shop;
 import io.github.eternalpro.model.SiteInfo;
 import io.github.eternalpro.service.SiteInfoService;
 
+import java.net.URLDecoder;
 import java.util.List;
 
 /**
@@ -33,9 +36,17 @@ public class IndexController extends Controller{
 
     public void shop(){
         SiteInfo shopInfo = SiteInfo.findByModule(Module.MODULE_SHOP);
-        List<Shop> shops = Shop.dao.find("select * from shop");
+        List<Record> records = Shop.dao.findProvinces();
         setAttr("shopInfo", shopInfo);
-        setAttr("shops", shops);
+        if (records != null && records.size() > 0) {
+            setAttr("currentP", records.get(0).getStr("province"));
+        }
+        setAttr("provinces", records);
+    }
+
+    public void loadShops(){
+        String province = getPara();
+        setAttr("shops", Shop.dao.findByProvince(URLDecoder.decode(province)));
     }
 
     public void demo(){

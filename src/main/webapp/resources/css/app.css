@@ -251,3 +251,15 @@ img.arrowdown {
     background: white;
     width: 200px;
 }
+
+.nav-shop a{
+    margin-left: 20px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bg-grey {
+    background: #F4F4F4;
+
+}

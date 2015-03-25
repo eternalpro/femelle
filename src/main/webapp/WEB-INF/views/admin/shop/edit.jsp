@@ -15,40 +15,40 @@
                 <div class="form-group">
                     <label for="province">省市</label>
                     <select class="form-control" name="shop.province" id="province">
-                        <option value="北京市" <c:if test="${shop.province eq '北京市'}">selected </c:if>>北京市</option>
-                        <option value="天津市" <c:if test="${shop.province eq '天津市'}">selected </c:if>>天津市</option>
-                        <option value="河北省" <c:if test="${shop.province eq '河北省'}">selected </c:if>>河北省</option>
-                        <option value="山西省" <c:if test="${shop.province eq '山西省'}">selected </c:if>>山西省</option>
-                        <option value="内蒙古自治区" <c:if test="${shop.province eq '内蒙古自治区'}">selected </c:if>>内蒙古自治区</option>
-                        <option value="辽宁省" <c:if test="${shop.province eq '辽宁省'}">selected </c:if>>辽宁省</option>
-                        <option value="吉林省" <c:if test="${shop.province eq '吉林省'}">selected </c:if>>吉林省</option>
-                        <option value="黑龙江省" <c:if test="${shop.province eq '黑龙江省'}">selected </c:if>>黑龙江省</option>
-                        <option value="上海市" <c:if test="${shop.province eq '上海市'}">selected </c:if>>上海市</option>
-                        <option value="江苏省" <c:if test="${shop.province eq '江苏省'}">selected </c:if>>江苏省</option>
-                        <option value="浙江省" <c:if test="${shop.province eq '浙江省'}">selected </c:if>>浙江省</option>
-                        <option value="安徽省" <c:if test="${shop.province eq '安徽省'}">selected </c:if>>安徽省</option>
-                        <option value="福建省" <c:if test="${shop.province eq '福建省'}">selected </c:if>>福建省</option>
-                        <option value="江西省" <c:if test="${shop.province eq '江西省'}">selected </c:if>>江西省</option>
-                        <option value="山东省" <c:if test="${shop.province eq '山东省'}">selected </c:if>>山东省</option>
-                        <option value="河南省" <c:if test="${shop.province eq '河南省'}">selected </c:if>>河南省</option>
-                        <option value="湖北省" <c:if test="${shop.province eq '湖北省'}">selected </c:if>>湖北省</option>
-                        <option value="湖南省" <c:if test="${shop.province eq '湖南省'}">selected </c:if>>湖南省</option>
-                        <option value="广东省" <c:if test="${shop.province eq '广东省'}">selected </c:if>>广东省</option>
-                        <option value="广西省" <c:if test="${shop.province eq '广西省'}">selected </c:if>>广西省</option>
-                        <option value="海南省" <c:if test="${shop.province eq '海南省'}">selected </c:if>>海南省</option>
-                        <option value="重庆市" <c:if test="${shop.province eq '重庆市'}">selected </c:if>>重庆市</option>
-                        <option value="四川省" <c:if test="${shop.province eq '四川省'}">selected </c:if>>四川省</option>
-                        <option value="贵州省" <c:if test="${shop.province eq '贵州省'}">selected </c:if>>贵州省</option>
-                        <option value="云南省" <c:if test="${shop.province eq '云南省'}">selected </c:if>>云南省</option>
-                        <option value="西藏自治区" <c:if test="${shop.province eq '西藏自治区'}">selected </c:if>>西藏自治区</option>
-                        <option value="陕西省" <c:if test="${shop.province eq '陕西省'}">selected </c:if>>陕西省</option>
-                        <option value="甘肃省" <c:if test="${shop.province eq '甘肃省'}">selected </c:if>>甘肃省</option>
-                        <option value="青海省" <c:if test="${shop.province eq '青海省'}">selected </c:if>>青海省</option>
-                        <option value="宁夏回族自治区" <c:if test="${shop.province eq '宁夏回族自治区'}">selected </c:if>>宁夏回族自治区</option>
-                        <option value="新疆维吾尔族自治区" <c:if test="${shop.province eq '新疆维吾尔族自治区'}">selected </c:if>>新疆维吾尔族自治区</option>
+                        <option value="北京" <c:if test="${shop.province eq '北京'}">selected </c:if>>北京</option>
+                        <option value="天津" <c:if test="${shop.province eq '天津'}">selected </c:if>>天津</option>
+                        <option value="河北" <c:if test="${shop.province eq '河北'}">selected </c:if>>河北</option>
+                        <option value="山西" <c:if test="${shop.province eq '山西'}">selected </c:if>>山西</option>
+                        <option value="内蒙古" <c:if test="${shop.province eq '内蒙古'}">selected </c:if>>内蒙古</option>
+                        <option value="辽宁" <c:if test="${shop.province eq '辽宁'}">selected </c:if>>辽宁</option>
+                        <option value="吉林" <c:if test="${shop.province eq '吉林'}">selected </c:if>>吉林</option>
+                        <option value="黑龙江" <c:if test="${shop.province eq '黑龙江'}">selected </c:if>>黑龙江</option>
+                        <option value="上海" <c:if test="${shop.province eq '上海'}">selected </c:if>>上海</option>
+                        <option value="江苏" <c:if test="${shop.province eq '江苏'}">selected </c:if>>江苏</option>
+                        <option value="浙江" <c:if test="${shop.province eq '浙江'}">selected </c:if>>浙江</option>
+                        <option value="安徽" <c:if test="${shop.province eq '安徽'}">selected </c:if>>安徽</option>
+                        <option value="福建" <c:if test="${shop.province eq '福建'}">selected </c:if>>福建</option>
+                        <option value="江西" <c:if test="${shop.province eq '江西'}">selected </c:if>>江西</option>
+                        <option value="山东" <c:if test="${shop.province eq '山东'}">selected </c:if>>山东</option>
+                        <option value="河南" <c:if test="${shop.province eq '河南'}">selected </c:if>>河南</option>
+                        <option value="湖北" <c:if test="${shop.province eq '湖北'}">selected </c:if>>湖北</option>
+                        <option value="湖南" <c:if test="${shop.province eq '湖南'}">selected </c:if>>湖南</option>
+                        <option value="广东" <c:if test="${shop.province eq '广东'}">selected </c:if>>广东</option>
+                        <option value="广西" <c:if test="${shop.province eq '广西'}">selected </c:if>>广西</option>
+                        <option value="海南" <c:if test="${shop.province eq '海南'}">selected </c:if>>海南</option>
+                        <option value="重庆" <c:if test="${shop.province eq '重庆'}">selected </c:if>>重庆</option>
+                        <option value="四川" <c:if test="${shop.province eq '四川'}">selected </c:if>>四川</option>
+                        <option value="贵州" <c:if test="${shop.province eq '贵州'}">selected </c:if>>贵州</option>
+                        <option value="云南" <c:if test="${shop.province eq '云南'}">selected </c:if>>云南</option>
+                        <option value="西藏" <c:if test="${shop.province eq '西藏'}">selected </c:if>>西藏</option>
+                        <option value="陕西" <c:if test="${shop.province eq '陕西'}">selected </c:if>>陕西</option>
+                        <option value="甘肃" <c:if test="${shop.province eq '甘肃'}">selected </c:if>>甘肃</option>
+                        <option value="青海" <c:if test="${shop.province eq '青海'}">selected </c:if>>青海</option>
+                        <option value="宁夏" <c:if test="${shop.province eq '宁夏'}">selected </c:if>>宁夏</option>
+                        <option value="新疆" <c:if test="${shop.province eq '新疆'}">selected </c:if>>新疆</option>
                         <option value="香港" <c:if test="${shop.province eq '香港'}">selected </c:if>>香港</option>
                         <option value="澳门" <c:if test="${shop.province eq '澳门'}">selected </c:if>>澳门</option>
-                        <option value="台湾省" <c:if test="${shop.province eq '台湾省'}">selected </c:if>>台湾省</option>
+                        <option value="台湾" <c:if test="${shop.province eq '台湾'}">selected </c:if>>台湾</option>
                     </select>
                 </div>
                 <div class="form-group">
