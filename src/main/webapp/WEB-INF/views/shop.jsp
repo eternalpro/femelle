@@ -5,21 +5,21 @@
         <div class="bg">
             <div class="container" style="width: 1124px;">
                 <div class="bg-left">
-                    <h4>品牌介绍</h4>
+                    <h4>门店位置</h4>
                     <ul class="bg-sidebar">
-                        <li class="active"><a href="${ctx}/brand">&nbsp;&nbsp;● 品牌故事</a></li>
-                        <li><a href="${ctx}/shop">&nbsp;&nbsp;● 门店位置</a></li>
+                        <li><a href="${ctx}/brand">&nbsp;&nbsp;● 品牌故事</a></li>
+                        <li class="active"><a href="${ctx}/shop">&nbsp;&nbsp;● 门店位置</a></li>
                         <li><a href="#">&nbsp;&nbsp;● 加入我们</a></li>
                         <li><a href="#">&nbsp;&nbsp;● 加盟</a></li>
                     </ul>
                 </div>
                 <div class="bg-right">
-                    <img class="image" src="${ctx}/upload/${brandInfo.imagepath}" alt="" />
+                    <img class="image" src="${ctx}/upload/${shopInfo.imagepath}" alt="" />
                     <div class="info atitle">
-                        ${brandInfo.title}
+                        ${shopInfo.title}
                     </div>
                     <div class="info acontent">
-                        ${brandInfo.content}
+                        ${shopInfo.content}
                     </div>
                 </div>
             </div>

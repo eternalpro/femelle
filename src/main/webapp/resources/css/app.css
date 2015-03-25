@@ -246,3 +246,8 @@ img.arrowdown {
     background: white;
     width: 200px;
 }
+
+.bg-sidebar .active {
+    background: white;
+    width: 200px;
+}
