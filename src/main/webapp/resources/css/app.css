@@ -244,12 +244,12 @@ img.arrowdown {
 }
 .bg-sidebar li:hover {
     background: white;
-    width: 200px;
+    width: 168px;
 }
 
 .bg-sidebar .active {
     background: white;
-    width: 200px;
+    width: 168px;
 }
 
 .nav-shop a{

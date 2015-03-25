@@ -9,6 +9,7 @@ import io.github.eternalpro.constant.Module;
 import io.github.eternalpro.model.Shop;
 import io.github.eternalpro.model.SiteInfo;
 import io.github.eternalpro.service.SiteInfoService;
+import org.apache.commons.lang3.StringUtils;
 
 import java.net.URLDecoder;
 import java.util.List;
@@ -34,6 +35,9 @@ public class IndexController extends Controller{
         setAttr("brandInfo", brandInfo);
     }
 
+    /**
+     * 门店位置
+     */
     public void shop(){
         SiteInfo shopInfo = SiteInfo.findByModule(Module.MODULE_SHOP);
         List<Record> records = Shop.dao.findProvinces();
@@ -44,9 +48,26 @@ public class IndexController extends Controller{
         setAttr("provinces", records);
     }
 
+    /**
+     * 加入我们
+     */
+    public void joinus(){
+        SiteInfo joinusInfo = SiteInfo.findByModule(Module.MODULE_JOINUS);
+        setAttr("joinusInfo", joinusInfo);
+    }
+
+    /**
+     * 加盟
+     */
+    public void affiliate(){
+        SiteInfo affiliateInfo = SiteInfo.findByModule(Module.MODULE_AFFILIATE);
+        setAttr("affiliateInfo", affiliateInfo);
+    }
+
     public void loadShops(){
         String province = getPara();
-        setAttr("shops", Shop.dao.findByProvince(URLDecoder.decode(province)));
+        if(StringUtils.isNotBlank(province))
+            setAttr("shops", Shop.dao.findByProvince(URLDecoder.decode(province)));
     }
 
     public void demo(){

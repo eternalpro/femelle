@@ -9,8 +9,8 @@
                     <ul class="bg-sidebar">
                         <li><a href="${ctx}/brand">&nbsp;&nbsp;● 品牌故事</a></li>
                         <li class="active"><a href="${ctx}/shop">&nbsp;&nbsp;● 门店位置</a></li>
-                        <li><a href="#">&nbsp;&nbsp;● 加入我们</a></li>
-                        <li><a href="#">&nbsp;&nbsp;● 加盟</a></li>
+                        <li><a href="${ctx}/joinus">&nbsp;&nbsp;● 加入我们</a></li>
+                        <li><a href="${ctx}/affiliate">&nbsp;&nbsp;● 加盟</a></li>
                     </ul>
                 </div>
                 <div class="bg-right">

@@ -7,19 +7,19 @@
                 <div class="bg-left">
                     <h4>品牌介绍</h4>
                     <ul class="bg-sidebar">
-                        <li class="active"><a href="${ctx}/brand">&nbsp;&nbsp;● 品牌故事</a></li>
+                        <li><a href="${ctx}/brand">&nbsp;&nbsp;● 品牌故事</a></li>
                         <li><a href="${ctx}/shop">&nbsp;&nbsp;● 门店位置</a></li>
-                        <li><a href="${ctx}/joinus">&nbsp;&nbsp;● 加入我们</a></li>
+                        <li class="active"><a href="${ctx}/joinus">&nbsp;&nbsp;● 加入我们</a></li>
                         <li><a href="${ctx}/affiliate">&nbsp;&nbsp;● 加盟</a></li>
                     </ul>
                 </div>
                 <div class="bg-right">
-                    <img class="image" src="${ctx}/upload/${brandInfo.filepath}" alt="" />
+                    <img class="image" src="${ctx}/upload/${joinusInfo.filepath}" alt="" />
                     <div class="info atitle">
-                        ${brandInfo.title}
+                        ${joinusInfo.title}
                     </div>
                     <div class="info acontent">
-                        ${brandInfo.content}
+                        ${joinusInfo.content}
                     </div>
                 </div>
             </div>
