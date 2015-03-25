@@ -21,6 +21,8 @@ public class AdminInterceptor implements Interceptor {
             }else {
                 ai.getController().redirect("/admin/login");
             }
+        }else{
+            ai.invoke();
         }
     }
 }

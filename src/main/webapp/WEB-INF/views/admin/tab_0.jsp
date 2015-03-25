@@ -22,6 +22,11 @@
                             <label>模块二描述：</label>
                             <input type="text" class="form-control" name="moduleabout" value="${moduleaboutInfo.title}" placeholder="建议控制在10个字以内">
                         </div>
+                        <div class="form-group">
+                            <label>首页展示视频：</label>
+                            <input type="text" class="form-control" name="videoPath" value="${videoInfo.filepath}" >
+                            <p class="help-block">请填写“flash地址”，点击 <a href="${ctx}/images/readme.jpg" class="fancybox"><strong class="text-danger">这里</strong></a> 查看帮助。</p>
+                        </div>
                     </div>
                     <div class="form-actions">
                         <button type="submit" class="btn blue">保存</button>

@@ -3,7 +3,7 @@
 <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
     <div class="page-header-inner">
         <div class="page-logo">
-            <a href="${ctx}">
+            <a href="${ctx}/admin">
                 <h2>后台管理</h2>
             </a>
             <div class="menu-toggler sidebar-toggler">
@@ -12,6 +12,13 @@
         <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
            data-target=".navbar-collapse">
         </a>
+        <div class="page-actions">
+            <div class="btn-group">
+                <a  class="btn btn-primary btn-sm dropdown-toggle" href="${ctx}">
+                    <i class="fa fa-arrow-circle-o-left"></i><span class="hidden-sm hidden-xs">返回前台</span>
+                </a>
+            </div>
+        </div>
         <div class="page-top">
             <div class="top-menu">
                 <ul class="nav navbar-nav pull-right">

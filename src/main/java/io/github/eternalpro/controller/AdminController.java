@@ -32,6 +32,7 @@ public class AdminController extends Controller {
         SiteInfo joinusInfo = SiteInfo.findByModule(Module.MODULE_JOINUS);
         SiteInfo affiliateInfo = SiteInfo.findByModule(Module.MODULE_AFFILIATE);
         SiteInfo shopInfo = SiteInfo.findByModule(Module.MODULE_SHOP);
+        SiteInfo videoInfo = SiteInfo.findByModule(Module.MODULE_HOME_VIDEO);
 
         setAttr("modulenewsInfo", modulenewsInfo);
         setAttr("moduleaboutInfo", moduleaboutInfo);
@@ -39,6 +40,7 @@ public class AdminController extends Controller {
         setAttr("joinusInfo", joinusInfo);
         setAttr("affiliateInfo", affiliateInfo);
         setAttr("shopInfo", shopInfo);
+        setAttr("videoInfo", videoInfo);
         setAttr("success", getAttr("success"));
     }
 

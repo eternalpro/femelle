@@ -85,6 +85,14 @@
                 </div>
             </div>
 
+            <div class="row margin40-t">
+                <div class="span2"></div>
+                <div class="span8">
+                    <embed src="${videoInfo.filepath}" allowFullScreen="true" quality="high" class="span8" height="450" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+                </div>
+                <div class="span2"></div>
+            </div>
+
             <!-- 新闻热点 -->
             <div class="row margin40-t" style="margin-left: 0px">
                 <ul class="thumbnails">

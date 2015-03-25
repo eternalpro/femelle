@@ -22,8 +22,9 @@ public class IndexController extends Controller{
      * 首页
      */
     @ActionKey("/")
-    public void index(){
-
+    public void index() {
+        SiteInfo videoInfo = SiteInfo.findByModule(Module.MODULE_HOME_VIDEO);
+        setAttr("videoInfo", videoInfo);
     }
 
     /**

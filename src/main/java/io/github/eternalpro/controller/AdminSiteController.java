@@ -24,7 +24,9 @@ public class AdminSiteController extends Controller {
     public void saveHomeModule() {
         String moduleabout = getPara("moduleabout");
         String modulenews = getPara("modulenews");
+        String videoPath = getPara("videoPath");
 
+        siteInfoService.saveHomeVideo(videoPath);
         siteInfoService.saveModulenews(modulenews);
         siteInfoService.saveModuleabout(moduleabout);
 

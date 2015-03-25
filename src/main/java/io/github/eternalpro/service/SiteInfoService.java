@@ -75,4 +75,20 @@ public class SiteInfoService {
             shopInfo.set("module", Module.MODULE_SHOP).save();
         }
     }
+
+    /**
+     * 保存视频文件
+     * @param fileName
+     */
+    public void saveHomeVideo(String fileName) {
+        SiteInfo homeVideoDB = SiteInfo.findByModule(Module.MODULE_HOME_VIDEO);
+        if (homeVideoDB != null) {
+            homeVideoDB.set("filepath", fileName).update();
+        }else {
+            new SiteInfo()
+                    .set("module", Module.MODULE_HOME_VIDEO)
+                    .set("filepath", fileName)
+                    .save();
+        }
+    }
 }

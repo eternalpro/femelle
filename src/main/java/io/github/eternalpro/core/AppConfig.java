@@ -45,6 +45,7 @@ public class AppConfig  extends JFinalConfig {
         // 开启debug模式
         me.setDevMode(true);
 
+        me.setMaxPostSize(1024 * 1024 * 1024);  // 1GB
     }
 
     /**
