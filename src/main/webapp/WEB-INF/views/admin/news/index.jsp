@@ -27,8 +27,10 @@
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">
+                                    <jsp:include page="tab_0.jsp"/>
                                 </div>
                                 <div class="tab-pane" id="tab_1">
+                                    <jsp:include page="tab_1.jsp"/>
                                 </div>
                             </div>
                         </div>
@@ -40,18 +42,22 @@
     <jsp:attribute name="js">
         <script>
             (function(){
-                KindEditor.ready(function(K) {
-                    window.editor = K.create('#editor_id', {
-                        items : [ 'formatblock', 'fontname', 'fontsize',
-                            '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
-                            'underline', 'strikethrough', '|', 'justifyleft',
-                            'justifycenter', 'justifyright', '|',
-                            'insertorderedlist', 'insertunorderedlist',
-                            'indent', 'outdent'],
-                        langType : 'zh_CN',
-                        width : '100%'
-                    });
+
+
+                $('.news-edit').on('click', function(e){
+                    e.preventDefault();
+                    var $this = $(this);
+                    $.get($this.attr('href'), function(data){
+                        $('.modal').html(data).modal('show');
+                    })
                 });
+
+                $('.news-delete').on('click', function(){
+                    e.preventDefault();
+                    var $this = $(this);
+                    location.href = $this.attr('href');
+                });
+
             })();
         </script>
     </jsp:attribute>

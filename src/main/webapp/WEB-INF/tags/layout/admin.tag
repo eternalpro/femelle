@@ -29,6 +29,8 @@
     <jsp:invoke fragment="js"/>
     <script>
         (function() {
+            $('.fancybox').fancybox();
+
             Metronic.init(); // init metronic core components
             Layout.init(); // init current layout
             KindEditor.ready(function(K) {

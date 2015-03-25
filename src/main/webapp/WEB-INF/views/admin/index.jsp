@@ -24,14 +24,21 @@
                                     <a href="#tab_1" data-toggle="tab" aria-expanded="false">
                                         品牌介绍 </a>
                                 </li>
+                                <li class="">
+                                    <a href="#tab_2" data-toggle="tab" aria-expanded="false">
+                                        最新资讯 </a>
+                                </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">
-                                    <jsp:include page="tab_0.jsp"/>
+                                    <jsp:include page="tab/tab_0.jsp"/>
                                 </div>
                                 <div class="tab-pane" id="tab_1">
-                                    <jsp:include page="tab_1.jsp"/>
+                                    <jsp:include page="tab/tab_1.jsp"/>
                                 </div>
+                                <%--<div class="tab-pane" id="tab_2">
+                                    <jsp:include page="tab/tab_2.jsp" />
+                                </div>--%>
                             </div>
                         </div>
                     </div>
@@ -42,7 +49,6 @@
     <jsp:attribute name="js">
         <script>
             (function(){
-                $('.fancybox').fancybox();
                 /**
                  * 保存品牌故事
                  */

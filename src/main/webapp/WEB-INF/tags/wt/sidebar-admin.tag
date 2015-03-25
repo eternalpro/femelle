@@ -31,6 +31,14 @@
                     <span class="title">门店管理</span>
                 </a>
             </li>
+
+            <li class="">
+                <a href="#">
+                    <i class="icon-eye"></i>
+                    <span class="title">宣传视频</span>
+                </a>
+            </li>
+
             <li class="">
                 <a href="#">
                     <i class="icon-picture"></i>
