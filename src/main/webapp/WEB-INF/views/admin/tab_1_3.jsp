@@ -8,12 +8,13 @@
                 <label>展示图片：</label>
                 <input type="file" class="form-control" name="joinusFile">
             </div>
-            <c:if test="${!empty(joinusInfo.imagepath)}">
-                <div class="form-group">
-                    <label>预览：</label>
-                    <img id="joinusImage" class="form-control" src="${ctx}/upload/${joinusInfo.imagepath}" alt="" style="width: 80px; height: 60px;"/>
-                </div>
-            </c:if>
+            <div class="form-group <c:if test='${empty(joinusInfo.filepath)}'> hide </c:if>">
+                <label>预览：</label>
+                <a class="fancybox" href="${ctx}/upload/${joinusInfo.filepath}">
+                    <img id="joinusImage" class="form-control" src="${ctx}/upload/${joinusInfo.filepath}" alt=""
+                     style="width: 80px; height: 60px;"/>
+                </a>
+            </div>
             <div class="form-group">
                 <label>标题：</label>
                 <input type="text" name="joinusInfo.title" class="form-control" value="${joinusInfo.title}"/>
@@ -21,7 +22,8 @@
 
             <div class="form-group">
                 <label>描述文字：</label>
-                <textarea class="form-control editor" name="joinusInfo.content" style="height:200px;">${joinusInfo.content}</textarea>
+                <textarea class="form-control editor" name="joinusInfo.content"
+                          style="height:200px;">${joinusInfo.content}</textarea>
             </div>
         </div>
         <div class="form-actions">

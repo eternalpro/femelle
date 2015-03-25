@@ -38,9 +38,9 @@ public class AdminSiteController extends Controller {
         UploadFile uploadFile = getFile("brandFile");
         SiteInfo brandInfo = getModel(SiteInfo.class, "brandInfo");
         if(uploadFile != null)
-            brandInfo.set("imagepath", uploadFile.getFileName());
+            brandInfo.set("filepath", uploadFile.getFileName());
         siteInfoService.saveBrandInfo(brandInfo);
-        renderText(brandInfo.getStr("imagepath"));
+        renderText(brandInfo.getStr("filepath"));
 
     }
 
@@ -51,9 +51,9 @@ public class AdminSiteController extends Controller {
         UploadFile uploadFile = getFile("joinusFile");
         SiteInfo joinusInfo = getModel(SiteInfo.class, "joinusInfo");
         if(uploadFile != null)
-            joinusInfo.set("imagepath", uploadFile.getFileName());
+            joinusInfo.set("filepath", uploadFile.getFileName());
         siteInfoService.saveJoinus(joinusInfo);
-        renderText(joinusInfo.getStr("imagepath"));
+        renderText(joinusInfo.getStr("filepath"));
     }
 
     /**
@@ -63,9 +63,9 @@ public class AdminSiteController extends Controller {
         UploadFile uploadFile = getFile("affiliateFile");
         SiteInfo affiliateInfo = getModel(SiteInfo.class, "affiliateInfo");
         if(uploadFile != null)
-            affiliateInfo.set("imagepath", uploadFile.getFileName());
+            affiliateInfo.set("filepath", uploadFile.getFileName());
         siteInfoService.saveAffiliate(affiliateInfo);
-        renderText(affiliateInfo.getStr("imagepath"));
+        renderText(affiliateInfo.getStr("filepath"));
     }
 
     /**
@@ -75,8 +75,8 @@ public class AdminSiteController extends Controller {
         UploadFile uploadFile = getFile("shopFile");
         SiteInfo shopInfo = getModel(SiteInfo.class, "shopInfo");
         if(uploadFile != null)
-            shopInfo.set("imagepath", uploadFile.getFileName());
+            shopInfo.set("filepath", uploadFile.getFileName());
         siteInfoService.saveShop(shopInfo);
-        renderText(shopInfo.getStr("imagepath"));
+        renderText(shopInfo.getStr("filepath"));
     }
 }

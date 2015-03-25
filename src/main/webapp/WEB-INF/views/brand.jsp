@@ -14,7 +14,7 @@
                     </ul>
                 </div>
                 <div class="bg-right">
-                    <img class="image" src="${ctx}/upload/${brandInfo.imagepath}" alt="" />
+                    <img class="image" src="${ctx}/upload/${brandInfo.filepath}" alt="" />
                     <div class="info atitle">
                         ${brandInfo.title}
                     </div>

@@ -42,7 +42,7 @@
     <jsp:attribute name="js">
         <script>
             (function(){
-
+                $('.fancybox').fancybox();
                 /**
                  * 保存品牌故事
                  */
@@ -50,6 +50,7 @@
                     success: function(data){
                         toastr.success("保存成功！");
                         $('#brandImage').attr("src", "${ctx}/upload/"+data)
+                        $('#brandImage').closest('div').removeClass('hide');
                     },
                     error: function(data){
                         toastr.error('系统错误，请联系管理员！');
@@ -63,6 +64,7 @@
                     success: function(data){
                         toastr.success("保存成功！");
                         $('#joinusImage').attr("src", "${ctx}/upload/"+data)
+                        $('#joinusImage').closest('div').removeClass('hide');
                     },
                     error: function(data){
                         toastr.error('系统错误，请联系管理员！');
@@ -76,6 +78,7 @@
                     success: function(data){
                         toastr.success("保存成功！");
                         $('#affiliateImage').attr("src", "${ctx}/upload/"+data)
+                        $('#affiliateImage').closest('div').removeClass('hide');
                     },
                     error: function(data){
                         toastr.error('系统错误，请联系管理员！');
@@ -88,6 +91,7 @@
                     success: function(data){
                         toastr.success("保存成功！");
                         $('#shopImage').attr("src", "${ctx}/upload/"+data)
+                        $('#shopImage').closest('div').removeClass('hide');
                     },
                     error: function(data){
                         toastr.error('系统错误，请联系管理员！');

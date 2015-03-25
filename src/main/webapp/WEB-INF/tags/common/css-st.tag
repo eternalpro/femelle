@@ -25,3 +25,4 @@
 <link href="${ctx}/resources/css/app.css" rel="stylesheet" type="text/css"/>
 <link href="${ctx}/resources/mt/css/toastr.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
+<link rel="stylesheet" href="${ctx}/resources/mt/fancybox/jquery.fancybox.css"/>
