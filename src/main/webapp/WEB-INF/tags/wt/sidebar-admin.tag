@@ -25,8 +25,8 @@
                     </li>
                 </ul>
             </li>
-            <li class="">
-                <a href="#">
+            <li <c:if test="${menu eq 'shop'}">class="active" </c:if>>
+                <a href="${ctx}/admin/shop">
                     <i class="icon-basket"></i>
                     <span class="title">门店管理</span>
                 </a>

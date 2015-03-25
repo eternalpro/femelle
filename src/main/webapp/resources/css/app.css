@@ -210,7 +210,7 @@ img.arrowdown {
     margin-left: 30px;
 }
 
-#title {
+.atitle {
     margin-top: 20px;
     border-left: 4px solid #9F9F9F;
     height: 30px;
@@ -220,7 +220,7 @@ img.arrowdown {
     font-weight: bold;
 }
 
-#content {
+.acontent {
     margin-top: 10px;
     border-top: 2px solid #9F9F9F;
     padding-top: 20px;

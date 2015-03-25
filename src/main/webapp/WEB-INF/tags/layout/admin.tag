@@ -20,12 +20,32 @@
         <jsp:invoke fragment="main"/>
 
     </div>
+
+    <div class="modal fade">
+
+    </div><!-- /.modal -->
+
     <common:js-st></common:js-st>
     <jsp:invoke fragment="js"/>
     <script>
         (function() {
             Metronic.init(); // init metronic core components
             Layout.init(); // init current layout
+            KindEditor.ready(function(K) {
+                window.editor = K.create('.editor', {
+                    items : [ 'formatblock', 'fontname', 'fontsize',
+                        '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+                        'underline', 'strikethrough', '|', 'justifyleft',
+                        'justifycenter', 'justifyright', '|',
+                        'insertorderedlist', 'insertunorderedlist',
+                        'indent', 'outdent'],
+                    langType : 'zh_CN',
+                    width : '100%',
+                    afterBlur: function(){  //利用该方法处理当富文本编辑框失焦之后，立即同步数据
+                        KindEditor.sync(".editor") ;
+                    }
+                });
+            });
         })();
     </script>
 </body>

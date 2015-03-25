@@ -67,4 +67,16 @@ public class AdminSiteController extends Controller {
         siteInfoService.saveAffiliate(affiliateInfo);
         renderText(affiliateInfo.getStr("imagepath"));
     }
+
+    /**
+     * 保存加盟
+     */
+    public void saveShop(){
+        UploadFile uploadFile = getFile("shopFile");
+        SiteInfo shopInfo = getModel(SiteInfo.class, "shopInfo");
+        if(uploadFile != null)
+            shopInfo.set("imagepath", uploadFile.getFileName());
+        siteInfoService.saveShop(shopInfo);
+        renderText(shopInfo.getStr("imagepath"));
+    }
 }

@@ -42,21 +42,6 @@
     <jsp:attribute name="js">
         <script>
             (function(){
-                KindEditor.ready(function(K) {
-                    window.editor = K.create('.editor', {
-                        items : [ 'formatblock', 'fontname', 'fontsize',
-                            '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
-                            'underline', 'strikethrough', '|', 'justifyleft',
-                            'justifycenter', 'justifyright', '|',
-                            'insertorderedlist', 'insertunorderedlist',
-                            'indent', 'outdent'],
-                        langType : 'zh_CN',
-                        width : '100%',
-                        afterBlur: function(){  //利用该方法处理当富文本编辑框失焦之后，立即同步数据
-                            KindEditor.sync(".editor") ;
-                        }
-                    });
-                });
 
                 /**
                  * 保存品牌故事
@@ -96,7 +81,18 @@
                         toastr.error('系统错误，请联系管理员！');
                     }
                 });
-
+                /**
+                 * 保存 门店位置
+                 */
+                $('#shopForm').ajaxForm({
+                    success: function(data){
+                        toastr.success("保存成功！");
+                        $('#shopImage').attr("src", "${ctx}/upload/"+data)
+                    },
+                    error: function(data){
+                        toastr.error('系统错误，请联系管理员！');
+                    }
+                });
 
             })();
         </script>

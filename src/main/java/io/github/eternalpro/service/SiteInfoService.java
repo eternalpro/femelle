@@ -66,4 +66,13 @@ public class SiteInfoService {
             affiliateInfo.set("module", Module.MODULE_AFFILIATE).save();
         }
     }
+
+    public void saveShop(SiteInfo shopInfo) {
+        SiteInfo shopInfoDB = SiteInfo.findByModule(Module.MODULE_SHOP);
+        if (shopInfoDB != null) {
+            shopInfoDB.setAttrs(shopInfo).update();
+        }else{
+            shopInfo.set("module", Module.MODULE_SHOP).save();
+        }
+    }
 }

@@ -138,9 +138,8 @@
             (function () {
 
                 // 屏幕滚动事件
-                $(document).scroll(function(){
+                $(window).scroll(function(){
                     var top = $(document).scrollTop();
-                    console.log(top);
                     if(top > 1700) {
                         $('img.arrowdown').addClass('flip');
                     }else{

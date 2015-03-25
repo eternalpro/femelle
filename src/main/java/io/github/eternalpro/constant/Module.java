@@ -9,4 +9,5 @@ public class Module {
     public static final String MODULE_BRAND = "MODULE_BRAND"; // 品牌故事
     public static final String MODULE_JOINUS = "MODULE_JOINUS"; // 加入我们
     public static final String MODULE_AFFILIATE = "MODULE_AFFILIATE";   // 加盟
+    public static final String MODULE_SHOP = "MODULE_SHOP";   // 门店位置
 }

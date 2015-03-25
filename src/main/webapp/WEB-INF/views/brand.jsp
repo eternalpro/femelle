@@ -15,10 +15,10 @@
                 </div>
                 <div class="bg-right">
                     <img class="image" src="${ctx}/upload/${brandInfo.imagepath}" alt="" />
-                    <div id="title" class="info">
+                    <div class="info atitle">
                         ${brandInfo.title}
                     </div>
-                    <div id="content" class="info">
+                    <div class="info acontent">
                         ${brandInfo.content}
                     </div>
                 </div>
