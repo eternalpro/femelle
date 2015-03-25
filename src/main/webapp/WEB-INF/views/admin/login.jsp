@@ -19,11 +19,11 @@
 			<span class="email">对整个站点进行相关设置</span>
             <br/>
             <br/>
-            <form class="form-inline" action="index.html">
+            <form class="form-inline" action="${ctx}/admin/adminlogin" method="post">
                 <div class="input-group input-medium">
-                    <input type="text" class="form-control" placeholder="输入密码">
+                    <input type="password" class="form-control" name="password" placeholder="输入密码">
 					<span class="input-group-btn">
-					<button type="submit" class="btn blue icn-only"><i class="m-icon-swapright m-icon-white"></i></button>
+					    <button type="submit" class="btn blue icn-only"><i class="m-icon-swapright m-icon-white"></i></button>
 					</span>
                 </div>
                 <!-- /input-group -->

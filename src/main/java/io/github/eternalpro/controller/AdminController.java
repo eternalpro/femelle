@@ -1,24 +1,31 @@
 package io.github.eternalpro.controller;
 
+import com.jfinal.aop.ClearInterceptor;
+import com.jfinal.aop.ClearLayer;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
+import com.jfinal.kit.EncryptionKit;
+import com.jfinal.plugin.auth.SessionKit;
 import io.github.eternalpro.constant.Module;
+import io.github.eternalpro.constant.SiteCST;
 import io.github.eternalpro.core.FlashMessageUtils;
-import io.github.eternalpro.model.SiteInfo;
+import io.github.eternalpro.model.*;
+import io.github.eternalpro.model.System;
 import io.github.eternalpro.service.SiteInfoService;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by fangshuai on 2015-03-20-0020.
  */
 @ControllerBind(controllerKey = "/admin", viewPath = "admin")
-public class AdminController extends Controller{
+public class AdminController extends Controller {
 
     /**
      * 跳转后台
      */
     @ActionKey("/admin")
-    public void index(){
+    public void index() {
         SiteInfo modulenewsInfo = SiteInfo.findByModule(Module.MODULE_NEWS);
         SiteInfo moduleaboutInfo = SiteInfo.findByModule(Module.MODULE_ABOUT);
         SiteInfo brandInfo = SiteInfo.findByModule(Module.MODULE_BRAND);
@@ -38,15 +45,42 @@ public class AdminController extends Controller{
     /**
      * 登录
      */
-    public void login(){
+    @ClearInterceptor(ClearLayer.ALL)
+    public void login() {
+        FlashMessageUtils.createFlash(this);
+    }
+
+    /**
+     * 登录校验
+     */
+    @ClearInterceptor(ClearLayer.ALL)
+    public void adminlogin() {
+        FlashMessageUtils.createFlash(this);
+        String password = getPara("password");
+        if (StringUtils.isNotBlank(password)) {
+            if (System.dao.findByKey("password").getStr("value").equals(EncryptionKit.md5Encrypt(password))) {
+                getSession().setAttribute(SiteCST.SESSION_LOGIN, true);
+                FlashMessageUtils.setSuccessMessage(this, "欢迎回来！");
+                redirect("/admin");
+            } else {
+                FlashMessageUtils.setErrorMessage(this, "登录失败，请检查密码是否正确！");
+                redirect("/admin/login");
+            }
+        } else {
+            FlashMessageUtils.setErrorMessage(this, "登录失败，请检查密码是否正确！");
+            redirect("/admin/login");
+        }
 
     }
+
 
     /**
      * 登出
      */
-    public void logout(){
-
+    public void logout() {
+        getSession().removeAttribute(SiteCST.SESSION_LOGIN);
+        FlashMessageUtils.setInfoMessage(this, "退出成功！");
+        redirect("/admin/login");
     }
 
 

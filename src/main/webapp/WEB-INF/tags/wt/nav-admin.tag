@@ -31,7 +31,7 @@
                             <li class="divider">
                             </li>
                             <li>
-                                <a href="${ctx}/admin/login">
+                                <a href="${ctx}/admin/logout">
                                     <i class="icon-key"></i> 登出 </a>
                             </li>
                         </ul>

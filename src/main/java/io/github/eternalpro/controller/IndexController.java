@@ -3,12 +3,11 @@ package io.github.eternalpro.controller;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
-import com.jfinal.plugin.activerecord.DbKit;
+import com.jfinal.kit.EncryptionKit;
 import com.jfinal.plugin.activerecord.Record;
 import io.github.eternalpro.constant.Module;
 import io.github.eternalpro.model.Shop;
 import io.github.eternalpro.model.SiteInfo;
-import io.github.eternalpro.service.SiteInfoService;
 import org.apache.commons.lang3.StringUtils;
 
 import java.net.URLDecoder;
@@ -70,7 +69,9 @@ public class IndexController extends Controller{
             setAttr("shops", Shop.dao.findByProvince(URLDecoder.decode(province)));
     }
 
-    public void demo(){
 
+    public void demo() {
     }
+
+
 }

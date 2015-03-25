@@ -36,4 +36,13 @@
     if(success) {
         toastr.success(success);
     }
+    if(error) {
+        toastr.error(error);
+    }
+    if(info) {
+        toastr.info(info);
+    }
+    if(warning) {
+        toastr.warning(warning);
+    }
 </script>

@@ -30,10 +30,7 @@ public class FlashMessageInterceptor implements Interceptor {
 //        logger.debug(flash_info_message);
 //        logger.debug(flash_error_message);
 
-        session.removeAttribute(FlashMessage.FLASH_SUCCESS);
-        session.removeAttribute(FlashMessage.FLASH_WARNING);
-        session.removeAttribute(FlashMessage.FLASH_INFO);
-        session.removeAttribute(FlashMessage.FLASH_ERROR);
+        FlashMessageUtils.clearAll(session);
         ai.invoke();
     }
 }
