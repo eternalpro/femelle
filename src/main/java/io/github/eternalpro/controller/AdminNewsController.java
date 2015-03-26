@@ -9,6 +9,8 @@ import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.News;
 import io.github.eternalpro.model.Shop;
 import io.github.eternalpro.model.SiteInfo;
+import io.github.eternalpro.service.NewsService;
+import net.wincn.utils.StrUtils;
 
 import java.util.List;
 
@@ -17,11 +19,15 @@ import java.util.List;
  */
 @ControllerBind(controllerKey = "/admin/news", viewPath = "admin/news")
 public class AdminNewsController extends Controller{
+    private NewsService newsService = new NewsService();
 
     @ActionKey("/admin/news")
     public void index() {
         List<News> newses = News.dao.find("select * from news where flag = ?", NewsCST.NEWS);
         List<News> fashions = News.dao.find("select * from news where flag = ?", NewsCST.FASHION);
+
+        newsService.abstractNews(newses, 80);
+        newsService.abstractNews(fashions, 80);
 
         setAttr("newses", newses);
         setAttr("fashions", fashions);
@@ -58,7 +64,6 @@ public class AdminNewsController extends Controller{
     }
 
     public void delete() {
-
         News.dao.deleteById(getParaToInt(1));
         FlashMessageUtils.setSuccessMessage(this, "删除成功！");
         if(getPara(0).endsWith(NewsCST.NEWS)){
