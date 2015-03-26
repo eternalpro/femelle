@@ -11,6 +11,6 @@ public class Module {
     public static final String MODULE_AFFILIATE = "MODULE_AFFILIATE";       // 加盟
     public static final String MODULE_SHOP = "MODULE_SHOP";                 // 门店位置
     public static final String MODULE_HOME_VIDEO = "MODULE_HOME_VIDEO";     // 首页视频
-    public static final String MODULE_NEWS_NEWS = "MODULE_NEWS_NEWS";       // 新闻资讯
-    public static final String MODULE_NEWS_FASHION = "MODULE_NEWS_FASHION"; // 时尚动态
+    public static final String MODULE_VIP = "MODULE_VIP";                   // 唯品会
+    public static final String MODULE_TMALL = "MODULE_TMALL";               // 天猫
 }

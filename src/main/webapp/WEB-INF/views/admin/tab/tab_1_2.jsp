@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <!--门店位置-->
-<div class="tab-pane active" id="tab_1_2">
+<div class="tab-pane" id="tab_1_2">
     <form role="form" id="shopForm" action="${ctx}/admin/site/saveShop" method="post" enctype="multipart/form-data">
         <div class="form-body">
             <div class="form-group">

@@ -137,4 +137,26 @@ public class SiteInfoService {
             newsInfo.set("module", NewsCST.NEWS).save();
         }
     }
+
+    public void saveVIP(SiteInfo vipInfo) {
+        SiteInfo vipInfoDB = SiteInfo.findByModule(Module.MODULE_VIP);
+        if (vipInfoDB != null) {
+            if (StringUtils.isNotBlank(vipInfo.getStr("filepath")))
+                vipInfo.set("filepath", vipInfoDB.get("filepath"));
+            vipInfoDB.setAttrs(vipInfo).update();
+        } else {
+            vipInfo.set("module", Module.MODULE_VIP).save();
+        }
+    }
+
+    public void saveTmall(SiteInfo tmallInfo) {
+        SiteInfo tmallInfoDB = SiteInfo.findByModule(Module.MODULE_VIP);
+        if (tmallInfoDB != null) {
+            if (StringUtils.isNotBlank(tmallInfo.getStr("filepath")))
+                tmallInfo.set("filepath", tmallInfoDB.get("filepath"));
+            tmallInfoDB.setAttrs(tmallInfo).update();
+        } else {
+            tmallInfo.set("module", Module.MODULE_VIP).save();
+        }
+    }
 }

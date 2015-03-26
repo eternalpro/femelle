@@ -10,7 +10,7 @@
                     <span class="title">控制面板</span>
                 </a>
             </li>
-            <li <c:if test="${menu eq 'index'}">class="active" </c:if>>
+            <%--<li <c:if test="${menu eq 'index'}">class="active" </c:if>>
                 <a href="${ctx}/admin">
                     <i class="icon-home"></i>
                     <span class="title">站点设置</span>
@@ -23,7 +23,16 @@
                     <li>
                         <a href="${ctx}/admin?#tab_1">品牌介绍</a>
                     </li>
+                    <li>
+                        <a href="${ctx}/admin?#tab_2">合作支持</a>
+                    </li>
                 </ul>
+            </li>--%>
+            <li <c:if test="${menu eq 'index'}">class="active" </c:if>>
+                <a href="${ctx}/admin">
+                    <i class="icon-home"></i>
+                    <span class="title">站点设置</span>
+                </a>
             </li>
             <li <c:if test="${menu eq 'shop'}">class="active" </c:if>>
                 <a href="${ctx}/admin/shop">

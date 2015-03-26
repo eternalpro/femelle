@@ -25,10 +25,10 @@
                                     <a href="#tab_1" data-toggle="tab" aria-expanded="false">
                                         品牌介绍 </a>
                                 </li>
-                                <%--<li class="">
+                                <li class="">
                                     <a href="#tab_2" data-toggle="tab" aria-expanded="false">
-                                        最新资讯 </a>
-                                </li>--%>
+                                        合作支持 </a>
+                                </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">
@@ -37,9 +37,9 @@
                                 <div class="tab-pane" id="tab_1">
                                     <jsp:include page="tab/tab_1.jsp"/>
                                 </div>
-                                <%--<div class="tab-pane" id="tab_2">
-                                    <jsp:include page="tab/tab_2.jsp" />
-                                </div>--%>
+                                <div class="tab-pane" id="tab_2">
+                                    <jsp:include page="tab/tab_2.jsp"/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -49,17 +49,17 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            (function(){
+            (function () {
                 /**
                  * 保存品牌故事
                  */
                 $('#brandForm').ajaxForm({
-                    success: function(data){
+                    success: function (data) {
                         toastr.success("保存成功！");
-                        $('#brandImage').attr("src", "${ctx}/upload/"+data)
+                        $('#brandImage').attr("src", "${ctx}/upload/" + data)
                         $('#brandImage').closest('div').removeClass('hide');
                     },
-                    error: function(data){
+                    error: function (data) {
                         toastr.error('系统错误，请联系管理员！');
                     }
                 });
@@ -68,12 +68,12 @@
                  * 保存加入我们
                  */
                 $('#joinusForm').ajaxForm({
-                    success: function(data){
+                    success: function (data) {
                         toastr.success("保存成功！");
-                        $('#joinusImage').attr("src", "${ctx}/upload/"+data)
+                        $('#joinusImage').attr("src", "${ctx}/upload/" + data)
                         $('#joinusImage').closest('div').removeClass('hide');
                     },
-                    error: function(data){
+                    error: function (data) {
                         toastr.error('系统错误，请联系管理员！');
                     }
                 });
@@ -82,12 +82,12 @@
                  * 保存加盟
                  */
                 $('#affiliateForm').ajaxForm({
-                    success: function(data){
+                    success: function (data) {
                         toastr.success("保存成功！");
-                        $('#affiliateImage').attr("src", "${ctx}/upload/"+data)
+                        $('#affiliateImage').attr("src", "${ctx}/upload/" + data)
                         $('#affiliateImage').closest('div').removeClass('hide');
                     },
-                    error: function(data){
+                    error: function (data) {
                         toastr.error('系统错误，请联系管理员！');
                     }
                 });
@@ -95,12 +95,39 @@
                  * 保存 门店位置
                  */
                 $('#shopForm').ajaxForm({
-                    success: function(data){
+                    success: function (data) {
                         toastr.success("保存成功！");
-                        $('#shopImage').attr("src", "${ctx}/upload/"+data)
+                        $('#shopImage').attr("src", "${ctx}/upload/" + data)
                         $('#shopImage').closest('div').removeClass('hide');
                     },
-                    error: function(data){
+                    error: function (data) {
+                        toastr.error('系统错误，请联系管理员！');
+                    }
+                });
+                /**
+                 * 保存 唯品会
+                 */
+                $('#vipForm').ajaxForm({
+                    success: function (data) {
+                        toastr.success("保存成功！");
+                        $('#vipImage').attr("src", "${ctx}/upload/" + data)
+                        $('#vipImage').closest('div').removeClass('hide');
+                    },
+                    error: function (data) {
+                        toastr.error('系统错误，请联系管理员！');
+                    }
+                });
+
+                /**
+                 * 保存 天猫
+                 */
+                $('#tmallForm').ajaxForm({
+                    success: function (data) {
+                        toastr.success("保存成功！");
+                        $('#tmallImage').attr("src", "${ctx}/upload/" + data)
+                        $('#tmallImage').closest('div').removeClass('hide');
+                    },
+                    error: function (data) {
                         toastr.error('系统错误，请联系管理员！');
                     }
                 });

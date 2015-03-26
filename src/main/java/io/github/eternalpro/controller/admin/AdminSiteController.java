@@ -105,4 +105,28 @@ public class AdminSiteController extends Controller {
         siteInfoService.saveNews(newsInfo);
         renderText(newsInfo.getStr("filepath"));
     }
+
+    /**
+     * 保存新闻资讯信息
+     */
+    public void saveVIP(){
+        UploadFile uploadFile = getFile("vipFile");
+        SiteInfo vipInfo = getModel(SiteInfo.class, "vipInfo");
+        if(uploadFile != null)
+            vipInfo.set("filepath", uploadFile.getFileName());
+        siteInfoService.saveVIP(vipInfo);
+        renderText(vipInfo.getStr("filepath"));
+    }
+
+    /**
+     * 保存新闻资讯信息
+     */
+    public void saveTmall(){
+        UploadFile uploadFile = getFile("newsFile");
+        SiteInfo tmallInfo = getModel(SiteInfo.class, "tmallInfo");
+        if(uploadFile != null)
+            tmallInfo.set("filepath", uploadFile.getFileName());
+        siteInfoService.saveTmall(tmallInfo);
+        renderText(tmallInfo.getStr("filepath"));
+    }
 }
