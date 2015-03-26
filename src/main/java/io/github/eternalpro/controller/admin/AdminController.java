@@ -1,4 +1,4 @@
-package io.github.eternalpro.controller;
+package io.github.eternalpro.controller.admin;
 
 import com.jfinal.aop.ClearInterceptor;
 import com.jfinal.aop.ClearLayer;

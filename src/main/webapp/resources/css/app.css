@@ -243,12 +243,12 @@ img.arrowdown {
     text-decoration: none;
 }
 .bg-sidebar li:hover {
-    background: white;
+    background: #ffffff;
     width: 168px;
 }
 
 .bg-sidebar .active {
-    background: white;
+    background: #ffffff;
     width: 168px;
 }
 

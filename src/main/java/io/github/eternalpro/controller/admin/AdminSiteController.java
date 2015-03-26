@@ -1,4 +1,4 @@
-package io.github.eternalpro.controller;
+package io.github.eternalpro.controller.admin;
 
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
