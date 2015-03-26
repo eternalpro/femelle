@@ -10,12 +10,28 @@
                     <jsp:include page="sidebar.jsp"/>
                 </div>
                 <div class="bg-right">
-                    <img class="image" src="${ctx}/upload/${fashionInfo.filepath}" alt="" />
+                    <img class="image" src="${ctx}/upload/${fashionInfo.filepath}" alt=""/>
+
                     <div class="info atitle">
-                        ${fashionInfo.title}
+                            ${fashionInfo.title}
                     </div>
                     <div class="info acontent">
-                        ${fashionInfo.content}
+                            ${fashionInfo.content}
+                        <div class="margin10-t">
+                            <c:forEach items="${fashions}" var="fashion">
+                                <table class="table-news table table-hover ">
+                                    <tr>
+                                        <td width="100" ><img src="${ctx}/upload/${fashion.imagepath}" alt=""/></td>
+                                        <td class="border-left" style="border-left: 1px solid #DDD;">
+                                            <strong>${fashion.title}</strong>
+                                            <div>
+                                                ${fashion.content}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </c:forEach>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -23,8 +39,8 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            (function(){
-                $('ul.bg-sidebar').height($('.bg-right').height()-75);
+            (function () {
+                $('ul.bg-sidebar').height($('.bg-right').height() - 75);
             })();
         </script>
     </jsp:attribute>

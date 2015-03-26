@@ -16,6 +16,21 @@
                     </div>
                     <div class="info acontent">
                         ${newsInfo.content}
+                            <div class="margin10-t">
+                                <c:forEach items="${newses}" var="news">
+                                    <table class="table-news table table-hover ">
+                                        <tr>
+                                            <td width="100" ><img src="${ctx}/upload/${news.imagepath}" alt=""/></td>
+                                            <td class="border-left" style="border-left: 1px solid #DDD;">
+                                                <strong>${news.title}</strong>
+                                                <div>
+                                                        ${news.content}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </c:forEach>
+                            </div>
                     </div>
                 </div>
             </div>

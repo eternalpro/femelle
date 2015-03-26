@@ -47,7 +47,7 @@
                     $.get('${ctx}/brand/loadShops/' + encodeURI(province), function(data){
                         $('#shopContent').html(data)
                         $('ul.bg-sidebar').height($('.bg-right').height() - 75);
-                        $('ul.nav-shop').css('minHeight', $('#shopContent').height());
+                        $('ul.nav-shop').css('min-height', $('#shopContent').height());
                     });
                 };
                 loadShopInfo('${currentP}');

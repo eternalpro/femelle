@@ -53,9 +53,10 @@
                     <thead>
                     <tr>
                         <th width="10"></th>
-                        <th width="80">标题</th>
-                        <th width="180">内容</th>
-                        <th width="50">操作</th>
+                        <th width="100">标题</th>
+                        <th>内容</th>
+                        <th width="20">首页显示</th>
+                        <th width="120">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -69,6 +70,22 @@
                             </td>
                             <td>${news.title}</td>
                             <td>${news.content}</td>
+                            <td>
+                                <c:choose>
+                                    <c:when test="${news.ismain eq 'y'}">
+                                        <a href="${ctx}/admin/news/set/news-n-${news.id}"
+                                           class="btn btn-icon-only btn-circle green">
+                                            <i class="fa fa-circle"></i>
+                                        </a>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <a href="${ctx}/admin/news/set/news-y-${news.id}"
+                                           class="btn btn-icon-only btn-circle red">
+                                            <i class="fa fa-circle-o"></i>
+                                        </a>
+                                    </c:otherwise>
+                                </c:choose>
+                            </td>
                             <td>
                                 <a href="${ctx}/admin/news/edit/news-${news.id}"
                                    class="btn btn-icon-only btn-circle blue news-edit">

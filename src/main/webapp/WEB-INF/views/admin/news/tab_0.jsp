@@ -53,9 +53,10 @@
                     <thead>
                     <tr>
                         <th width="10"></th>
-                        <th width="80">标题</th>
-                        <th width="180">内容</th>
-                        <th width="50">操作</th>
+                        <th width="100">标题</th>
+                        <th>内容</th>
+                        <th width="20">首页显示</th>
+                        <th width="120">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -69,6 +70,22 @@
                             <td>${fashion.title}</td>
                             <td>${fashion.content}</td>
                             <td>
+                                <c:choose>
+                                    <c:when test="${fashion.ismain eq 'y'}">
+                                        <a href="${ctx}/admin/news/set/fashion-n-${fashion.id}"
+                                           class="btn btn-icon-only btn-circle green">
+                                            <i class="fa fa-circle"></i>
+                                        </a>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <a href="${ctx}/admin/news/set/fashion-y-${fashion.id}"
+                                           class="btn btn-icon-only btn-circle red">
+                                            <i class="fa fa-circle-o"></i>
+                                        </a>
+                                    </c:otherwise>
+                                </c:choose>
+                            </td>
+                            <td>
                                 <a href="${ctx}/admin/news/edit/fashion-${fashion.id}"
                                    class="btn btn-icon-only btn-circle blue news-edit">
                                     <i class="fa fa-edit"></i>
@@ -77,6 +94,7 @@
                                    class="btn btn-icon-only btn-circle red news-delete">
                                     <i class="fa fa-remove"></i>
                                 </a>
+
                             </td>
                         </tr>
                     </c:forEach>

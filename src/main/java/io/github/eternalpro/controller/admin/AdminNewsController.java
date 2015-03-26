@@ -80,4 +80,20 @@ public class AdminNewsController extends Controller{
             redirect("/admin/news");
         }
     }
+
+    public void set(){
+        String type = getPara(0);
+        String isMain = getPara(1);
+        Integer id = getParaToInt(2);
+
+        News.dao.findByIdAndFlag(id, type).set("ismain", isMain).update();
+
+        FlashMessageUtils.setSuccessMessage(this, "修改成功！");
+
+        if(type.endsWith(NewsCST.NEWS)){
+            redirect("/admin/news?#tab_1");
+        }else{
+            redirect("/admin/news");
+        }
+    }
 }

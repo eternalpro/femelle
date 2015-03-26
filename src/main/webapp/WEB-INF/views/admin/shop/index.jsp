@@ -88,7 +88,9 @@
                 $('.shop-delete').on('click', function(){
                     e.preventDefault();
                     var $this = $(this);
-                    location.href = $this.attr('href');
+                    if(confirm('确定要删除吗？')){
+                        location.href = $this.attr('href');
+                    }
                 });
 
             })();

@@ -54,7 +54,9 @@
                 $('.news-delete').on('click', function (e) {
                     e.preventDefault();
                     var $this = $(this);
-                    location.href = $this.attr('href');
+                    if(confirm('确定要删除吗？')) {
+                        location.href = $this.attr('href');
+                    }
                 });
 
                 /**
