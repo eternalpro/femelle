@@ -17,6 +17,12 @@
                     <label>展示图片：</label>
                     <input type="file" class="form-control" name="newsFile">
                 </div>
+                <c:if test="${!empty(news.imagepath)}">
+                    <div class="form-group">
+                        <label>预览：</label>
+                        <img src="${ctx}/upload/${news.imagepath}" class="form-control" alt="" style="width: 80px; height: 60px;"/>
+                    </div>
+                </c:if>
                 <div class="form-group">
                     <label for="title">标题</label>
                     <input type="text" name="news.title" class="form-control" id="title" placeholder="填写标题" value="${news.title}">

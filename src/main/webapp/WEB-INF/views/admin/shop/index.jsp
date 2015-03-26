@@ -10,6 +10,7 @@
                             <small>管理所有的门店信息</small>
                         </h1>
                     </div>
+
                 </div>
                 <!-- content -->
                 <div class="row">
@@ -21,10 +22,15 @@
                                         <i class="fa fa-gift font-green-sharp"></i>
                                         <span class="caption-subject font-green-sharp bold uppercase">门店列表</span>
                                     </div>
+
                                     <div class="actions">
                                         <a href="${ctx}/admin/shop/edit/0" class="btn btn-circle btn-sm shop-edit" id="addShop">
                                             <i class="fa fa-plus"></i> 添加 </a>
+
+                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title="">
+                                        </a>
                                     </div>
+
                                 </div>
                                 <div class="portlet-body">
                                     <div class="table-container">

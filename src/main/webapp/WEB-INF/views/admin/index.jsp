@@ -10,6 +10,7 @@
                             <small>与整站信息有关的设置</small>
                         </h1>
                     </div>
+
                 </div>
                 <!-- content -->
                 <div class="row">
@@ -24,10 +25,10 @@
                                     <a href="#tab_1" data-toggle="tab" aria-expanded="false">
                                         品牌介绍 </a>
                                 </li>
-                                <li class="">
+                                <%--<li class="">
                                     <a href="#tab_2" data-toggle="tab" aria-expanded="false">
                                         最新资讯 </a>
-                                </li>
+                                </li>--%>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">

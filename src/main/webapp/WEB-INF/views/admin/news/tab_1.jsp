@@ -10,6 +10,9 @@
     <div class="actions">
       <a href="${ctx}/admin/news/edit/news-0" class="btn btn-circle btn-sm news-edit" id="addNews">
         <i class="fa fa-plus"></i> 添加 </a>
+
+      <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title="">
+      </a>
     </div>
   </div>
   <div class="portlet-body">

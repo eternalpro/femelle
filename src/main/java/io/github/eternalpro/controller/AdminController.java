@@ -62,7 +62,7 @@ public class AdminController extends Controller {
         if (StringUtils.isNotBlank(password)) {
             if (System.dao.findByKey("password").getStr("value").equals(EncryptionKit.md5Encrypt(password))) {
                 getSession().setAttribute(SiteCST.SESSION_LOGIN, true);
-                FlashMessageUtils.setSuccessMessage(this, "欢迎回来！");
+                FlashMessageUtils.setSuccessMessage(this, "管理员，欢迎回来！");
                 redirect("/admin");
             } else {
                 FlashMessageUtils.setErrorMessage(this, "登录失败，请检查密码是否正确！");

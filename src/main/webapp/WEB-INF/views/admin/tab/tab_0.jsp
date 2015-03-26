@@ -8,6 +8,7 @@
                     <i class="icon-equalizer font-blue-sharp"></i>
                     <span class="caption-subject font-blue-sharp bold uppercase">设置首页相关信息</span>
                 </div>
+
             </div>
             <div class="portlet-body form">
                 <!-- BEGIN FORM-->
