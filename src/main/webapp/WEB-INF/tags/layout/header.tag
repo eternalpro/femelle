@@ -29,7 +29,7 @@
                 <span class="split">|</span>
             </li>
             <li>
-                <a href="#">最新资讯</a>
+                <a href="${ctx}/news">最新资讯</a>
                 <span class="split">|</span>
             </li>
             <li>

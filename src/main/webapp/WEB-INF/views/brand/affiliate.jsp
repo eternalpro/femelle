@@ -6,12 +6,8 @@
             <div class="container" style="width: 1124px;">
                 <div class="bg-left">
                     <h4>品牌介绍</h4>
-                    <ul class="bg-sidebar">
-                        <li><a href="${ctx}/brand">&nbsp;&nbsp;● 品牌故事</a></li>
-                        <li><a href="${ctx}/shop">&nbsp;&nbsp;● 门店位置</a></li>
-                        <li><a href="${ctx}/joinus">&nbsp;&nbsp;● 加入我们</a></li>
-                        <li class="active"><a href="${ctx}/affiliate">&nbsp;&nbsp;● 加盟</a></li>
-                    </ul>
+                    <c:set var="sidemenu" value="affiliate" scope="request"/>
+                    <jsp:include page="sidebar.jsp"/>
                 </div>
                 <div class="bg-right">
                     <img class="image" src="${ctx}/upload/${affiliateInfo.filepath}" alt="" />

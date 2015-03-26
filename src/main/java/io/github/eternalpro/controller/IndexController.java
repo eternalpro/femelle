@@ -27,48 +27,7 @@ public class IndexController extends Controller{
         setAttr("videoInfo", videoInfo);
     }
 
-    /**
-     * 品牌介绍
-     */
-    public void brand() {
-        SiteInfo brandInfo = SiteInfo.findByModule(Module.MODULE_BRAND);
-        setAttr("brandInfo", brandInfo);
-    }
 
-    /**
-     * 门店位置
-     */
-    public void shop(){
-        SiteInfo shopInfo = SiteInfo.findByModule(Module.MODULE_SHOP);
-        List<Record> records = Shop.dao.findProvinces();
-        setAttr("shopInfo", shopInfo);
-        if (records != null && records.size() > 0) {
-            setAttr("currentP", records.get(0).getStr("province"));
-        }
-        setAttr("provinces", records);
-    }
-
-    /**
-     * 加入我们
-     */
-    public void joinus(){
-        SiteInfo joinusInfo = SiteInfo.findByModule(Module.MODULE_JOINUS);
-        setAttr("joinusInfo", joinusInfo);
-    }
-
-    /**
-     * 加盟
-     */
-    public void affiliate(){
-        SiteInfo affiliateInfo = SiteInfo.findByModule(Module.MODULE_AFFILIATE);
-        setAttr("affiliateInfo", affiliateInfo);
-    }
-
-    public void loadShops(){
-        String province = getPara();
-        if(StringUtils.isNotBlank(province))
-            setAttr("shops", Shop.dao.findByProvince(URLDecoder.decode(province)));
-    }
 
 
     public void demo() {
