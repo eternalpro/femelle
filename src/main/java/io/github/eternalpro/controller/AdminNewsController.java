@@ -10,6 +10,7 @@ import io.github.eternalpro.model.News;
 import io.github.eternalpro.model.Shop;
 import io.github.eternalpro.model.SiteInfo;
 import io.github.eternalpro.service.NewsService;
+import io.github.eternalpro.service.SiteInfoService;
 import net.wincn.utils.StrUtils;
 
 import java.util.List;
@@ -20,6 +21,7 @@ import java.util.List;
 @ControllerBind(controllerKey = "/admin/news", viewPath = "admin/news")
 public class AdminNewsController extends Controller{
     private NewsService newsService = new NewsService();
+    private SiteInfoService siteInfoService = new SiteInfoService();
 
     @ActionKey("/admin/news")
     public void index() {
@@ -28,6 +30,12 @@ public class AdminNewsController extends Controller{
 
         newsService.abstractNews(newses, 80);
         newsService.abstractNews(fashions, 80);
+
+        SiteInfo newsInfo = SiteInfo.findByModule(NewsCST.NEWS);
+        SiteInfo fashionInfo = SiteInfo.findByModule(NewsCST.FASHION);
+
+        setAttr("newsInfo", newsInfo);
+        setAttr("fashionInfo", fashionInfo);
 
         setAttr("newses", newses);
         setAttr("fashions", fashions);

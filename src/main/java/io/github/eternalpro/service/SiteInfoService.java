@@ -1,6 +1,7 @@
 package io.github.eternalpro.service;
 
 import io.github.eternalpro.constant.Module;
+import io.github.eternalpro.constant.NewsCST;
 import io.github.eternalpro.model.SiteInfo;
 
 /**
@@ -77,7 +78,7 @@ public class SiteInfoService {
     }
 
     /**
-     * 保存视频文件
+     * 保存首页视频文件
      * @param fileName
      */
     public void saveHomeVideo(String fileName) {
@@ -89,6 +90,32 @@ public class SiteInfoService {
                     .set("module", Module.MODULE_HOME_VIDEO)
                     .set("filepath", fileName)
                     .save();
+        }
+    }
+
+    /**
+     * 保存时尚动态
+     * @param fashionInfo
+     */
+    public void saveFashion(SiteInfo fashionInfo) {
+        SiteInfo fashionInfoDB = SiteInfo.findByModule(NewsCST.FASHION);
+        if (fashionInfoDB != null) {
+            fashionInfoDB.setAttrs(fashionInfo).update();
+        }else{
+            fashionInfo.set("module", NewsCST.FASHION).save();
+        }
+    }
+
+    /**
+     * 保存新闻资讯
+     * @param newsInfo
+     */
+    public void saveNews(SiteInfo newsInfo) {
+        SiteInfo newsInfoDB = SiteInfo.findByModule(NewsCST.NEWS);
+        if (newsInfoDB != null) {
+            newsInfoDB.setAttrs(newsInfo).update();
+        }else{
+            newsInfo.set("module", NewsCST.NEWS).save();
         }
     }
 }

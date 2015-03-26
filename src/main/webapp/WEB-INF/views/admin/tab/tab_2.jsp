@@ -6,7 +6,7 @@
             <div class="portlet-title">
                 <div class="caption">
                     <i class="icon-equalizer font-blue-sharp"></i>
-                    <span class="caption-subject font-blue-sharp bold uppercase">设置资讯及动态信息、宣传视频、搭配图集</span>
+                    <span class="caption-subject font-blue-sharp bold uppercase">设置时尚动态、宣传视频、搭配图集、新闻资讯</span>
                 </div>
                 <div class="actions">
                     <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title="">
@@ -20,15 +20,15 @@
                             <ul class="nav nav-pills nav-stacked">
                                 <li class="active">
                                     <a href="#tab_1_1" data-toggle="tab" aria-expanded="true">
-                                        品牌故事 </a>
+                                        时尚动态 </a>
                                 </li>
                                 <li class="">
                                     <a href="#tab_1_2" data-toggle="tab" aria-expanded="false">
-                                        门店位置 </a>
+                                        宣传视频 </a>
                                 </li>
                                 <li class="">
                                     <a href="#tab_1_3" data-toggle="tab" aria-expanded="false">
-                                        加入我们 </a>
+                                        搭配图集 </a>
                                 </li>
                                 <li class="">
                                     <a href="#tab_1_4" data-toggle="tab" aria-expanded="false">

@@ -81,4 +81,28 @@ public class AdminSiteController extends Controller {
         siteInfoService.saveShop(shopInfo);
         renderText(shopInfo.getStr("filepath"));
     }
+
+    /**
+     * 保存时尚动态信息
+     */
+    public void saveFashion(){
+        UploadFile uploadFile = getFile("fashionFile");
+        SiteInfo fashionInfo = getModel(SiteInfo.class, "fashionInfo");
+        if(uploadFile != null)
+            fashionInfo.set("filepath", uploadFile.getFileName());
+        siteInfoService.saveFashion(fashionInfo);
+        renderText(fashionInfo.getStr("filepath"));
+    }
+
+    /**
+     * 保存新闻资讯信息
+     */
+    public void saveNews(){
+        UploadFile uploadFile = getFile("newsFile");
+        SiteInfo newsInfo = getModel(SiteInfo.class, "newsInfo");
+        if(uploadFile != null)
+            newsInfo.set("filepath", uploadFile.getFileName());
+        siteInfoService.saveNews(newsInfo);
+        renderText(newsInfo.getStr("filepath"));
+    }
 }
