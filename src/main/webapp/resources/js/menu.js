@@ -1,10 +1,10 @@
 (function () {
 
-    if ($.support.leadingWhitespace) {
+    if ($.support.leadingWhitespace) {  // ¸ß°æ±¾ä¯ÀÀÆ÷
         $('ul.menu>li').each(function (i, o) {
             var $this = $(this);
             var $sub = $('.' + $this.data('target'));
-            $sub.css('left', (126 * i - 18) + 'px');
+            $sub.css('left', (130 * i - 26) + 'px');
         });
     } else {
         $('ul.menu>li').each(function (i, o) {
