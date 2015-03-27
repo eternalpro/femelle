@@ -69,27 +69,21 @@
                     </li>
                 </ul>
             </li>
+
             <li class="">
                 <a href="#">
                     <i class="icon-wallet"></i>
                     <span class="title">画册管理</span>
                 </a>
             </li>
+
             <li class="<c:if test='${menu eq "news"}'>active </c:if>">
                 <a href="${ctx}/admin/news">
                     <i class="icon-docs"></i>
                     <span class="title">资讯管理</span>
-                    <span class="arrow <c:if test='${menu eq "news"}'>open </c:if>"></span>
                 </a>
-                <ul class="sub-menu" style="display: <c:if test='${menu ne "news"}'>none </c:if>;">
-                    <li>
-                        <a href="${ctx}/admin/news">时尚动态</a>
-                    </li>
-                    <li>
-                        <a href="${ctx}/admin/news?#tab_1">新闻资讯</a>
-                    </li>
-                </ul>
             </li>
+
             <li class="">
                 <a href="#">
                     <i class="icon-users"></i>

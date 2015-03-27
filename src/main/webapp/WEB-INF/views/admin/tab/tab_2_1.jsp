@@ -17,11 +17,11 @@
                 </a>
             </div>
 
-            <div class="form-group">
+            <%--<div class="form-group">
                 <label>标题：</label>
                 <input type="text" name="vipInfo.title" class="form-control" value="${vipInfo.title}"/>
             </div>
-
+--%>
             <div class="form-group">
                 <label>描述文字：</label>
                 <textarea class="form-control editor" name="vipInfo.content"

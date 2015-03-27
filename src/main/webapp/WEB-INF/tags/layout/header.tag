@@ -33,7 +33,7 @@
                 <span class="split">|</span>
             </li>
             <li>
-                <a href="#">合作支持</a>
+                <a href="${ctx}/support/vip">合作支持</a>
                 <span class="split">|</span>
             </li>
             <li>
