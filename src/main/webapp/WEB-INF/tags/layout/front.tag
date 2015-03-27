@@ -17,6 +17,15 @@
 
     <layout:footer />
     <common:js></common:js>
+    <script type="text/javascript">
+        $('#nav-menu .menu > li').hover(function () {
+            $(this).find('.children').animate({opacity: 'show', height: 'show'}, 200);
+            $(this).find('.xialaguang').addClass('navhover');
+        }, function () {
+            $('.children').stop(true, true).hide();
+            $('.xialaguang').removeClass('navhover');
+        });
+    </script>
     <jsp:invoke fragment="js"/>
 </body>
 </html>

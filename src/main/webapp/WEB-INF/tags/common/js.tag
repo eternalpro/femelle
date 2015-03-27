@@ -4,3 +4,4 @@
 <script src="${ctx}/resources/js/bootstrap.js"></script>
 <script src="${ctx}/resources/js/animatescroll.min.js"></script>
 <script src="${ctx}/resources/js/html5media.min.js"></script>
+<script src="${ctx}/resources/js/menu.js"></script>

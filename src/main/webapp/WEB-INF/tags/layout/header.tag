@@ -13,32 +13,113 @@
     </div>
 </div>
 <div class="border"></div>
-<div class="container margin20-t menu">
+<div class="container margin20-t margin50-b">
     <div class="row">
-        <ul class="span12">
-            <li>
-                <a href="${ctx}/brand">品牌介绍</a>
-                <span class="split">|</span>
-            </li>
-            <li>
-                <a href="#">当季推荐</a>
-                <span class="split">|</span>
-            </li>
-            <li>
-                <a href="#">产品介绍</a>
-                <span class="split">|</span>
-            </li>
-            <li>
-                <a href="${ctx}/news">最新资讯</a>
-                <span class="split">|</span>
-            </li>
-            <li>
-                <a href="${ctx}/support/vip">合作支持</a>
-                <span class="split">|</span>
-            </li>
-            <li>
-                <a href="#">会员中心</a>
-            </li>
-        </ul>
+        <div class="span12">
+            <ul class="menu">
+                <li class="active" data-target="s1">
+                    <a href="#">品牌介绍</a>
+                    <ul class="s-menu s1">
+                        <li>
+                            <a href="${ctx}/brand">品牌故事</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/shop">门店位置</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/joinus">加入我们</a>
+                        </li>
+                        <li class="lastItem">
+                            <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">加盟</a>
+                        </li>
+                    </ul>
+                </li>
+                <li data-target="s2">
+                    <a href="#">当季推荐</a>
+                    <ul class="s-menu s2">
+                        <li>
+                            <a href="${ctx}/brand">春</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/shop">夏</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/joinus">秋</a>
+                        </li>
+                        <li class="lastItem">
+                            <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">冬</a>
+                        </li>
+                    </ul>
+                </li>
+                <li data-target="s3">
+                    <a href="#">产品介绍</a>
+                    <ul class="s-menu s3">
+                        <li>
+                            <a href="${ctx}/brand">大衣</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/shop">毛衣</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/joinus">风衣</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/joinus">连衣裙</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/joinus">短裙</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/joinus">裤子</a>
+                        </li>
+                        <li class="lastItem">
+                            <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">皮革</a>
+                        </li>
+                    </ul>
+                </li>
+                <li data-target="s4">
+                    <a href="#">最新资讯</a>
+                    <ul class="s-menu s4">
+                        <li>
+                            <a href="${ctx}/brand">时尚动态</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/shop">宣传视频</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/joinus">搭配图集</a>
+                        </li>
+                        <li class="lastItem">
+                            <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">新闻资讯</a>
+                        </li>
+                    </ul>
+                </li>
+                <li data-target="s5">
+                    <a href="#">合作支持</a>
+                    <ul class="s-menu s5">
+                        <li>
+                            <a href="${ctx}/brand">唯品会</a>
+                        </li>
+                        <li class="lastItem">
+                            <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">天猫</a>
+                        </li>
+                    </ul>
+                </li>
+                <li data-target="s6">
+                    <a style="border-right: 0px;" href="#">会员中心</a>
+                    <ul class="s-menu s6">
+                        <li>
+                            <a href="${ctx}/brand">联系我们</a>
+                        </li>
+                        <li>
+                            <a href="${ctx}/brand/shop">常见问题</a>
+                        </li>
+                        <li class="lastItem">
+                            <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">会员注册</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
