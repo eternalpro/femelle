@@ -1,10 +1,19 @@
 (function () {
 
-    $('ul.menu>li').each(function(i, o){
-        var $this = $(this);
-        var $sub = $('.' + $this.data('target'));
-        $sub.css('left', (128 * i - 25) + 'px');
-    });
+    if ($.support.leadingWhitespace) {
+        $('ul.menu>li').each(function (i, o) {
+            var $this = $(this);
+            var $sub = $('.' + $this.data('target'));
+            $sub.css('left', (126 * i - 18) + 'px');
+        });
+    } else {
+        $('ul.menu>li').each(function (i, o) {
+            var $this = $(this);
+            var $sub = $('.' + $this.data('target'));
+            $sub.css('left', (130 * i - 20) + 'px');
+        });
+    }
+
 
     $('ul.menu>li').on('mouseover', function () {
         var $this = $(this);
