@@ -81,16 +81,16 @@
                     <a href="#">最新资讯</a>
                     <ul class="s-menu s4">
                         <li>
-                            <a href="${ctx}/brand">时尚动态</a>
+                            <a href="${ctx}/news">时尚动态</a>
                         </li>
                         <li>
-                            <a href="${ctx}/brand/shop">宣传视频</a>
+                            <a href="${ctx}/news/video">宣传视频</a>
                         </li>
                         <li>
-                            <a href="${ctx}/brand/joinus">搭配图集</a>
+                            <a href="${ctx}/news/fashion">搭配图集</a>
                         </li>
                         <li class="lastItem">
-                            <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">新闻资讯</a>
+                            <a style="border-bottom: 0px;" href="${ctx}/news/news">新闻资讯</a>
                         </li>
                     </ul>
                 </li>
