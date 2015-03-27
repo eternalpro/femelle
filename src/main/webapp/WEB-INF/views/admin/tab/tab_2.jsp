@@ -6,7 +6,7 @@
             <div class="portlet-title">
                 <div class="caption">
                     <i class="icon-equalizer font-blue-sharp"></i>
-                    <span class="caption-subject font-blue-sharp bold uppercase">设置时尚动态、宣传视频、搭配图集、新闻资讯</span>
+                    <span class="caption-subject font-blue-sharp bold uppercase">设置唯品会、天猫信息</span>
                 </div>
                 <div class="actions">
                     <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title="">

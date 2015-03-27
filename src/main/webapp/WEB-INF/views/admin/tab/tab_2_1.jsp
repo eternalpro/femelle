@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
-<!-- 品牌故事 -->
-<div class="tab-pane active" id="tab_1_1">
-    <form role="form" id=vipForm" action="${ctx}/admin/site/saveVIP" method="post" enctype="multipart/form-data">
+<!-- 唯品会 -->
+<div class="tab-pane active" id="tab_2_1">
+    <form role="form" id="vipForm" action="${ctx}/admin/site/saveVIP" method="post" enctype="multipart/form-data">
         <div class="form-body">
             <div class="form-group">
                 <label>展示图片：</label>

@@ -122,7 +122,7 @@ public class AdminSiteController extends Controller {
      * 保存新闻资讯信息
      */
     public void saveTmall(){
-        UploadFile uploadFile = getFile("newsFile");
+        UploadFile uploadFile = getFile("tmallFile");
         SiteInfo tmallInfo = getModel(SiteInfo.class, "tmallInfo");
         if(uploadFile != null)
             tmallInfo.set("filepath", uploadFile.getFileName());

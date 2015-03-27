@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
-<!-- 品牌故事 -->
-<div class="tab-pane" id="tab_1_1">
+<!-- 天猫 -->
+<div class="tab-pane" id="tab_2_2">
     <form role="form" id="tmallForm" action="${ctx}/admin/site/saveTmall" method="post" enctype="multipart/form-data">
         <div class="form-body">
             <div class="form-group">
