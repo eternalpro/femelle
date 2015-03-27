@@ -40,7 +40,7 @@
                         'underline', 'strikethrough', '|', 'justifyleft',
                         'justifycenter', 'justifyright', '|',
                         'insertorderedlist', 'insertunorderedlist',
-                        'indent', 'outdent'],
+                        'indent', 'outdent','|', 'fullscreen'],
                     langType : 'zh_CN',
                     width : '100%',
                     afterBlur: function(){  //利用该方法处理当富文本编辑框失焦之后，立即同步数据

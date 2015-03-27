@@ -16,19 +16,19 @@
                     <div class="col-md-12">
                         <div class="tabbable tabbable-custom tabbable-noborder  tabbable-reversed">
                             <ul class="nav nav-tabs">
-                                <li class="active">
-                                    <a href="#tab_0" data-toggle="tab" aria-expanded="true">
-                                        当季推荐 </a>
+                                <li>
+                                    <a href="#tab_0" data-toggle="tab" aria-expanded="true"> 当季推荐 </a>
                                 </li>
-                                <li class="">
-                                    <a href="#tab_1" data-toggle="tab" aria-expanded="false">
-                                        所有产品 </a>
+                                <li class="active">
+                                    <a href="#tab_1" data-toggle="tab" aria-expanded="false"> 所有产品 </a>
                                 </li>
                             </ul>
                             <div class="tab-content">
-                                <div class="tab-pane active" id="tab_0">
+                                <div class="tab-pane" id="tab_0">
+                                    <jsp:include page="tab_0.jsp"/>
                                 </div>
-                                <div class="tab-pane" id="tab_1">
+                                <div class="tab-pane active" id="tab_1">
+                                    <jsp:include page="tab_1.jsp"/>
                                 </div>
                             </div>
                         </div>
@@ -40,18 +40,15 @@
     <jsp:attribute name="js">
         <script>
             (function(){
-                KindEditor.ready(function(K) {
-                    window.editor = K.create('#editor_id', {
-                        items : [ 'formatblock', 'fontname', 'fontsize',
-                            '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
-                            'underline', 'strikethrough', '|', 'justifyleft',
-                            'justifycenter', 'justifyright', '|',
-                            'insertorderedlist', 'insertunorderedlist',
-                            'indent', 'outdent'],
-                        langType : 'zh_CN',
-                        width : '100%'
-                    });
+                $('.product-edit').on('click', function(e){
+                    e.preventDefault();
+                    var $this = $(this);
+                    $.get($this.attr('href'), function(data){
+                        $('.modal').html(data).modal('show');
+                    })
                 });
+
+
             })();
         </script>
     </jsp:attribute>

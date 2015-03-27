@@ -10,24 +10,6 @@
                     <span class="title">控制面板</span>
                 </a>
             </li>
-            <%--<li <c:if test="${menu eq 'index'}">class="active" </c:if>>
-                <a href="${ctx}/admin">
-                    <i class="icon-home"></i>
-                    <span class="title">站点设置</span>
-                    <span class="arrow <c:if test='${menu eq "index"}'>open </c:if>"></span>
-                </a>
-                <ul class="sub-menu" style="display: <c:if test='${menu ne "index"}'>none </c:if>;">
-                    <li>
-                        <a href="${ctx}/admin">首页</a>
-                    </li>
-                    <li>
-                        <a href="${ctx}/admin?#tab_1">品牌介绍</a>
-                    </li>
-                    <li>
-                        <a href="${ctx}/admin?#tab_2">合作支持</a>
-                    </li>
-                </ul>
-            </li>--%>
             <li <c:if test="${menu eq 'index'}">class="active" </c:if>>
                 <a href="${ctx}/admin">
                     <i class="icon-home"></i>
@@ -55,17 +37,17 @@
                 </a>
             </li>
             <li class="<c:if test='${menu eq "product"}'>active </c:if>">
-                <a href="${ctx}/admin/products">
+                <a href="${ctx}/admin/product">
                     <i class="icon-present"></i>
                     <span class="title">产品管理</span>
                     <span class="arrow <c:if test='${menu eq "product"}'>open </c:if>"></span>
                 </a>
                 <ul class="sub-menu" style="display: <c:if test='${menu ne "product"}'>none </c:if>;">
                     <li>
-                        <a href="${ctx}/admin/products">当季推荐</a>
+                        <a href="${ctx}/admin/product">当季推荐</a>
                     </li>
                     <li>
-                        <a href="${ctx}/admin/products?#tab_1">所有产品</a>
+                        <a href="${ctx}/admin/product">所有产品</a>
                     </li>
                 </ul>
             </li>
