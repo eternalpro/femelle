@@ -36,7 +36,7 @@ img.arrowdown {
     position: fixed;
     bottom: 11.88px;
     left: 50%;
-    z-index: 3;
+    z-index: 32222;
     width: 37.6px;
     height: 37.6px;
     margin-left: -18.8px;
@@ -81,7 +81,9 @@ img.arrowdown {
 .margin10-l {
     margin-left: 10px;
 }
-
+.margin10-b {
+    margin-bottom: 10px;
+}
 .margin20-l {
     margin-left: 20px;
 }
@@ -167,6 +169,14 @@ img {
     background: #1a529c
 }
 
+/*.fix-header {
+    background: white;
+    position: fixed;
+}*/
+
+/*.main-container {
+    margin-top: 200px;
+}*/
 /*第二页*/
 .bg {
     background: #F4F4F4;
@@ -305,9 +315,9 @@ img {
 
 .product {}
 .product-detail {
-    margin-top: 50px;
+    margin-top: 20px;
     float: right;
-    width: 400px;
+    width: 180px;
 }
 .product-title {
     letter-spacing: 5px;
@@ -317,23 +327,31 @@ img {
 }
 .product-content {
     margin-top: 30px;
+    font-size: 13px;
+}
+.product-image {
+    float: left;
 }
 .product-image img{
     float: left;
-    height: 400px;
-    width: 350px;
+    width: 560px;
 }
 
+.image-div {
+    margin-bottom: 20px;
+    width: 560px;
+    overflow: hidden;
+}
 div.guanzhu {
-    margin-top: 30px;
-    text-align: center;
+    margin-top: 20px;
+    margin-left: 0px;
 }
 
-div.guanzhu>a{
+div.guanzhu>p>a{
     color: #6C6C6C;
     text-decoration: none;
 }
 
-div.guanzhu>a:hover {
+div.guanzhu>>p>a:hover {
     color: #000;
 }

@@ -3,6 +3,7 @@ package io.github.eternalpro.controller;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
+import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
 
 import java.io.UnsupportedEncodingException;
@@ -30,7 +31,13 @@ public class ProductController extends Controller{
     public void item(){
         Integer id = getParaToInt();
         Product product = Product.dao.findById(id);
+        List<Image> images = Image.dao.getImagesByProduct(id);
+
+        List<Product> recommends = Product.findRecommend(id);
+
         setAttr("types", Product.Type.values());
+        setAttr("recommends", recommends);
         setAttr("product", product);
+        setAttr("images", images);
     }
 }

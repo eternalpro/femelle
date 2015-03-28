@@ -13,11 +13,17 @@
 </head>
 <body>
     <layout:header />
-    <jsp:invoke fragment="main"/>
-
+    <div class="main-container">
+        <jsp:invoke fragment="main"/>
+    </div>
     <layout:footer />
     <common:js></common:js>
     <script type="text/javascript">
+        $('.fancybox').fancybox({
+            openEffect	: 'elastic',
+            closeEffect	: 'elastic'
+        });
+
         $('#nav-menu .menu > li').hover(function () {
             $(this).find('.children').animate({opacity: 'show', height: 'show'}, 200);
             $(this).find('.xialaguang').addClass('navhover');

@@ -15,8 +15,10 @@ public class Product extends Model<Product> {
     }
 
     public static List<Product> findNotRecommend(Integer id) {
-        return dao.find("select * from product where id not in (select productid from recommend where mainid = ?)", id);
+        return dao.find("select * from product where id <> ? and id not in (select productid from recommend where mainid = ?)", id, id);
     }
+
+
     /**
      * 衣服类型
      */

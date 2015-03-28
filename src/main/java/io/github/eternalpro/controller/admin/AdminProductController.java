@@ -10,6 +10,7 @@ import com.jfinal.upload.UploadFile;
 import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
+import io.github.eternalpro.model.Recommend;
 import io.github.eternalpro.service.ProductService;
 
 import java.io.UnsupportedEncodingException;
@@ -92,7 +93,8 @@ public class AdminProductController extends Controller {
     public void saveRecommend(){
         Integer mainId = getParaToInt(0);
         Integer productId = getParaToInt(1);
-        Db.update("delete from recommend where mainid = ? and productid = ?", mainId, productId);
+
+        new Recommend().set("mainid", mainId).set("productid", productId).save();
         renderNull();
     }
 
