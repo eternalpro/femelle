@@ -3,4 +3,6 @@
 <link rel="stylesheet" href="${ctx}/resources/css/bootstrap.css"/>
 <link rel="stylesheet" href="${ctx}/resources/css/menu.css"/>
 <link rel="stylesheet" href="${ctx}/resources/mt/fancybox/jquery.fancybox.css"/>
+<link href="${ctx}/resources/mt/css/toastr.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="${ctx}/resources/css/app.css"/>
+

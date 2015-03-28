@@ -2,14 +2,33 @@
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <layout:front>
     <jsp:attribute name="main">
+
         <div class="bg">
+
             <div class="container" style="width: 1124px;">
+
+                <div class="arrow-left" style="">
+                    <a href="${ctx}/product/itemPrev/${product.id}">
+                        <img src="${ctx}/resources/img/arrow-left.png" alt=""/>
+                    </a>
+                </div>
+
+                <div class="arrow-right" style="">
+                    <a href="${ctx}/product/itemNext/${product.id}">
+                        <img src="${ctx}/resources/img/arrow-right.png" alt=""/>
+                    </a>
+                </div>
+
                 <div class="bg-left">
                     <h4>产品介绍</h4>
                     <c:set var="sidemenu" value="${product.type}" scope="request"/>
                     <jsp:include page="sidebar.jsp"/>
                 </div>
+
                 <div class="bg-right">
+
+
+
                     <div class="product">
                         <div class="product-image">
                             <div class="image-div">
@@ -64,10 +83,20 @@
                 </div>
             </div>
         </div>
+
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
             (function () {
+                $('div.bg').on('mouseover', function(e){
+                    $('div.arrow-left').show(300);
+                    $('div.arrow-right').show(300);
+                });
+
+                $('div.bg').on('mouseleave', function(e){
+                    $('div.arrow-left').hide(300);
+                    $('div.arrow-right').hide(300);
+                });
 
             })();
         </script>
