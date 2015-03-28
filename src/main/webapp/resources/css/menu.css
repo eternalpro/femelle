@@ -10,6 +10,7 @@ ul.menu > li {
     float: left;
     line-height: 18px;
     text-align: center;
+    width: 130px;
 }
 
 ul.menu > li.active {
@@ -51,7 +52,7 @@ ul.s-menu {
     left: -27px;
     line-height: 40px;
     z-index: 999;
-    width: 128px;
+    width: 130px;
 }
 
 ul.s-menu > li > a {

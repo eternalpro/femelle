@@ -4,7 +4,7 @@
         $('ul.menu>li').each(function (i, o) {
             var $this = $(this);
             var $sub = $('.' + $this.data('target'));
-            $sub.css('left', (130 * i - 18) + 'px');
+            $sub.css('left', (130 * i - 20) + 'px');
         });
     } else {
         $('ul.menu>li').each(function (i, o) {

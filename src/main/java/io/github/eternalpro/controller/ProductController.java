@@ -25,4 +25,11 @@ public class ProductController extends Controller{
         renderJsp("index.jsp");
     }
 
+
+    public void item(){
+        Integer id = getParaToInt();
+        Product product = Product.dao.findById(id);
+        setAttr("types", Product.Type.values());
+        setAttr("product", product);
+    }
 }

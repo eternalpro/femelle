@@ -10,23 +10,26 @@
                     <jsp:include page="sidebar.jsp"/>
                 </div>
                 <div class="bg-right">
-                        <ul class="thumbnails">
-                            <c:forEach items="${products}" var="product">
-                                <li style="width: 180px; height: 270px;">
-                                    <a href="${ctx}/product/${product.id}" class="thumbnail">
-                                        <img src="${ctx}/upload/${product.imagepath}" style="height: 250px;"/>
-                                    </a>
-                                    <p style="padding-left: 5px;display:block;overflow:hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;"><small>${product.title}</small></p>
-                                </li>
-                            </c:forEach>
-                        </ul>
+                    <ul class="thumbnails">
+                        <c:forEach items="${products}" var="product">
+                            <li style="width: 180px; height: 270px;">
+                                <a href="${ctx}/product/item/${product.id}" class="thumbnail">
+                                    <img src="${ctx}/upload/${product.imagepath}" style="height: 250px;"/>
+                                </a>
+
+                                <p style="padding-left: 5px;display:block;overflow:hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;">
+                                    <small>${product.title}</small>
+                                </p>
+                            </li>
+                        </c:forEach>
+                    </ul>
                 </div>
             </div>
         </div>
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            (function(){
+            (function () {
 
             })();
         </script>

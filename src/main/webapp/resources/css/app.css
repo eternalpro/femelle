@@ -1,5 +1,6 @@
 body {
     color: #6C6C6C;
+    font-family: '微软雅黑','Segoe UI','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .border {
@@ -300,4 +301,39 @@ img {
     border-top: 0px;
     border-bottom: 0px;
     border-right: 0px;
+}
+
+.product {}
+.product-detail {
+    margin-top: 50px;
+    float: right;
+    width: 400px;
+}
+.product-title {
+    letter-spacing: 5px;
+    line-height: 23px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.product-content {
+    margin-top: 30px;
+}
+.product-image img{
+    float: left;
+    height: 400px;
+    width: 350px;
+}
+
+div.guanzhu {
+    margin-top: 30px;
+    text-align: center;
+}
+
+div.guanzhu>a{
+    color: #6C6C6C;
+    text-decoration: none;
+}
+
+div.guanzhu>a:hover {
+    color: #000;
 }
