@@ -18,6 +18,14 @@ public class Product extends Model<Product> {
         return dao.find("select * from product where id <> ? and id not in (select productid from recommend where mainid = ?)", id, id);
     }
 
+    public static List<Product> findTuijianProduct(Integer tuijianId) {
+        return dao.find("select * from product where tuijianid = ?", tuijianId);
+    }
+
+    public static List<Product> findNoTuijianProduct(Integer tuijianId) {
+        return dao.find("select * from product where tuijianid is null");
+    }
+
 
     /**
      * 衣服类型

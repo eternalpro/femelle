@@ -95,6 +95,7 @@ public class AppConfig  extends JFinalConfig {
     public void configInterceptor(Interceptors me) {
         me.add(new AdminInterceptor());
         me.add(new FlashMessageInterceptor());
+        me.add(new GlobalInterceptor());
     }
 
     @Override

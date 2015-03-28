@@ -38,18 +38,12 @@
                     <li data-target="s2">
                         <a href="#">当季推荐</a>
                         <ul class="s-menu s2">
+                            <c:forEach items="${tuijians}" var="tuijian">
                             <li>
-                                <a href="${ctx}/brand">春</a>
+                                <a href="${ctx}/season/${tuijian.id}">${tuijian.title}</a>
                             </li>
-                            <li>
-                                <a href="${ctx}/brand/shop">夏</a>
-                            </li>
-                            <li>
-                                <a href="${ctx}/brand/joinus">秋</a>
-                            </li>
-                            <li class="lastItem">
-                                <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">冬</a>
-                            </li>
+                            </c:forEach>
+
                         </ul>
                     </li>
                     <li data-target="s3">
