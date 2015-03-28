@@ -17,6 +17,14 @@
                     <input type="text" name="product.title" class="form-control" id="title" placeholder="填写名称" value="${product.title}">
                 </div>
                 <div class="form-group">
+                    <label for="type">分类 <small class="text-success">产品的分类</small></label>
+                    <select name="product.type" id="type" class="form-control">
+                        <c:forEach items="${types}" var="type">
+                            <option value="${type}"  <c:if test="${product.type eq type}">selected</c:if>>${type}</option>
+                        </c:forEach>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="imageFile">大图 <small class="text-success">产品的展示大图</small></label>
                     <input type="file" name="productFile" class="form-control" id="imageFile" placeholder="填写名称" value="${product.title}">
                 </div>

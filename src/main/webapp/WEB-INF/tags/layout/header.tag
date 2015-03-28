@@ -98,10 +98,10 @@
                     <a href="#">合作支持</a>
                     <ul class="s-menu s5">
                         <li>
-                            <a href="${ctx}/brand">唯品会</a>
+                            <a href="${ctx}/support/vip">唯品会</a>
                         </li>
                         <li class="lastItem">
-                            <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">天猫</a>
+                            <a style="border-bottom: 0px;" href="${ctx}/support/tmall">天猫</a>
                         </li>
                     </ul>
                 </li>

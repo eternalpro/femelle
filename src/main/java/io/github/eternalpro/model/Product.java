@@ -8,4 +8,16 @@ import com.jfinal.plugin.activerecord.Model;
 public class Product extends Model<Product> {
     public static final Product dao = new Product();
 
+    /**
+     * 衣服类型
+     */
+    public enum Type{
+        大衣,
+        毛衣,
+        风衣,
+        连衣裙,
+        短裙,
+        裤子,
+        皮革
+    }
 }

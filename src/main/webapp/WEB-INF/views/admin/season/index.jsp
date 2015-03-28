@@ -6,8 +6,8 @@
             <div class="page-content">
                 <div class="page-head">
                     <div class="page-title">
-                        <h1>产品管理
-                            <small>与产品有关的设置</small>
+                        <h1>当季推荐
+                            <small>产品推荐相关设置</small>
                         </h1>
                     </div>
                 </div>
@@ -16,58 +16,37 @@
                     <div class="col-md-12">
                         <div class="tabbable tabbable-custom tabbable-noborder  tabbable-reversed">
                             <ul class="nav nav-tabs">
-                                <li>
-                                    <a href="${ctx}/admin/season"> 当季推荐 </a>
-                                </li>
                                 <li class="active">
-                                    <a href="${ctx}/admin/product"> 所有产品 </a>
+                                    <a href="${ctx}/admin/season" > 当季推荐 </a>
+                                </li>
+                                <li>
+                                    <a href="${ctx}/admin/product" > 所有产品 </a>
                                 </li>
                             </ul>
                             <div class="tab-content">
-                                <div class="tab-pane active" id="tab_1">
+                                <div class="tab-pane active">
                                     <div class="portlet light ">
                                         <div class="portlet-title">
                                             <div class="caption">
                                                 <i class="fa fa-gift font-green-sharp"></i>
                                                 <span class="caption-subject font-green-sharp bold uppercase">产品列表</span>
                                             </div>
-
                                             <div class="actions">
-
                                                 <a href="${ctx}/admin/product/edit/0" class="btn btn-circle btn-sm product-edit" id="addProduct">
                                                     <i class="fa fa-plus"></i> 添加 </a>
-
-                                                <div class="btn-group">
-                                                    <button data-close-others="true" data-delay="1000" data-hover="dropdown" data-toggle="dropdown" class="btn btn-success btn-circle dropdown-toggle" type="button">
-                                                        衣服分类 <i class="fa fa-angle-down"></i>
-                                                    </button>
-                                                    <ul role="menu" class="dropdown-menu">
-                                                        <li>
-                                                            <a href="${ctx}/admin/product">全部</a>
-                                                        </li>
-                                                        <c:forEach items="${types}" var="type">
-                                                            <li>
-                                                                <a href="${ctx}/admin/product/type/${type}">${type}</a>
-                                                            </li>
-                                                        </c:forEach>
-                                                    </ul>
-                                                </div>
-
-
                                                 <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title="">
                                                 </a>
                                             </div>
 
                                         </div>
-                                        <div class="portlet-body" style="min-height: 300px;">
+                                        <div class="portlet-body">
                                             <div class="table-container">
                                                 <div class="table-scrollable">
                                                     <table class="table table-striped table-hover dataTable no-footer">
                                                         <thead>
                                                         <tr>
                                                             <th width="30">&nbsp;</th>
-                                                            <th width="160">分类</th>
-                                                            <th width="80">种类</th>
+                                                            <th width="160">名称</th>
                                                             <th width="380">描述</th>
                                                             <th width="80">操作</th>
                                                         </tr>
@@ -88,9 +67,6 @@
                                                                         <a href="${ctx}/admin/product/detail/add/${product.id}" class="text-danger product-edit">添加细节图片</a> |
                                                                         <a href="${ctx}/admin/product/detail/view/${product.id}" class="text-primary product-edit">查看细节图片</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="badge badge-success">${product.type}</span>
                                                                 </td>
                                                                 <td>${product.description}</td>
                                                                 <td>

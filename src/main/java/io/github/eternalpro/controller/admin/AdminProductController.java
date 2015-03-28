@@ -10,6 +10,7 @@ import io.github.eternalpro.model.Product;
 import io.github.eternalpro.model.Shop;
 import io.github.eternalpro.service.ProductService;
 
+import java.net.URLDecoder;
 import java.util.List;
 
 /**
@@ -22,6 +23,7 @@ public class AdminProductController extends Controller {
     @ActionKey("/admin/product")
     public void index() {
         List<Product> products = Product.dao.find("select * from product");
+        setAttr("types", Product.Type.values());
 
         productService.abstractProducts(products, 78);
 
@@ -30,6 +32,9 @@ public class AdminProductController extends Controller {
 
     public void edit() {
         Integer id = getParaToInt();
+
+        setAttr("types", Product.Type.values());
+
         if (id != null && id != 0) {
             setAttr("product", Product.dao.findById(id));
         }
@@ -44,6 +49,15 @@ public class AdminProductController extends Controller {
         productService.saveProduct(product);
         FlashMessageUtils.setSuccessMessage(this, "保存成功！");
         redirect("/admin/product");
+    }
+
+    public void type(){
+        String type = getPara();
+        List<Product> products = Product.dao.find("select * from product where type = ?" , URLDecoder.decode(type));
+        setAttr("types", Product.Type.values());
+        productService.abstractProducts(products, 78);
+        setAttr("products", products);
+        renderJsp("index.jsp");
     }
 
     @ActionKey("/admin/product/detail/add")

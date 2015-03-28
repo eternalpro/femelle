@@ -44,7 +44,7 @@
                 </a>
                 <ul class="sub-menu" style="display: <c:if test='${menu ne "product"}'>none </c:if>;">
                     <li>
-                        <a href="${ctx}/admin/product">当季推荐</a>
+                        <a href="${ctx}/admin/season">当季推荐</a>
                     </li>
                     <li>
                         <a href="${ctx}/admin/product">所有产品</a>
