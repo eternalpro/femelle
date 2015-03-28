@@ -24,7 +24,6 @@
     <jsp:attribute name="js">
         <script>
             (function(){
-                $('ul.bg-sidebar').height($('.bg-right').height()-75);
             })();
         </script>
     </jsp:attribute>

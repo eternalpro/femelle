@@ -55,25 +55,25 @@
                     <a href="#">产品介绍</a>
                     <ul class="s-menu s3">
                         <li>
-                            <a href="${ctx}/brand">大衣</a>
+                            <a href="${ctx}/product/大衣">大衣</a>
                         </li>
                         <li>
-                            <a href="${ctx}/brand/shop">毛衣</a>
+                            <a href="${ctx}/product/毛衣">毛衣</a>
                         </li>
                         <li>
-                            <a href="${ctx}/brand/joinus">风衣</a>
+                            <a href="${ctx}/product/风衣">风衣</a>
                         </li>
                         <li>
-                            <a href="${ctx}/brand/joinus">连衣裙</a>
+                            <a href="${ctx}/product/连衣裙">连衣裙</a>
                         </li>
                         <li>
-                            <a href="${ctx}/brand/joinus">短裙</a>
+                            <a href="${ctx}/product/短裙">短裙</a>
                         </li>
                         <li>
-                            <a href="${ctx}/brand/joinus">裤子</a>
+                            <a href="${ctx}/product/裤子">裤子</a>
                         </li>
                         <li class="lastItem">
-                            <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">皮革</a>
+                            <a style="border-bottom: 0px;" href="${ctx}/product/皮革">皮革</a>
                         </li>
                     </ul>
                 </li>

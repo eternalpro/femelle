@@ -1,6 +1,7 @@
 package io.github.eternalpro.utils;
 
 import org.apache.commons.lang3.StringUtils;
+import org.jsoup.Jsoup;
 
 /**
  * 字符串工具类
@@ -14,6 +15,8 @@ public class StrUtils {
     }
 
     public static String getAbstract(String content, int length) {
+        if(StringUtils.isNotBlank(content))
+        content = Jsoup.parse(content).text();  // 过滤html代码
         if (StringUtils.isNoneBlank(content)) {
             if (content.length() <= length) {
                 return content;

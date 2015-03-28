@@ -52,8 +52,6 @@
                                                         </c:forEach>
                                                     </ul>
                                                 </div>
-
-
                                                 <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title="">
                                                 </a>
                                             </div>
@@ -66,8 +64,8 @@
                                                         <thead>
                                                         <tr>
                                                             <th width="30">&nbsp;</th>
-                                                            <th width="160">分类</th>
-                                                            <th width="80">种类</th>
+                                                            <th width="160">名称</th>
+                                                            <th width="80">分类</th>
                                                             <th width="380">描述</th>
                                                             <th width="80">操作</th>
                                                         </tr>
