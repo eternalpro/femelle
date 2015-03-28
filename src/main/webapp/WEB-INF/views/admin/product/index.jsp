@@ -71,7 +71,7 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                        <c:forEach items="${products}" var="product">
+                                                        <c:forEach items="${products.list}" var="product">
                                                             <tr>
                                                                 <td>
                                                                     <c:if test="${!empty(product.imagepath)}">
@@ -103,7 +103,15 @@
                                                         </c:forEach>
                                                         </tbody>
                                                     </table>
+
                                                 </div>
+                                                <nav>
+                                                    <ul class="pagination">
+                                                        <c:forEach var="i" begin="1" end="${products.totalPage}">
+                                                            <li <c:if test="${i eq products.pageNumber}">class="disabled"</c:if>><a href="?page=${i}">${i}</a></li>
+                                                        </c:forEach>
+                                                    </ul>
+                                                </nav>
                                             </div>
                                         </div>
                                     </div>

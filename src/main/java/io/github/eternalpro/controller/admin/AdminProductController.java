@@ -3,11 +3,11 @@ package io.github.eternalpro.controller.admin;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
+import com.jfinal.plugin.activerecord.Page;
 import com.jfinal.upload.UploadFile;
 import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
-import io.github.eternalpro.model.Shop;
 import io.github.eternalpro.service.ProductService;
 
 import java.net.URLDecoder;
@@ -22,11 +22,10 @@ public class AdminProductController extends Controller {
 
     @ActionKey("/admin/product")
     public void index() {
-        List<Product> products = Product.dao.find("select * from product");
+        int page = getParaToInt("page", 1);
+        Page<Product> products = Product.dao.paginate(page, 5, "select *", "from product");
         setAttr("types", Product.Type.values());
-
-        productService.abstractProducts(products, 78);
-
+        productService.abstractProducts(products.getList(), 78);
         setAttr("products", products);
     }
 
@@ -53,9 +52,10 @@ public class AdminProductController extends Controller {
 
     public void type(){
         String type = getPara();
-        List<Product> products = Product.dao.find("select * from product where type = ?" , URLDecoder.decode(type));
+        int page = getParaToInt("page", 1);
+        Page<Product> products = Product.dao.paginate(page, 5, "select *", "from product where type = ?", URLDecoder.decode(type));
         setAttr("types", Product.Type.values());
-        productService.abstractProducts(products, 78);
+        productService.abstractProducts(products.getList(), 78);
         setAttr("products", products);
         renderJsp("index.jsp");
     }
