@@ -3,6 +3,8 @@ package io.github.eternalpro.controller.admin;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
+import com.jfinal.plugin.activerecord.Db;
+import com.jfinal.plugin.activerecord.DbKit;
 import com.jfinal.plugin.activerecord.Page;
 import com.jfinal.upload.UploadFile;
 import io.github.eternalpro.core.FlashMessageUtils;
@@ -63,10 +65,37 @@ public class AdminProductController extends Controller {
 
     public void recommend(){
         Integer id = getParaToInt();
-        List<Product> products = Product.dao.find("select * from product where productid = ?", id);
+        List<Product> products = Product.findRecommend(id);
         setAttr("products", products);
+        setAttr("mainid", id);
         renderJsp("recommend.jsp");
     }
+
+    @ActionKey("/admin/product/recommend/add")
+    public void addRecommend(){
+        Integer id = getParaToInt();
+        List<Product> products = Product.findNotRecommend(id);
+        setAttr("products", products);
+        setAttr("mainid", id);
+        renderJsp("addRecommend.jsp");
+    }
+
+    @ActionKey("/admin/product/recommend/delete")
+    public void deleteRecommend(){
+        Integer mainId = getParaToInt(0);
+        Integer productId = getParaToInt(1);
+        Db.update("delete from recommend where mainid = ? and productid = ?", mainId, productId);
+        renderNull();
+    }
+
+    @ActionKey("/admin/product/recommend/save")
+    public void saveRecommend(){
+        Integer mainId = getParaToInt(0);
+        Integer productId = getParaToInt(1);
+        Db.update("delete from recommend where mainid = ? and productid = ?", mainId, productId);
+        renderNull();
+    }
+
 
     @ActionKey("/admin/product/detail/add")
     public void addDetail() {

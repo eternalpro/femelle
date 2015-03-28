@@ -13,7 +13,7 @@
                     <tr>
                         <th width="40">&nbsp;</th>
                         <th width="200">名称</th>
-                        <th width="40">移除</th>
+                        <th width="40">添加</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -35,9 +35,9 @@
                             </td>
 
                             <td>
-                                <a href="${ctx}/admin/product/recommend/delete/${mainid}-${product.id}"
-                                   class="btn btn-icon-only btn-circle red recommend-delete" data-mainid="${mainid}" data-productid="${product.id}">
-                                    <i class="fa fa-remove"></i>
+                                <a href="${ctx}/admin/product/recommend/save/${mainid}-${product.id}"
+                                   class="btn btn-icon-only btn-circle blue recommend-add">
+                                    <i class="fa fa-plus"></i>
                                 </a>
                             </td>
                         </tr>
@@ -56,12 +56,12 @@
 </div>
 <script>
     (function(){
-        $('a.recommend-delete').on('click', function(e){
+        $('a.recommend-add').on('click', function(e){
             e.preventDefault();
             var $this = $(this);
             $.get($this.attr('href'), function(){
                 $this.closest('tr').hide(300);
             });
-        })
+        });
     })();
 </script>

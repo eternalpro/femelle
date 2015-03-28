@@ -2,12 +2,21 @@ package io.github.eternalpro.model;
 
 import com.jfinal.plugin.activerecord.Model;
 
+import java.util.List;
+
 /**
  * Created by gefangshuai on 2015/3/27.
  */
 public class Product extends Model<Product> {
     public static final Product dao = new Product();
 
+    public static List<Product> findRecommend(Integer id) {
+        return dao.find("select * from product where id in (select productid from recommend where mainid = ?)", id);
+    }
+
+    public static List<Product> findNotRecommend(Integer id) {
+        return dao.find("select * from product where id not in (select productid from recommend where mainid = ?)", id);
+    }
     /**
      * 衣服类型
      */
