@@ -10,6 +10,7 @@ import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
 import io.github.eternalpro.service.ProductService;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.List;
 
@@ -50,14 +51,21 @@ public class AdminProductController extends Controller {
         redirect("/admin/product");
     }
 
-    public void type(){
+    public void type() throws UnsupportedEncodingException {
         String type = getPara();
         int page = getParaToInt("page", 1);
-        Page<Product> products = Product.dao.paginate(page, 5, "select *", "from product where type = ?", URLDecoder.decode(type));
+        Page<Product> products = Product.dao.paginate(page, 5, "select *", "from product where type = ?", URLDecoder.decode(type, "utf-8"));
         setAttr("types", Product.Type.values());
         productService.abstractProducts(products.getList(), 78);
         setAttr("products", products);
         renderJsp("index.jsp");
+    }
+
+    public void recommend(){
+        Integer id = getParaToInt();
+        List<Product> products = Product.dao.find("select * from product where productid = ?", id);
+        setAttr("products", products);
+        renderJsp("recommend.jsp");
     }
 
     @ActionKey("/admin/product/detail/add")
@@ -88,9 +96,11 @@ public class AdminProductController extends Controller {
     }
 
     @ActionKey("/admin/product/detail/remove")
-    public void deleteDetail(){
+    public void deleteDetail() {
         Integer imageId = getParaToInt();
         Image.dao.deleteById(imageId);
         renderNull();
     }
+
+
 }

@@ -34,11 +34,15 @@
 
                                             <div class="actions">
 
-                                                <a href="${ctx}/admin/product/edit/0" class="btn btn-circle btn-sm product-edit" id="addProduct">
+                                                <a href="${ctx}/admin/product/edit/0"
+                                                   class="btn btn-circle btn-sm product-edit" id="addProduct">
                                                     <i class="fa fa-plus"></i> 添加 </a>
 
                                                 <div class="btn-group">
-                                                    <button data-close-others="true" data-delay="1000" data-hover="dropdown" data-toggle="dropdown" class="btn btn-success btn-circle dropdown-toggle" type="button">
+                                                    <button data-close-others="true" data-delay="1000"
+                                                            data-hover="dropdown" data-toggle="dropdown"
+                                                            class="btn btn-success btn-circle dropdown-toggle"
+                                                            type="button">
                                                         衣服分类 <i class="fa fa-angle-down"></i>
                                                     </button>
                                                     <ul role="menu" class="dropdown-menu">
@@ -52,7 +56,8 @@
                                                         </c:forEach>
                                                     </ul>
                                                 </div>
-                                                <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title="">
+                                                <a class="btn btn-circle btn-icon-only btn-default fullscreen"
+                                                   href="javascript:;" data-original-title="" title="">
                                                 </a>
                                             </div>
 
@@ -67,7 +72,7 @@
                                                             <th width="160">名称</th>
                                                             <th width="80">分类</th>
                                                             <th width="380">描述</th>
-                                                            <th width="80">操作</th>
+                                                            <th width="90">操作</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
@@ -75,29 +80,50 @@
                                                             <tr>
                                                                 <td>
                                                                     <c:if test="${!empty(product.imagepath)}">
-                                                                        <a href="${ctx}/upload/${product.imagepath}" class="fancybox">
-                                                                            <img src="${ctx}/upload/${product.imagepath}" alt="" style="width: 60px; height: 40px;"/>
+                                                                        <a href="${ctx}/upload/${product.imagepath}"
+                                                                           class="fancybox">
+                                                                            <img src="${ctx}/upload/${product.imagepath}"
+                                                                                 alt=""
+                                                                                 style="width: 60px; height: 40px;"/>
                                                                         </a>
                                                                     </c:if>
                                                                 </td>
                                                                 <td>
                                                                         ${product.title}
-                                                                    <div>
-                                                                        <a href="${ctx}/admin/product/detail/add/${product.id}" class="text-danger product-edit">添加细节图片</a> |
-                                                                        <a href="${ctx}/admin/product/detail/view/${product.id}" class="text-primary product-edit">查看细节图片</a>
-                                                                    </div>
+
                                                                 </td>
                                                                 <td>
                                                                     <span class="badge badge-success">${product.type}</span>
                                                                 </td>
                                                                 <td>${product.description}</td>
                                                                 <td>
-                                                                    <a href="${ctx}/admin/product/edit/${product.id}" class="btn btn-icon-only btn-circle blue product-edit">
+                                                                    <a href="${ctx}/admin/product/edit/${product.id}"
+                                                                       class="btn btn-icon-only btn-circle blue product-edit">
                                                                         <i class="fa fa-edit"></i>
                                                                     </a>
-                                                                    <a href="${ctx}/admin/product/delete/${product.id}" class="btn btn-icon-only btn-circle red product-delete">
+                                                                    <a href="${ctx}/admin/product/delete/${product.id}"
+                                                                       class="btn btn-icon-only btn-circle red product-delete">
                                                                         <i class="fa fa-remove"></i>
                                                                     </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="5">
+                                                                    <div>
+                                                                        <a href="${ctx}/admin/product/detail/add/${product.id}"
+                                                                           class="text-danger product-edit">添加细节图片</a> |
+                                                                        <a href="${ctx}/admin/product/detail/view/${product.id}"
+                                                                           class="text-primary product-edit">查看细节图片</a> |
+                                                                        <a href="${ctx}/admin/product/recommend/${product.id}"
+                                                                           class="text-danger product-edit">
+                                                                            查看搭配
+                                                                        </a>
+                                                                        |
+                                                                        <a href="${ctx}/admin/product/recommend/add/${product.id}"
+                                                                           class="text-primary product-edit">
+                                                                            添加搭配
+                                                                        </a>
+                                                                    </div>
                                                                 </td>
                                                             </tr>
                                                         </c:forEach>
@@ -108,7 +134,9 @@
                                                 <nav>
                                                     <ul class="pagination">
                                                         <c:forEach var="i" begin="1" end="${products.totalPage}">
-                                                            <li <c:if test="${i eq products.pageNumber}">class="disabled"</c:if>><a href="?page=${i}">${i}</a></li>
+                                                            <li
+                                                                    <c:if test="${i eq products.pageNumber}">class="disabled"</c:if>>
+                                                                <a href="?page=${i}">${i}</a></li>
                                                         </c:forEach>
                                                     </ul>
                                                 </nav>
@@ -125,11 +153,11 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            (function(){
-                $('.product-edit').on('click', function(e){
+            (function () {
+                $('.product-edit').on('click', function (e) {
                     e.preventDefault();
                     var $this = $(this);
-                    $.get($this.attr('href'), function(data){
+                    $.get($this.attr('href'), function (data) {
                         $('.modal').html(data).modal('show');
                     })
                 });

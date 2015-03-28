@@ -5,6 +5,7 @@ import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
 import io.github.eternalpro.model.Product;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.List;
 
@@ -15,12 +16,12 @@ import java.util.List;
 public class ProductController extends Controller{
 
     @ActionKey("product")
-    public void type(){
+    public void type() throws UnsupportedEncodingException {
         String type = getPara();
 
-        List<Product> products = Product.dao.find("select * from product where type = ?", URLDecoder.decode(type));
+        List<Product> products = Product.dao.find("select * from product where type = ?", URLDecoder.decode(type, "utf-8"));
         setAttr("types", Product.Type.values());
-        setAttr("type", URLDecoder.decode(type));
+        setAttr("type", URLDecoder.decode(type, "utf-8"));
         setAttr("products", products);
         renderJsp("index.jsp");
     }
