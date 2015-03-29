@@ -26,19 +26,12 @@
                 </div>
 
                 <div class="bg-right">
-
-
-
                     <div class="product">
                         <div class="product-image">
-                            <div class="image-div">
-                                <a title="${product.title}" href="${ctx}/upload/${product.imagepath}" class="fancybox"><img
-                                        src="${ctx}/upload/${product.imagepath}"/></a>
-                            </div>
                             <c:forEach items="${images}" var="image">
                                 <div class="image-div">
-                                    <a title="${product.title}" href="${ctx}/upload/${product.imagepath}" class="fancybox"><img
-                                            src="${ctx}/upload/${product.imagepath}"/></a>
+                                    <a title="${product.title}" href="${ctx}/upload/${image.path}" class="fancybox"><img
+                                            src="${ctx}/upload/${image.path}"/></a>
                                 </div>
                             </c:forEach>
                         </div>
@@ -69,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tuijian" style="float: left">
+                    <div class="tuijian">
                         <div class="info atitle border">
                             推荐搭配
                         </div>

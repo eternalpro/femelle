@@ -19,9 +19,16 @@ public class AlbumController extends Controller {
 
     @ActionKey("/album")
     public void index() {
-        int page = getParaToInt(1, 1);
+        int page = getParaToInt(0, 1);
         Page<Album> albumPage = Album.dao.paginate(page, 8, "select *", "from album");
 
+        Integer albumId = getParaToInt("albumId");
+
+        if (albumId == null && albumPage != null && albumPage.getList().size() > 0) {
+            albumId = albumPage.getList().get(0).get("id");
+        }
+
+        setAttr("current", albumId);
         setAttr("albumPage", albumPage);
     }
 

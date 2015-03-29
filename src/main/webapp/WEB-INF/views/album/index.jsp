@@ -66,7 +66,7 @@
                     var id = $this.data('id');
                     loadGA(id);
                 });
-                loadGA('${albumPage.list[0].id}');
+                loadGA('${current}');
             })();
         </script>
     </jsp:attribute>

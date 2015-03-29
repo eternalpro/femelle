@@ -11,6 +11,7 @@ import io.github.eternalpro.model.*;
 import org.apache.commons.lang3.StringUtils;
 
 import java.net.URLDecoder;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -40,10 +41,8 @@ public class IndexController extends Controller{
 
         List<Album> albums = Album.findTuijianY();
 
-        if (albums != null && albums.size() > 0) {
-            List<Image> images = Image.dao.getImagesByAlbum(albums.get(0).getInt("id"));
-            setAttr("images", images);
-        }
+        setAttr("albums", albums);
+
         List<Tuijian> tuijians = Tuijian.findTuijianY();
         setAttr("tuijians", tuijians);
 

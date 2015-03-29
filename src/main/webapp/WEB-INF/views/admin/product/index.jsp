@@ -68,7 +68,6 @@
                                                     <table class="table table-striped table-hover dataTable no-footer">
                                                         <thead>
                                                         <tr>
-                                                            <th width="30">&nbsp;</th>
                                                             <th width="160">名称</th>
                                                             <th width="80">分类</th>
                                                             <th width="380">描述</th>
@@ -78,7 +77,7 @@
                                                         <tbody>
                                                         <c:forEach items="${products.list}" var="product">
                                                             <tr>
-                                                                <td>
+                                                                <%--<td>
                                                                     <c:if test="${!empty(product.imagepath)}">
                                                                         <a href="${ctx}/upload/${product.imagepath}"
                                                                            class="fancybox">
@@ -87,7 +86,7 @@
                                                                                  style="width: 60px; height: 40px;"/>
                                                                         </a>
                                                                     </c:if>
-                                                                </td>
+                                                                </td>--%>
                                                                 <td>
                                                                         ${product.title}
 
@@ -111,9 +110,9 @@
                                                                 <td colspan="5">
                                                                     <div>
                                                                         <a href="${ctx}/admin/product/detail/add/${product.id}"
-                                                                           class="text-danger product-edit">添加细节图片</a> |
+                                                                           class="text-danger product-edit">添加图片</a> |
                                                                         <a href="${ctx}/admin/product/detail/view/${product.id}"
-                                                                           class="text-primary product-edit">查看细节图片</a> |
+                                                                           class="text-primary product-edit">查看图片</a> |
                                                                         <a href="${ctx}/admin/product/recommend/${product.id}"
                                                                            class="text-danger product-edit">
                                                                             查看搭配

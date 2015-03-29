@@ -42,10 +42,10 @@
         <div class="main">
 
             <ul class="rslides">
-                <c:forEach items="${images}" var="image">
+                <c:forEach items="${albums}" var="album">
                     <li>
-                        <a href="#">
-                            <img src="${ctx}/upload/${image.path}" alt=""/>
+                        <a href="${ctx}/album?albumId=${album.id}">
+                            <img src="${ctx}/upload/${album.imagepath}" alt=""/>
                         </a>
                     </li>
                 </c:forEach>

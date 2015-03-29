@@ -22,6 +22,13 @@ public class ProductController extends Controller {
         String type = getPara();
 
         List<Product> products = Product.dao.find("select * from product where type = ?", URLDecoder.decode(type, "utf-8"));
+
+        for (Product product : products) {
+            List<Image> images = Image.dao.getImagesByProduct(product.getInt("id"));
+            if (images.size() > 0)
+                product.set("imagepath", images.get(0).getStr("path"));
+        }
+
         setAttr("types", Product.Type.values());
         setAttr("type", URLDecoder.decode(type, "utf-8"));
         setAttr("products", products);

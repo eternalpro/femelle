@@ -24,10 +24,10 @@
                         </c:forEach>
                     </select>
                 </div>
-                <div class="form-group">
+               <%-- <div class="form-group">
                     <label for="imageFile">大图 <small class="text-success">产品的展示大图</small></label>
                     <input type="file" name="productFile" class="form-control" id="imageFile" placeholder="填写名称" value="${product.title}">
-                </div>
+                </div>--%>
                 <div class="form-group">
                     <label for="content">详细描述</label>
                     <textarea class="form-control editor" id="content" name="product.description"

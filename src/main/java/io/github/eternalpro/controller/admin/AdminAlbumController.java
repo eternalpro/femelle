@@ -88,18 +88,9 @@ public class AdminAlbumController extends Controller {
         String isMain = getPara(0);
         Integer id = getParaToInt(1);
 
-        if (isMain.equals("y")) {
-            List<Album> albums = Album.findTuijianY();
-            if (albums.size() >= 1) {
-                FlashMessageUtils.setWarningMessage(this, "推荐的数量已满，请先删除多余的项目！");
-            }else{
-                Album.dao.findById(id).set("ismain", isMain).update();
-                FlashMessageUtils.setSuccessMessage(this, "修改成功！");
-            }
-        } else{
-            Album.dao.findById(id).set("ismain", isMain).update();
-            FlashMessageUtils.setSuccessMessage(this, "修改成功！");
-        }
+        Album.dao.findById(id).set("ismain", isMain).update();
+        FlashMessageUtils.setSuccessMessage(this, "修改成功！");
+
         redirect("/admin/album");
     }
 
