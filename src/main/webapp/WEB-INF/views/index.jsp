@@ -42,26 +42,13 @@
         <div class="main">
 
             <ul class="rslides">
-                <li>
-                    <a href="#">
-                        <img src="${ctx}/images/bg1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="${ctx}/images/bg2.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="${ctx}/images/bg3.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="${ctx}/images/bg4.jpg" alt=""/>
-                    </a>
-                </li>
+                <c:forEach items="${images}" var="image">
+                    <li>
+                        <a href="#">
+                            <img src="${ctx}/upload/${image.path}" alt=""/>
+                        </a>
+                    </li>
+                </c:forEach>
             </ul>
 
         </div>
@@ -73,7 +60,7 @@
                     <img src="${ctx}/resources/img/left.png" alt=""/>
                 </div>
                 <div class="span4 text-center">
-                    <h3>新品/推荐</h3>
+                    <h3>${modulenewsInfo.title}</h3>
                 </div>
                 <div class="span4 margin20-t">
                     <img src="${ctx}/resources/img/right.png" alt=""/>
@@ -119,7 +106,7 @@
                     <img src="${ctx}/resources/img/left.png" alt=""/>
                 </div>
                 <div class="span4 text-center">
-                    <h3>关于/我们</h3>
+                    <h3>${moduleaboutInfo.title}</h3>
                 </div>
                 <div class="span4 margin20-t">
                     <img src="${ctx}/resources/img/right.png" alt=""/>
@@ -142,10 +129,12 @@
                         <div class="thumbnail">
                             <img src="${ctx}/resources/img/a1.png" alt="">
 
-                            <h2 class="text-center">新闻</h2>
+                            <h2 class="text-center">搭配图集</h2>
 
                             <div class="text-center pad10">
-                                <p class="text-left">9月9日，中国高端时尚女装HPLY（荷比俪）2015夏季订购会上海总部拉开帷幕了……</p>
+                                <p class="text-left">
+                                    在siteinfo里保存“搭配图集信息”
+                                </p>
                                 <button class="btn ">
                                     <strong class="margin30-l margin30-r">more+</strong>
                                 </button>
@@ -155,12 +144,16 @@
                     </li>
                     <li class="span4">
                         <div class="thumbnail">
-                            <img src="${ctx}/resources/img/a1.png" alt="">
+                            <img src="${ctx}/upload/${fashionInfo.filepath}" alt="">
 
-                            <h2 class="text-center">服装资讯</h2>
+                            <h2 class="text-center">
+                                ${fashionInfo.title}
+                            </h2>
 
                             <div class="text-center pad10">
-                                <p class="text-left">JEAN PAUL GAULTIER 最后成衣系列大秀明天就要在LE GRAND EREX辉煌上演了……</p>
+                                <p class="text-left">
+                                    ${fashionInfo.content}
+                                </p>
                                 <button class="btn ">
                                     <strong class="margin30-l margin30-r">more+</strong>
                                 </button>
@@ -169,12 +162,15 @@
                     </li>
                     <li class="span4">
                         <div class="thumbnail">
-                            <img src="${ctx}/resources/img/a1.png" alt="">
+                            <img src="${ctx}/upload/${newsInfo.filepath}" alt="">
 
-                            <h2 class="text-center">时尚动态</h2>
-
+                            <h2 class="text-center">
+                                ${newsInfo.title}
+                            </h2>
                             <div class="text-center pad10">
-                                <p class="text-left">巴黎时装周第一天一般都会平平淡淡的度过，但今年一众先锋小牌带给了我们太多惊喜……</p>
+                                <p class="text-left">
+                                    ${newsInfo.content}
+                                </p>
                                 <button class="btn ">
                                     <strong class="margin30-l margin30-r">more+</strong>
                                 </button>
@@ -203,9 +199,9 @@
 
                 // 屏幕滚动事件
                 $(window).scroll(function () {
-                    if($('img.arrowdown').offset().top > $('div.footer').offset().top){
+                    if ($('img.arrowdown').offset().top > $('div.footer').offset().top) {
                         $('img.arrowdown').addClass('flip');
-                    }else{
+                    } else {
                         $('img.arrowdown').removeClass('flip');
                     }
                 });
@@ -216,9 +212,9 @@
                     var $this = $(this);
                     var top = $(document).scrollTop();
                     if ($this.hasClass('flip')) {
-                        $('html').animatescroll({scrollSpeed:3000,easing:'easeInQuad'});
+                        $('html').animatescroll({scrollSpeed: 3000, easing: 'easeInQuad'});
                     } else {
-                        $('div.footer').animatescroll({scrollSpeed:3000,easing:'easeInQuad'});
+                        $('div.footer').animatescroll({scrollSpeed: 3000, easing: 'easeInQuad'});
                     }
                 });
             })();

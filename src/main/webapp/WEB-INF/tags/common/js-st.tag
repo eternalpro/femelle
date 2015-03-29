@@ -53,4 +53,6 @@
             location.href = $this.attr('href');
         }
     });
+
+    $('a').tooltip();
 </script>

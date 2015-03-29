@@ -7,6 +7,7 @@ import com.jfinal.upload.UploadFile;
 import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.Album;
 import io.github.eternalpro.model.Image;
+import io.github.eternalpro.model.Tuijian;
 
 import java.util.List;
 
@@ -81,6 +82,25 @@ public class AdminAlbumController extends Controller {
         Integer imageId = getParaToInt();
         Image.dao.deleteById(imageId);
         renderNull();
+    }
+
+    public void set(){
+        String isMain = getPara(0);
+        Integer id = getParaToInt(1);
+
+        if (isMain.equals("y")) {
+            List<Album> albums = Album.findTuijianY();
+            if (albums.size() >= 1) {
+                FlashMessageUtils.setWarningMessage(this, "推荐的数量已满，请先删除多余的项目！");
+            }else{
+                Album.dao.findById(id).set("ismain", isMain).update();
+                FlashMessageUtils.setSuccessMessage(this, "修改成功！");
+            }
+        } else{
+            Album.dao.findById(id).set("ismain", isMain).update();
+            FlashMessageUtils.setSuccessMessage(this, "修改成功！");
+        }
+        redirect("/admin/album");
     }
 
 }

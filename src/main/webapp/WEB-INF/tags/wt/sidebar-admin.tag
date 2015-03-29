@@ -29,13 +29,6 @@
                     <span class="title">宣传视频</span>
                 </a>
             </li>
-
-            <li class="">
-                <a href="#">
-                    <i class="icon-picture"></i>
-                    <span class="title">图片管理</span>
-                </a>
-            </li>
             <li class="<c:if test='${menu eq "product"}'>active </c:if>">
                 <a href="${ctx}/admin/product">
                     <i class="icon-present"></i>
