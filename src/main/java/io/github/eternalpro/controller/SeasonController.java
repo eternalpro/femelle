@@ -3,6 +3,7 @@ package io.github.eternalpro.controller;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
+import com.jfinal.plugin.activerecord.Page;
 import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
 import io.github.eternalpro.model.Tuijian;
@@ -18,8 +19,10 @@ public class SeasonController extends Controller {
 
     @ActionKey("/season")
     public void index() {
-        Integer id = getParaToInt();
-        List<Product> products = Product.findTuijianProduct(id);
+        Integer id = getParaToInt(0);
+        int page = getParaToInt(1, 1);
+        Page<Product> products = Product.pageTuijianProduct(id, page, 8);
+
         setAttr("tuijianId", id);
         setAttr("products", products);
     }

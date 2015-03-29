@@ -88,15 +88,7 @@
     <jsp:attribute name="js">
         <script>
             (function () {
-                $('div.bg').on('mouseover', function(e){
-                    $('div.arrow-left').show(300);
-                    $('div.arrow-right').show(300);
-                });
 
-                $('div.bg').on('mouseleave', function(e){
-                    $('div.arrow-left').hide(300);
-                    $('div.arrow-right').hide(300);
-                });
 
             })();
         </script>

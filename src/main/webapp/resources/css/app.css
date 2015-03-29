@@ -371,6 +371,8 @@ div.arrow-left {
     display: none;
     top: 300px;
     left: 50px;
+    opacity:0.2;
+    filter:alpha(opacity=20);
 }
 
 div.arrow-right {
@@ -378,5 +380,7 @@ div.arrow-right {
     display: none;
     top: 300px;
     right: 50px;
+    opacity:0.2;
+    filter:alpha(opacity=20);
 }
 

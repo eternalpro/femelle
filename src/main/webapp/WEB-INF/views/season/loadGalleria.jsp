@@ -9,6 +9,8 @@
     </c:forEach>
 
 </div>
+
+
 <script>
     Galleria.run('#galleria');
 </script>

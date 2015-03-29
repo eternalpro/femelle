@@ -1,6 +1,7 @@
 package io.github.eternalpro.model;
 
 import com.jfinal.plugin.activerecord.Model;
+import com.jfinal.plugin.activerecord.Page;
 
 import java.util.List;
 
@@ -20,6 +21,12 @@ public class Product extends Model<Product> {
 
     public static List<Product> findTuijianProduct(Integer tuijianId) {
         return dao.find("select * from product where tuijianid = ?", tuijianId);
+    }
+
+    public static Page<Product> pageTuijianProduct(Integer tuijianId, int pageNumber, int pageSize) {
+        return dao.paginate(pageNumber, pageSize, "select * ", "from product where tuijianid = ?", tuijianId);
+
+
     }
 
     public static List<Product> findNoTuijianProduct(Integer tuijianId) {

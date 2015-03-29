@@ -4,6 +4,19 @@
     <jsp:attribute name="main">
         <div class="bg">
             <div class="container" style="width: 1124px;">
+
+                <div class="arrow-left" style="">
+                    <a href="${ctx}/season/${tuijianId}-${products.pageNumber eq 1 ? 1 : products.pageNumber - 1}">
+                        <img src="${ctx}/resources/img/arrow-left.png" alt=""/>
+                    </a>
+                </div>
+
+                <div class="arrow-right" style="">
+                    <a href="${ctx}/season/${tuijianId}-${products.pageNumber eq products.totalPage? products.pageNumber: products.pageNumber + 1}">
+                        <img src="${ctx}/resources/img/arrow-right.png" alt=""/>
+                    </a>
+                </div>
+
                 <div class="bg-left">
                     <h4>当季推荐</h4>
                     <c:set var="sidemenu" value="${tuijianId}" scope="request"/>
@@ -16,15 +29,11 @@
                     </div>
 
                     <ul class="thumbnails margin20-t">
-                        <c:forEach items="${products}" var="product">
+                        <c:forEach items="${products.list}" var="product">
                             <li style="width: 180px; height: 270px;">
                                 <a href="#" class="thumbnail image-a" data-id="${product.id}">
                                     <img src="${ctx}/upload/${product.imagepath}" style="height: 250px;"/>
                                 </a>
-
-                                <p style="padding-left: 5px;display:block;overflow:hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;">
-                                    <small>${product.title}</small>
-                                </p>
                             </li>
                         </c:forEach>
                     </ul>
@@ -48,7 +57,7 @@
                     var id = $this.data('id');
                     loadGA(id);
                 });
-                loadGA('${products[0].id}');
+                loadGA('${products.list[0].id}');
             })();
         </script>
     </jsp:attribute>
