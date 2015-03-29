@@ -163,15 +163,6 @@ img.arrowdown {
 }
 
 /* 顶部菜单 */
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-img {
-    border: 0 none;
-}
 
 .box {
     background: #1a529c

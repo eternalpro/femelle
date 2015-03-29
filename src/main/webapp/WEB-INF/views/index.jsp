@@ -38,7 +38,7 @@
                 <ul class="thumbnails picL " id="picLsy">
                     <c:forEach items="${tuijians}" var="tuijian">
                         <li class="span3">
-                            <a href="#" class="thumbnail">
+                            <a href="${ctx}/season/${tuijian.id}" class="thumbnail">
                                 <img src="${ctx}/upload/${tuijian.imagepath}" style="height: 300px;">
                                 <div class="text">
                                     <p>
