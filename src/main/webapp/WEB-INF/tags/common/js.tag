@@ -9,7 +9,7 @@
 <script src="${ctx}/resources/mt/js/toastr.js" type="text/javascript"></script>
 <script src="${ctx}/resources/galleria/galleria-1.4.2.min.js"></script>
 <script src="${ctx}/resources/galleria/themes/classic/galleria.classic.min.js"></script>
-
+<script src="${ctx}/resources/slide/responsiveslides.js"></script>
 <script>
     ctx = '${ctx}';
     var success = '${FLASH_SUCCESS}';

@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <!-- footer -->
 <div class="border margin50-t margin50-b"></div>
-<div class="container margin50-b">
+<div class="container margin50-b footer">
     <div class="row">
         <div class="span12 text-center">
             <h3>关注我们</h3>

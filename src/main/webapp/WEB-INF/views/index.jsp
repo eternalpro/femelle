@@ -1,11 +1,61 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <layout:front>
+    <jsp:attribute name="css">
+        <style>
+            .rslides {
+                position: relative;
+                list-style: none;
+                overflow: hidden;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .rslides li {
+                -webkit-backface-visibility: hidden;
+                position: absolute;
+                display: none;
+                width: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            .rslides li:first-child {
+                position: relative;
+                display: block;
+                float: left;
+            }
+
+            .rslides img {
+                display: block;
+                height: auto;
+                float: left;
+                width: 100%;
+                border: 0;
+            }
+        </style>
+    </jsp:attribute>
     <jsp:attribute name="main">
 
         <!-- 中间大图内容 -->
         <div class="main">
-            <a href="#"><img src="${ctx}/images/bg.jpg" alt=""/></a>
+
+            <ul class="rslides">
+                <li>
+                    <img src="${ctx}/images/bg1.jpg" alt=""/>
+                </li>
+                <li>
+                    <img src="${ctx}/images/bg2.jpg" alt=""/>
+                </li>
+                <li>
+                    <img src="${ctx}/images/bg3.jpg" alt=""/>
+                </li>
+                <li>
+                    <img src="${ctx}/images/bg4.jpg" alt=""/>
+                </li>
+            </ul>
+
         </div>
 
         <!-- 新品推荐 -->
@@ -40,9 +90,10 @@
                         <li class="span3">
                             <a href="${ctx}/season/${tuijian.id}" class="thumbnail">
                                 <img src="${ctx}/upload/${tuijian.imagepath}" style="height: 300px;">
+
                                 <div class="text">
                                     <p>
-                                        ${tuijian.memo}
+                                            ${tuijian.memo}
                                     </p>
                                 </div>
                             </a>
@@ -132,19 +183,21 @@
     <jsp:attribute name="js">
         <script>
             (function () {
+                $(".rslides").responsiveSlides();
 
-                $("#picLsy li").hover(function(){
-                    $(this).find('.text:not(:animated)').animate({top:"150px"}, {easing:"easeInOutExpo"}, 60, function(){});
-                },function () {
-                    $(this).find('.text').animate({top:"300px"}, {easing:"easeInOutExpo"}, 50, function(){});
+                $("#picLsy li").hover(function () {
+                    $(this).find('.text:not(:animated)').animate({top: "150px"}, {easing: "easeInOutExpo"}, 60, function () {
+                    });
+                }, function () {
+                    $(this).find('.text').animate({top: "300px"}, {easing: "easeInOutExpo"}, 50, function () {
+                    });
                 });
 
                 // 屏幕滚动事件
                 $(window).scroll(function () {
-                    var top = $(document).scrollTop();
-                    if (top > 2150) {
+                    if($('img.arrowdown').offset().top > $('div.footer').offset().top){
                         $('img.arrowdown').addClass('flip');
-                    } else {
+                    }else{
                         $('img.arrowdown').removeClass('flip');
                     }
                 });
@@ -155,13 +208,9 @@
                     var $this = $(this);
                     var top = $(document).scrollTop();
                     if ($this.hasClass('flip')) {
-                        $('html').animatescroll({});
+                        $('html').animatescroll({scrollSpeed:3000,easing:'easeInQuad'});
                     } else {
-                        if (top < 1100) {
-                            $('div#new').animatescroll({});
-                        } else {
-                            $('div#about').animatescroll({});
-                        }
+                        $('div.footer').animatescroll({scrollSpeed:3000,easing:'easeInQuad'});
                     }
                 });
             })();
