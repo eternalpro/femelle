@@ -82,7 +82,7 @@
                                 <a href="${ctx}/news/video">宣传视频</a>
                             </li>
                             <li>
-                                <a href="${ctx}/news/fashion">搭配图集</a>
+                                <a href="${ctx}/album">搭配图集</a>
                             </li>
                             <li class="lastItem">
                                 <a style="border-bottom: 0px;" href="${ctx}/news/news">新闻资讯</a>

@@ -6,37 +6,39 @@
             <div class="container" style="width: 1124px;">
 
                 <div class="arrow-left" style="">
-                    <a href="${ctx}/season/${tuijianId}-${products.pageNumber eq 1 ? 1 : products.pageNumber - 1}">
+                    <a href="${ctx}/album/${albumPage.pageNumber eq 1 ? 1 : albumPage.pageNumber - 1}">
                         <img src="${ctx}/resources/img/arrow-left.png" alt=""/>
                     </a>
                 </div>
 
                 <div class="arrow-right" style="">
-                    <a href="${ctx}/season/${tuijianId}-${products.pageNumber eq products.totalPage? products.pageNumber: products.pageNumber + 1}">
+                    <a href="${ctx}/album/${albumPage.pageNumber eq albumPage.totalPage? albumPage.pageNumber: albumPage.pageNumber + 1}">
                         <img src="${ctx}/resources/img/arrow-right.png" alt=""/>
                     </a>
                 </div>
 
                 <div class="bg-left">
-                    <h4>当季推荐</h4>
-                    <c:set var="sidemenu" value="${tuijianId}" scope="request"/>
-                    <jsp:include page="sidebar.jsp"/>
+                    <h4>最新资讯</h4>
+                    <c:set var="sidemenu" value="album" scope="request"/>
+                    <jsp:include page="../news/sidebar.jsp"/>
                 </div>
                 <div class="bg-right">
 
                     <div id="gc">
 
                     </div>
+
                     <div class="margin20-l row margin50-t margin20-b">
                         <div class="span3 border-black">
                         </div>
-                        <div class="span3 text-center" style="font-size: 20px;">其他推荐</div>
+                        <div class="span3 text-center" style="font-size: 20px;">其他图集</div>
                         <div class="span3 border-black">
 
                         </div>
                     </div>
+
                     <ul class="thumbnails margin20-t">
-                        <c:forEach items="${products.list}" var="product">
+                        <c:forEach items="${albumPage.list}" var="product">
                             <li style="width: 180px; height: 270px;">
                                 <a href="#" class="thumbnail image-a" data-id="${product.id}">
                                     <img src="${ctx}/upload/${product.imagepath}" style="height: 250px;"/>
@@ -53,7 +55,7 @@
             (function () {
 
                 var loadGA = function(id) {
-                    $.get('${ctx}/season/loadGalleria/' + id, function(data){
+                    $.get('${ctx}/album/loadGalleria/' + id, function(data){
                         $('#gc').html(data);
                     });
                 };
@@ -64,7 +66,7 @@
                     var id = $this.data('id');
                     loadGA(id);
                 });
-                loadGA('${products.list[0].id}');
+                loadGA('${albumPage.list[0].id}');
             })();
         </script>
     </jsp:attribute>

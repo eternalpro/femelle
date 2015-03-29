@@ -8,6 +8,13 @@ body {
     border-bottom: 1px solid #DEDEDE;
 }
 
+.border-black {
+    margin-top: 10px;
+    border-bottom: 1px solid #2B2B2B;
+}
+
+
+
 .border-all {
     border: 1px solid #9F9F9F;
 }

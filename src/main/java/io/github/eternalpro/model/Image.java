@@ -13,4 +13,8 @@ public class Image extends Model<Image> {
     public List<Image> getImagesByProduct(Integer productId) {
         return Image.dao.find("select * from image where productid = ?", productId);
     }
+
+    public List<Image> getImagesByAlbum(Integer albumId) {
+        return Image.dao.find("select * from image where albumid = ?", albumId);
+    }
 }
