@@ -43,16 +43,24 @@
 
             <ul class="rslides">
                 <li>
-                    <img src="${ctx}/images/bg1.jpg" alt=""/>
+                    <a href="#">
+                        <img src="${ctx}/images/bg1.jpg" alt=""/>
+                    </a>
                 </li>
                 <li>
-                    <img src="${ctx}/images/bg2.jpg" alt=""/>
+                    <a href="#">
+                        <img src="${ctx}/images/bg2.jpg" alt=""/>
+                    </a>
                 </li>
                 <li>
-                    <img src="${ctx}/images/bg3.jpg" alt=""/>
+                    <a href="#">
+                        <img src="${ctx}/images/bg3.jpg" alt=""/>
+                    </a>
                 </li>
                 <li>
-                    <img src="${ctx}/images/bg4.jpg" alt=""/>
+                    <a href="#">
+                        <img src="${ctx}/images/bg4.jpg" alt=""/>
+                    </a>
                 </li>
             </ul>
 
