@@ -13,8 +13,6 @@ body {
     border-bottom: 1px solid #2B2B2B;
 }
 
-
-
 .border-all {
     border: 1px solid #9F9F9F;
 }
@@ -378,8 +376,8 @@ div.arrow-left {
     display: none;
     top: 300px;
     left: 50px;
-    opacity:0.2;
-    filter:alpha(opacity=20);
+    opacity: 0.2;
+    filter: alpha(opacity=20);
 }
 
 div.arrow-right {
@@ -387,7 +385,36 @@ div.arrow-right {
     display: none;
     top: 300px;
     right: 50px;
-    opacity:0.2;
-    filter:alpha(opacity=20);
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+.picL {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.picL li {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    zoom: 1
+}
+
+.picL li .text {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    background: #000;
+    position: absolute;
+    color: #ffffff;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 200px;
+    height: 150px;
+    top: 300px;
+    font-size: 12px;
+    font-family: "宋体";
+    left: 0px;
 }
 

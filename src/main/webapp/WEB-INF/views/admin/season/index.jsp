@@ -47,7 +47,10 @@
                                                     <table class="table table-striped table-hover dataTable no-footer">
                                                         <thead>
                                                         <tr>
-                                                            <th width="160">名称</th>
+                                                            <th width="50"></th>
+                                                            <th width="180">名称</th>
+                                                            <th width="180">描述</th>
+                                                            <th width="50">首页显示</th>
                                                             <th width="90">操作</th>
                                                         </tr>
                                                         </thead>
@@ -55,11 +58,41 @@
                                                         <c:forEach items="${tuijians}" var="tuijian">
                                                             <tr>
                                                                 <td>
+                                                                    <a href="${ctx}/upload/${tuijian.imagepath}" class="fancybox">
+                                                                        <img src="${ctx}/upload/${tuijian.imagepath}" alt="" style="width:40px; height: 40px;;"/>
+                                                                    </a>
+                                                                </td>
+                                                                <td>
                                                                         ${tuijian.title}
-                                                                        <div>
-                                                                            <a href="${ctx}/admin/season/addProduct/${tuijian.id}"  class="text-danger tuijian-edit"><small>添加推荐</small></a> |
-                                                                            <a href="${ctx}/admin/season/viewProduct/${tuijian.id}"  class="text-primary tuijian-edit"><small>查看推荐</small></a>
-                                                                        </div>
+                                                                    <div>
+                                                                        <a href="${ctx}/admin/season/addProduct/${tuijian.id}"
+                                                                           class="text-danger tuijian-edit">
+                                                                            <small>添加推荐</small>
+                                                                        </a> |
+                                                                        <a href="${ctx}/admin/season/viewProduct/${tuijian.id}"
+                                                                           class="text-primary tuijian-edit">
+                                                                            <small>查看推荐</small>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    ${tuijian.memo}
+                                                                </td>
+                                                                <td>
+                                                                    <c:choose>
+                                                                        <c:when test="${tuijian.ismain eq 'y'}">
+                                                                            <a href="${ctx}/admin/season/set/n-${tuijian.id}"
+                                                                               class="btn btn-icon-only btn-circle green">
+                                                                                <i class="fa fa-circle"></i>
+                                                                            </a>
+                                                                        </c:when>
+                                                                        <c:otherwise>
+                                                                            <a href="${ctx}/admin/season/set/y-${tuijian.id}"
+                                                                               class="btn btn-icon-only btn-circle red">
+                                                                                <i class="fa fa-circle-o"></i>
+                                                                            </a>
+                                                                        </c:otherwise>
+                                                                    </c:choose>
                                                                 </td>
                                                                 <td>
                                                                     <a href="${ctx}/admin/season/edit/${tuijian.id}"

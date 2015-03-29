@@ -24,48 +24,30 @@
 
             <!--春夏秋冬-->
             <div class="row margin40-t">
-                <div class="span3 ">
-                    <div class="text-center">SPRING</div>
-                    <img src="${ctx}/resources/img/split-s.png" alt=""/>
-                </div>
-                <div class="span3">
-                    <div class="text-center">SUMMER</div>
-                    <img src="${ctx}/resources/img/split-s.png" alt=""/>
-                </div>
-                <div class="span3">
-                    <div class="text-center">AUTUMN</div>
-                    <img src="${ctx}/resources/img/split-s.png" alt=""/>
-                </div>
-                <div class="span3">
-                    <div class="text-center">WINTER</div>
-                    <img src="${ctx}/resources/img/split-s.png" alt=""/>
-                </div>
+                <c:forEach items="${tuijians}" var="tuijian">
+                    <div class="span3 ">
+                        <div class="text-center">${tuijian.title}</div>
+                        <img src="${ctx}/resources/img/split-s.png" alt=""/>
+                    </div>
+                </c:forEach>
 
             </div>
 
             <!--四副图-->
             <div class="row margin30-t" style="margin-left: 0px">
-                <ul class="thumbnails">
-                    <li class="span3">
-                        <a href="#" class="thumbnail">
-                            <img src="${ctx}/resources/img/p1.png" >
-                        </a>
-                    </li>
-                    <li class="span3">
-                        <a href="#" class="thumbnail">
-                            <img src="${ctx}/resources/img/p2.png" alt="">
-                        </a>
-                    </li>
-                    <li class="span3">
-                        <a href="#" class="thumbnail">
-                            <img src="${ctx}/resources/img/p3.png" alt="">
-                        </a>
-                    </li>
-                    <li class="span3">
-                        <a href="#" class="thumbnail">
-                            <img src="${ctx}/resources/img/p4.png" alt="">
-                        </a>
-                    </li>
+                <ul class="thumbnails picL " id="picLsy">
+                    <c:forEach items="${tuijians}" var="tuijian">
+                        <li class="span3">
+                            <a href="#" class="thumbnail">
+                                <img src="${ctx}/upload/${tuijian.imagepath}" style="height: 300px;">
+                                <div class="text">
+                                    <p>
+                                        ${tuijian.memo}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
 
@@ -88,7 +70,8 @@
             <div class="row margin40-t">
                 <div class="span2"></div>
                 <div class="span8">
-                    <embed src="${videoInfo.filepath}" allowFullScreen="true" quality="high" class="span8" height="450" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+                    <embed src="${videoInfo.filepath}" allowFullScreen="true" quality="high" class="span8" height="450"
+                           align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
                 </div>
                 <div class="span2"></div>
             </div>
@@ -99,6 +82,7 @@
                     <li class="span4">
                         <div class="thumbnail">
                             <img src="${ctx}/resources/img/a1.png" alt="">
+
                             <h2 class="text-center">新闻</h2>
 
                             <div class="text-center pad10">
@@ -113,7 +97,9 @@
                     <li class="span4">
                         <div class="thumbnail">
                             <img src="${ctx}/resources/img/a1.png" alt="">
+
                             <h2 class="text-center">服装资讯</h2>
+
                             <div class="text-center pad10">
                                 <p class="text-left">JEAN PAUL GAULTIER 最后成衣系列大秀明天就要在LE GRAND EREX辉煌上演了……</p>
                                 <button class="btn ">
@@ -125,7 +111,9 @@
                     <li class="span4">
                         <div class="thumbnail">
                             <img src="${ctx}/resources/img/a1.png" alt="">
+
                             <h2 class="text-center">时尚动态</h2>
+
                             <div class="text-center pad10">
                                 <p class="text-left">巴黎时装周第一天一般都会平平淡淡的度过，但今年一众先锋小牌带给了我们太多惊喜……</p>
                                 <button class="btn ">
@@ -145,27 +133,33 @@
         <script>
             (function () {
 
+                $("#picLsy li").hover(function(){
+                    $(this).find('.text:not(:animated)').animate({top:"150px"}, {easing:"easeInOutExpo"}, 60, function(){});
+                },function () {
+                    $(this).find('.text').animate({top:"300px"}, {easing:"easeInOutExpo"}, 50, function(){});
+                });
+
                 // 屏幕滚动事件
-                $(window).scroll(function(){
+                $(window).scroll(function () {
                     var top = $(document).scrollTop();
-                    if(top > 2150) {
+                    if (top > 2150) {
                         $('img.arrowdown').addClass('flip');
-                    }else{
+                    } else {
                         $('img.arrowdown').removeClass('flip');
                     }
                 });
 
                 // 点击向下箭头
-                $('img.arrowdown').on('click', function(e){
+                $('img.arrowdown').on('click', function (e) {
                     e.preventDefault();
                     var $this = $(this);
                     var top = $(document).scrollTop();
-                    if($this.hasClass('flip')) {
+                    if ($this.hasClass('flip')) {
                         $('html').animatescroll({});
-                    }else{
-                        if(top < 1100) {
+                    } else {
+                        if (top < 1100) {
                             $('div#new').animatescroll({});
-                        }else{
+                        } else {
                             $('div#about').animatescroll({});
                         }
                     }
