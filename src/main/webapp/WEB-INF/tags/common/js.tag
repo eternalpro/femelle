@@ -44,5 +44,13 @@
     });
 
 
+    $('.weixin').on('mouseover', function(e){
+        var $this = $(this);
+        $('#'+ $this.data('id')).removeClass('hide').show();
+    });
 
+    $('.weixin').on('mouseleave', function(e){
+        var $this = $(this);
+        $('#'+ $this.data('id')).hide();
+    });
 </script>

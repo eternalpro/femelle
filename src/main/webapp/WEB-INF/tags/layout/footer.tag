@@ -6,8 +6,11 @@
     <div class="row">
         <div class="span12 text-center">
             <h3>关注我们</h3>
-            <a href="#"><img src="${ctx}/resources/img/weibo.png" alt=""/></a>
-            <a href="#"><img src="${ctx}/resources/img/wechat.png" alt=""/></a>
+            <a href="http://weibo.com/alphafemelle"><img src="${ctx}/resources/img/weibo.png" alt=""/></a>
+            <a href="#" class="weixin" data-id="weixin-d1"><img src="${ctx}/resources/img/wechat.png" alt=""/></a>
+            <div>
+                <img id="weixin-d1"  src="${ctx}/resources/img/weixb2.png" alt="" style="margin-top: -350px; margin-left: 30px; display: none;"/>
+            </div>
         </div>
     </div>
 </div>

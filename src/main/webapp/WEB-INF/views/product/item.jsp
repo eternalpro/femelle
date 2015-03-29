@@ -51,17 +51,20 @@
                             </div>
                             <div class="guanzhu">
                                 <p>
-                                    <a href="#">
+                                    <a href="http://weibo.com/alphafemelle">
                                         <img src="${ctx}/resources/img/weibo.png" alt=""/>
                                         &nbsp;微博关注
                                     </a>
                                 </p>
 
                                 <p>
-                                    <a href="#">
+                                    <a href="#" class="weixin" data-id="weixin2">
                                         <img src="${ctx}/resources/img/wechat.png" alt=""/>
                                         &nbsp;微信关注
                                     </a>
+                                    <div >
+                                        <img class="weixinImg" id="weixin2" src="${ctx}/resources/img/weixb2.png" alt="" style="display: none; margin-top: -300px; margin-right: 200px; "/>
+                                    </div>
                                 </p>
                             </div>
                         </div>

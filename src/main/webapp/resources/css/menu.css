@@ -7,7 +7,6 @@ ul.menu {
 }
 
 ul.menu > li {
-    list-style: none;
     float: left;
     line-height: 18px;
     text-align: center;
@@ -49,6 +48,7 @@ ul.s-menu {
     background: #fff;
     top: 20px;
     padding-top: 8px;
+    list-style: none;
     display: none;
     left: -27px;
     line-height: 40px;

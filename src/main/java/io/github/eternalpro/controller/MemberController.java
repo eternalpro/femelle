@@ -22,4 +22,8 @@ public class MemberController extends Controller {
 
         setAttr("faqInfo", faqInfo);
     }
+
+    public void signup(){
+
+    }
 }
