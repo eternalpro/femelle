@@ -12,11 +12,14 @@
 
                 <c:forEach items="${products}" var="product">
                     <div class="col-xs-6 col-md-3">
-                        <a href="${ctx}/upload/${product.imagepath}" class="thumbnail fancybox">
+                        <a title="${product.title}" href="${ctx}/upload/${product.imagepath}"
+                           class="thumbnail fancybox">
                             <img src="${ctx}/upload/${product.imagepath}" alt="...">
                         </a>
-                        <a href="${ctx}/admin/season/removeProduct/${product.id}" class="fancybox-close detail-remove"
+                        <a href="${ctx}/admin/season/removeProduct/${product.id}"
+                           class="fancybox-close detail-remove"
                            style="margin-right: 20px;" title="Close"></a>
+
                     </div>
                 </c:forEach>
             </div>
@@ -29,7 +32,7 @@
     </form>
 </div>
 <script>
-    (function(){
+    (function () {
         $('a.detail-remove').on('click', function (e) {
             e.preventDefault();
             var $this = $(this);
