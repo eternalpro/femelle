@@ -45,4 +45,12 @@
     if(warning) {
         toastr.warning(warning);
     }
+
+    $('a.delete-data').on('click', function(e){
+        e.preventDefault();
+        var $this = $(this);
+        if(confirm("确认删除吗？")) {
+            location.href = $this.attr('href');
+        }
+    });
 </script>

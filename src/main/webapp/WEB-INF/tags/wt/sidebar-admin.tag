@@ -52,10 +52,10 @@
                 </ul>
             </li>
 
-            <li class="">
-                <a href="#">
+            <li class="<c:if test='${menu eq "album"}'>active </c:if>">
+                <a href="${ctx}/admin/album">
                     <i class="icon-wallet"></i>
-                    <span class="title">画册管理</span>
+                    <span class="title">搭配图集</span>
                 </a>
             </li>
 
