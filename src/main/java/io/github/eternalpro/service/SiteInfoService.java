@@ -104,7 +104,12 @@ public class SiteInfoService {
     public void saveTmall(SiteInfo tmallInfo) {
         saveSite(tmallInfo, Module.MODULE_TMALL);
     }
-
+    public void saveCallusInfo(SiteInfo callusInfo) {
+        saveSite(callusInfo, Module.MODULE_CALLUS);
+    }
+    public void saveFaqInfo(SiteInfo faqInfo) {
+        saveSite(faqInfo, Module.MODULE_FAQ);
+    }
     private void saveSite(SiteInfo siteInfo, String module) {
         SiteInfo siteInfoDB = SiteInfo.findByModule(module);
         if (siteInfoDB != null) {
@@ -115,4 +120,6 @@ public class SiteInfoService {
             siteInfo.set("module", module).save();
         }
     }
+
+
 }

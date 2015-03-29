@@ -104,10 +104,10 @@
                         <a style="border-right: 0px;" href="#">会员中心</a>
                         <ul class="s-menu s6">
                             <li>
-                                <a href="${ctx}/brand">联系我们</a>
+                                <a href="${ctx}/member/callus">联系我们</a>
                             </li>
                             <li>
-                                <a href="${ctx}/brand/shop">常见问题</a>
+                                <a href="${ctx}/member/faq">常见问题</a>
                             </li>
                             <li class="lastItem">
                                 <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">会员注册</a>

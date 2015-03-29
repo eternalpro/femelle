@@ -13,4 +13,8 @@ public class Module {
     public static final String MODULE_HOME_VIDEO = "MODULE_HOME_VIDEO";     // 首页视频
     public static final String MODULE_VIP = "MODULE_VIP";                   // 唯品会
     public static final String MODULE_TMALL = "MODULE_TMALL";               // 天猫
+    public static final String MODULE_CALLUS = "MODULE_CALLUS";             // 联系我们
+    public static final String MODULE_FAQ = "MODULE_FAQ";                   // 常见问题
+
+
 }

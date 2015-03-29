@@ -35,6 +35,8 @@ public class AdminController extends Controller {
         SiteInfo videoInfo = SiteInfo.findByModule(Module.MODULE_HOME_VIDEO);
         SiteInfo vipInfo = SiteInfo.findByModule(Module.MODULE_VIP);
         SiteInfo tmallInfo = SiteInfo.findByModule(Module.MODULE_TMALL);
+        SiteInfo callusInfo = SiteInfo.findByModule(Module.MODULE_CALLUS);
+        SiteInfo faqInfo = SiteInfo.findByModule(Module.MODULE_FAQ);
 
         setAttr("modulenewsInfo", modulenewsInfo);
         setAttr("moduleaboutInfo", moduleaboutInfo);
@@ -45,6 +47,8 @@ public class AdminController extends Controller {
         setAttr("videoInfo", videoInfo);
         setAttr("vipInfo", vipInfo);
         setAttr("tmallInfo", tmallInfo);
+        setAttr("callusInfo", callusInfo);
+        setAttr("faqInfo", faqInfo);
 
         setAttr("success", getAttr("success"));
     }

@@ -118,9 +118,7 @@ public class AdminSiteController extends Controller {
         renderText(vipInfo.getStr("filepath"));
     }
 
-    /**
-     * 保存新闻资讯信息
-     */
+
     public void saveTmall(){
         UploadFile uploadFile = getFile("tmallFile");
         SiteInfo tmallInfo = getModel(SiteInfo.class, "tmallInfo");
@@ -128,5 +126,18 @@ public class AdminSiteController extends Controller {
             tmallInfo.set("filepath", uploadFile.getFileName());
         siteInfoService.saveTmall(tmallInfo);
         renderText(tmallInfo.getStr("filepath"));
+    }
+
+
+    public void saveCallus(){
+        SiteInfo callusInfo = getModel(SiteInfo.class, "callusInfo");
+        siteInfoService.saveCallusInfo(callusInfo);
+        renderNull();
+    }
+
+    public void saveFaq(){
+        SiteInfo faqInfo = getModel(SiteInfo.class, "faqInfo");
+        siteInfoService.saveFaqInfo(faqInfo);
+        renderNull();
     }
 }

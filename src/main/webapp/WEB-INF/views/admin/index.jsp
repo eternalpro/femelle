@@ -29,6 +29,10 @@
                                     <a href="#tab_2" data-toggle="tab" aria-expanded="false">
                                         合作支持 </a>
                                 </li>
+                                <li class="">
+                                    <a href="#tab_3" data-toggle="tab" aria-expanded="false">
+                                        会员中心 </a>
+                                </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">
@@ -39,6 +43,9 @@
                                 </div>
                                 <div class="tab-pane" id="tab_2">
                                     <jsp:include page="tab/tab_2.jsp"/>
+                                </div>
+                                <div class="tab-pane" id="tab_3">
+                                    <jsp:include page="tab/tab_3.jsp"/>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +138,29 @@
                         toastr.error('系统错误，请联系管理员！');
                     }
                 });
+                /**
+                 * 保存 联系我们
+                 */
+                $('#callusForm').ajaxForm({
+                    success: function (data) {
+                        toastr.success("保存成功！");
+                    },
+                    error: function (data) {
+                        toastr.error('系统错误，请联系管理员！');
+                    }
+                });
 
+                /**
+                 * 保存 联系我们
+                 */
+                $('#faqForm').ajaxForm({
+                    success: function (data) {
+                        toastr.success("保存成功！");
+                    },
+                    error: function (data) {
+                        toastr.error('系统错误，请联系管理员！');
+                    }
+                });
             })();
         </script>
     </jsp:attribute>
