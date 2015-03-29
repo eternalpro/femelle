@@ -3,9 +3,11 @@ package io.github.eternalpro.controller;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
+import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
 import io.github.eternalpro.model.Tuijian;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,6 +21,21 @@ public class SeasonController extends Controller {
         Integer id = getParaToInt();
         List<Product> products = Product.findTuijianProduct(id);
         setAttr("tuijianId", id);
+        setAttr("products", products);
     }
 
+
+    public void loadGalleria(){
+        Integer productId = getParaToInt();
+        Product product = Product.dao.findById(productId);
+        List<Image> images = Image.dao.getImagesByProduct(productId);
+
+        List<String> imagePaths = new ArrayList<>();
+        imagePaths.add(product.getStr("imagepath"));
+        for (Image image : images) {
+            imagePaths.add(image.getStr("path"));
+        }
+
+        setAttr("imagePaths", imagePaths);
+    }
 }

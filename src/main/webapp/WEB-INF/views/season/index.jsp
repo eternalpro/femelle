@@ -10,10 +10,15 @@
                     <jsp:include page="sidebar.jsp"/>
                 </div>
                 <div class="bg-right">
-                    <ul class="thumbnails">
+
+                    <div id="gc">
+
+                    </div>
+
+                    <ul class="thumbnails margin20-t">
                         <c:forEach items="${products}" var="product">
                             <li style="width: 180px; height: 270px;">
-                                <a href="${ctx}/product/item/${product.id}" class="thumbnail">
+                                <a href="#" class="thumbnail image-a" data-id="${product.id}">
                                     <img src="${ctx}/upload/${product.imagepath}" style="height: 250px;"/>
                                 </a>
 
@@ -31,6 +36,19 @@
         <script>
             (function () {
 
+                var loadGA = function(id) {
+                    $.get('${ctx}/season/loadGalleria/' + id, function(data){
+                        $('#gc').html(data);
+                    });
+                };
+
+                $('a.image-a').on('click', function(e){
+                    e.preventDefault();
+                    var $this = $(this);
+                    var id = $this.data('id');
+                    loadGA(id);
+                });
+                loadGA('${products[0].id}');
             })();
         </script>
     </jsp:attribute>

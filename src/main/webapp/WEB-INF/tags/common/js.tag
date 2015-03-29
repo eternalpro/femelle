@@ -7,6 +7,9 @@
 <script src="${ctx}/resources/mt/fancybox/jquery.fancybox.js"></script>
 <script src="${ctx}/resources/js/menu.js"></script>
 <script src="${ctx}/resources/mt/js/toastr.js" type="text/javascript"></script>
+<script src="${ctx}/resources/galleria/galleria-1.4.2.min.js"></script>
+<script src="${ctx}/resources/galleria/themes/classic/galleria.classic.min.js"></script>
+
 <script>
     ctx = '${ctx}';
     var success = '${FLASH_SUCCESS}';
@@ -18,16 +21,18 @@
         "debug": false,
         "positionClass": "toast-top-center"
     };
-    if(success) {
+    if (success) {
         toastr.success(success);
     }
-    if(error) {
+    if (error) {
         toastr.error(error);
     }
-    if(info) {
+    if (info) {
         toastr.info(info);
     }
-    if(warning) {
+    if (warning) {
         toastr.warning(warning);
     }
+
+
 </script>
