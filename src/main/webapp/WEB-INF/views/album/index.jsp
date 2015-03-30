@@ -66,7 +66,9 @@
                     var id = $this.data('id');
                     loadGA(id);
                 });
+
                 loadGA('${current}');
+
             })();
         </script>
     </jsp:attribute>

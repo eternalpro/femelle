@@ -32,13 +32,7 @@
             $('.xialaguang').removeClass('navhover');
         });
 
-        var height = $('.bg-right').height()-75;
-
-        if(height < 400) {
-            $('ul.bg-sidebar').height(300);
-        }else{
-            $('ul.bg-sidebar').height(height);
-        }
+       
 
     </script>
     <jsp:invoke fragment="js"/>
