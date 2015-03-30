@@ -5,4 +5,6 @@ package io.github.eternalpro.constant;
  */
 public class SiteCST {
     public static final String SESSION_LOGIN = "session_login";
+
+    public static final String MEMBER_SESSION_LOGIN = "member_session_login";
 }

@@ -15,37 +15,28 @@
                     </div>
                     <div class="info acontent">
                         <h4 class="margin200-l">欢迎加入法米拉的优雅世界</h4>
-                        <form class="margin30-t" action="${ctx}/member/saveMember" method="post">
+                        <form class="margin30-t" action="${ctx}/member/loginMember" method="post">
                             <div class="span4">
                                 <fieldset>
                                     <label>账号</label>
                                     <input type="text" name="member.username">
                                     <label for="password">密码</label>
                                     <input type="password" name="member.password" id="password">
-                                    <label for="password_confirm">确认密码</label>
-                                    <input type="password" name="password_confirm" id="password_confirm">
-                                    <label for="address">联系地址</label>
-                                    <input type="text" name="member.address" id="address">
-                                    <div style="margin-left: 147px">
-                                        <button type="submit" class="btn btn-primary pad20-l pad20-r">注册</button>
+
+                                    <div style="margin-left: 70px">
+                                        <button type="submit" class="btn pad20-l pad20-r">登录</button>
                                     </div>
                                 </fieldset>
                             </div>
+
+
                             <div class="span4">
-                                <fieldset>
-                                    <label>电话</label>
-                                    <input type="text" name="member.tel">
-                                    <label>生日</label>
-                                    <input type="text" name="member.birth">
-                                    <label>性别</label>
-                                    <select name="member.gender">
-                                        <option value="男">男</option>
-                                        <option value="女">女</option>
-                                    </select>
-                                    <label>邮箱</label>
-                                    <input type="text" name="member.email">
+                                <div style="border-left: 1px solid #c6c6c6; height: 200px; float: left"></div>
+                                <fieldset class="text-center">
+                                    <p>新用户</p>
+                                    <p>创建新账号，让购物更简单</p>
                                     <div>
-                                        <button type="reset" class="btn pad20-l pad20-r">取消</button>
+                                        <a href="${ctx}/member/signup" class="btn pad20-l pad20-r">创建新用户</a>
                                     </div>
                                 </fieldset>
                             </div>

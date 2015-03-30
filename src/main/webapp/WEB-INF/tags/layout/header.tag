@@ -7,8 +7,16 @@
                 <a class="logo pull-left" href="${ctx}"></a>
 
                 <div class="pull-right margin40-t">
-                    <a href="#" class="color-black"><strong>登录</strong></a> |
-                    <a href="#" class="color-black"><strong>注册</strong></a>
+                    <c:choose>
+                        <c:when test="${!empty(member_session_login)}">
+                            欢迎回来： ${member_session_login.username} |
+                            <a href="${ctx}/member/logout" class="color-black"><strong>退出</strong></a>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="${ctx}/member/login" class="color-black"><strong>登录</strong></a> |
+                            <a href="${ctx}/member/signup" class="color-black"><strong>注册</strong></a>
+                        </c:otherwise>
+                    </c:choose>
                 </div>
             </div>
         </div>
