@@ -3,12 +3,7 @@
 <layout:front>
     <jsp:attribute name="css">
         <style>
-            .bg-sidebar{
-                height: 1105px;
-            }
-            .bg-right {
-                height: 1185px;
-            }
+
         </style>
     </jsp:attribute>
     <jsp:attribute name="main">
@@ -60,6 +55,11 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
+            var height = $('.bg-right').height();
+            if(height < 500)
+                height = 500;
+            $('.bg-sidebar').css('height', height);
+            $('.bg-right').css('height', height + 78);
             (function () {
 
                 var loadGA = function(id) {

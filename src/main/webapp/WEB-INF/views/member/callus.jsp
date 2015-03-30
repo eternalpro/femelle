@@ -22,8 +22,11 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            (function () {
-            })();
+            var height = $('.bg-right').height();
+            if(height < 500)
+                height = 500;
+            $('.bg-sidebar').css('height', height);
+            $('.bg-right').css('height', height + 78);
         </script>
     </jsp:attribute>
 </layout:front>

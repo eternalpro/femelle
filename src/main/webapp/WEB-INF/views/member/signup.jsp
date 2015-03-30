@@ -3,12 +3,7 @@
 <layout:front>
     <jsp:attribute name="css">
         <style>
-            .bg-sidebar{
-                height: 505px;
-            }
-            .bg-right {
-                height: 585px;
-            }
+
         </style>
     </jsp:attribute>
     <jsp:attribute name="main">
@@ -37,7 +32,7 @@
                                     <label for="address">联系地址</label>
                                     <input type="text" name="member.address" id="address">
                                     <div style="margin-left: 147px">
-                                        <button type="submit" class="btn btn-primary pad20-l pad20-r">注册</button>
+                                        <button type="submit" class="btn pad20-l pad20-r">注册</button>
                                     </div>
                                 </fieldset>
                             </div>
@@ -68,8 +63,11 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            (function () {
-            })();
+            var height = $('.bg-right').height();
+            if(height < 500)
+                height = 500;
+            $('.bg-sidebar').css('height', height);
+            $('.bg-right').css('height', height + 78);
         </script>
     </jsp:attribute>
 </layout:front>
