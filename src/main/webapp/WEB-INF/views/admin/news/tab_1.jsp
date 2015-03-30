@@ -23,6 +23,11 @@
                 <input type="text" class="form-control" name="newsInfo.title" id="title" placeholder="前台模块显示名称" value="${newsInfo.title}">
             </div>
             <div class="form-group">
+                <label for="content">内容：</label>
+                <input type="text" class="form-control" name="newsInfo.content" id="content" value="${newsInfo.content}"
+                       placeholder="前台模块显示描述">
+            </div>
+            <div class="form-group">
                 <label for="newsFile">图片：</label>
                 <input type="file" name="newsFile" id="newsFile" class="form-control"/>
             </div>

@@ -9,19 +9,19 @@
     <jsp:attribute name="main">
         <div class="bg">
             <div class="container" style="width: 1124px;">
+                <c:if test="${products.totalPage > 1}">
+                    <div class="arrow-left" style="">
+                        <a href="${ctx}/season/${tuijianId}-${products.pageNumber eq 1 ? 1 : products.pageNumber - 1}">
+                            <img src="${ctx}/resources/img/arrow-left.png" alt=""/>
+                        </a>
+                    </div>
 
-                <div class="arrow-left" style="">
-                    <a href="${ctx}/season/${tuijianId}-${products.pageNumber eq 1 ? 1 : products.pageNumber - 1}">
-                        <img src="${ctx}/resources/img/arrow-left.png" alt=""/>
-                    </a>
-                </div>
-
-                <div class="arrow-right" style="">
-                    <a href="${ctx}/season/${tuijianId}-${products.pageNumber eq products.totalPage? products.pageNumber: products.pageNumber + 1}">
-                        <img src="${ctx}/resources/img/arrow-right.png" alt=""/>
-                    </a>
-                </div>
-
+                    <div class="arrow-right" style="">
+                        <a href="${ctx}/season/${tuijianId}-${products.pageNumber eq products.totalPage? products.pageNumber: products.pageNumber + 1}">
+                            <img src="${ctx}/resources/img/arrow-right.png" alt=""/>
+                        </a>
+                    </div>
+                </c:if>
                 <div class="bg-left">
                     <h4>当季推荐</h4>
                     <c:set var="sidemenu" value="${tuijianId}" scope="request"/>
@@ -56,19 +56,19 @@
     <jsp:attribute name="js">
         <script>
             var height = $('.bg-right').height();
-            if(height < 500)
+            if (height < 500)
                 height = 500;
             $('.bg-sidebar').css('height', height);
             $('.bg-right').css('height', height + 78);
             (function () {
 
-                var loadGA = function(id) {
-                    $.get('${ctx}/season/loadGalleria/' + id, function(data){
+                var loadGA = function (id) {
+                    $.get('${ctx}/season/loadGalleria/' + id, function (data) {
                         $('#gc').html(data);
                     });
                 };
 
-                $('a.image-a').on('click', function(e){
+                $('a.image-a').on('click', function (e) {
                     e.preventDefault();
                     var $this = $(this);
                     var id = $this.data('id');

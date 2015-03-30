@@ -23,6 +23,11 @@
                        placeholder="前台模块显示名称">
             </div>
             <div class="form-group">
+                <label for="content">内容：</label>
+                <input type="text" class="form-control" name="fashionInfo.content" id="content" value="${fashionInfo.content}"
+                       placeholder="前台模块显示描述">
+            </div>
+            <div class="form-group">
                 <label for="fashionFile">图片：</label>
                 <input type="file" name="fashionFile" id="fashionFile" class="form-control"/>
             </div>
