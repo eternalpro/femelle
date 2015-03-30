@@ -91,7 +91,8 @@ public class AdminSiteController extends Controller {
         if(uploadFile != null)
             fashionInfo.set("filepath", uploadFile.getFileName());
         siteInfoService.saveFashion(fashionInfo);
-        renderText(fashionInfo.getStr("filepath"));
+        FlashMessageUtils.setSuccessMessage(this, "保存成功！");
+        redirect("/admin/news");
     }
 
     /**
@@ -103,7 +104,8 @@ public class AdminSiteController extends Controller {
         if(uploadFile != null)
             newsInfo.set("filepath", uploadFile.getFileName());
         siteInfoService.saveNews(newsInfo);
-        renderText(newsInfo.getStr("filepath"));
+        FlashMessageUtils.setSuccessMessage(this, "保存成功！");
+        redirect("/admin/news?#tab_1");
     }
 
     /**
