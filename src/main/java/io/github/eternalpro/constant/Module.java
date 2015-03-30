@@ -15,6 +15,7 @@ public class Module {
     public static final String MODULE_TMALL = "MODULE_TMALL";               // 天猫
     public static final String MODULE_CALLUS = "MODULE_CALLUS";             // 联系我们
     public static final String MODULE_FAQ = "MODULE_FAQ";                   // 常见问题
+    public static final String MODULE_ALBUM = "MODULE_ALBUM";               // 搭配图集
 
 
 }

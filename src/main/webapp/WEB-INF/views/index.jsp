@@ -127,17 +127,17 @@
                 <ul class="thumbnails">
                     <li class="span4">
                         <div class="thumbnail">
-                            <img src="${ctx}/resources/img/a1.png" alt="">
+                            <img src="${ctx}/upload/${albumInfo.filepath}" alt="">
 
-                            <h2 class="text-center">搭配图集</h2>
+                            <h2 class="text-center">${albumInfo.title}</h2>
 
                             <div class="text-center pad10">
                                 <p class="text-left">
-                                    在siteinfo里保存“搭配图集信息”
+                                    ${albumInfo.content}
                                 </p>
-                                <button class="btn ">
+                                <a class="btn " href="${ctx}/album">
                                     <strong class="margin30-l margin30-r">more+</strong>
-                                </button>
+                                </a>
                             </div>
 
                         </div>
@@ -154,9 +154,9 @@
                                 <p class="text-left">
                                     ${fashionInfo.content}
                                 </p>
-                                <button class="btn ">
+                                <a class="btn " href="${ctx}/news">
                                     <strong class="margin30-l margin30-r">more+</strong>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -171,9 +171,9 @@
                                 <p class="text-left">
                                     ${newsInfo.content}
                                 </p>
-                                <button class="btn ">
+                                <a class="btn " href="${ctx}/news/news">
                                     <strong class="margin30-l margin30-r">more+</strong>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </li>

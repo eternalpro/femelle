@@ -140,4 +140,17 @@ public class AdminSiteController extends Controller {
         siteInfoService.saveFaqInfo(faqInfo);
         renderNull();
     }
+
+    /**
+     * 保存新闻资讯信息
+     */
+    public void saveAlbum(){
+        UploadFile uploadFile = getFile("albumFile");
+        SiteInfo albumInfo = getModel(SiteInfo.class, "albumInfo");
+        if(uploadFile != null)
+            albumInfo.set("filepath", uploadFile.getFileName());
+        siteInfoService.saveAlbum(albumInfo);
+        FlashMessageUtils.setSuccessMessage(this, "保存成功！");
+        redirect("/admin/album");
+    }
 }

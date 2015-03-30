@@ -4,9 +4,11 @@ import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
 import com.jfinal.upload.UploadFile;
+import io.github.eternalpro.constant.Module;
 import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.Album;
 import io.github.eternalpro.model.Image;
+import io.github.eternalpro.model.SiteInfo;
 import io.github.eternalpro.model.Tuijian;
 
 import java.util.List;
@@ -19,8 +21,10 @@ public class AdminAlbumController extends Controller {
 
     @ActionKey("/admin/album")
     public void index() {
+        SiteInfo albumInfo = SiteInfo.findByModule(Module.MODULE_ALBUM);
         List<Album> albums = Album.dao.find("select * from album");
         setAttr("albums", albums);
+        setAttr("albumInfo", albumInfo);
     }
 
     public void edit() {

@@ -35,8 +35,13 @@ public class IndexController extends Controller{
 
         SiteInfo modulenewsInfo = SiteInfo.findByModule(Module.MODULE_NEWS);
         setAttr("modulenewsInfo", modulenewsInfo);
+
+
         SiteInfo moduleaboutInfo = SiteInfo.findByModule(Module.MODULE_ABOUT);
         setAttr("moduleaboutInfo", moduleaboutInfo);
+
+        SiteInfo albumInfo = SiteInfo.findByModule(Module.MODULE_ALBUM);
+        setAttr("albumInfo", albumInfo);
 
 
         List<Album> albums = Album.findTuijianY();

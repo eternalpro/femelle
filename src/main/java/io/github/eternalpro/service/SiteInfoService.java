@@ -110,6 +110,10 @@ public class SiteInfoService {
     public void saveFaqInfo(SiteInfo faqInfo) {
         saveSite(faqInfo, Module.MODULE_FAQ);
     }
+
+    public void saveAlbum(SiteInfo albumInfo) {
+        saveSite(albumInfo, Module.MODULE_ALBUM);
+    }
     private void saveSite(SiteInfo siteInfo, String module) {
         SiteInfo siteInfoDB = SiteInfo.findByModule(module);
         if (siteInfoDB != null) {
@@ -120,6 +124,7 @@ public class SiteInfoService {
             siteInfo.set("module", module).save();
         }
     }
+
 
 
 }

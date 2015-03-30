@@ -16,6 +16,44 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="portlet light">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-gift font-green-sharp"></i>
+                            <span class="caption-subject font-green-sharp bold uppercase">设置首页信息</span>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <form class="form-inline" id="albumForm" method="post" action="${ctx}/admin/site/saveAlbum" enctype="multipart/form-data">
+                            <div class="form-group <c:if test='${empty(albumInfo.filepath)}'> hide </c:if>">
+                                <a href="${ctx}/upload/${albumInfo.filepath}" class="fancybox">
+                                    <img src="${ctx}/upload/${albumInfo.filepath}" alt="" id="fashionImg"
+                                         style="width: 60px; height: 40px;"/>
+                                </a>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="title">标题：</label>
+                                <input type="text" class="form-control" name="albumInfo.title" id="title" value="${albumInfo.title}"
+                                       placeholder="前台模块显示名称">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="content">内容：</label>
+                                <input type="text" class="form-control" name="albumInfo.content" id="content" value="${albumInfo.content}"
+                                       placeholder="前台模块显示描述">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="albumFile">图片：</label>
+                                <input type="file" name="albumFile" id="albumFile" class="form-control"/>
+                            </div>
+                            <button type="submit" id="saveAlbum" class="btn btn-primary">保存</button>
+                        </form>
+                    </div>
+                </div>
+
                 <!-- content -->
                 <div class="row">
                     <c:forEach items="${albums}" var="album">
