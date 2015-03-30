@@ -69,9 +69,11 @@ public class MemberController extends Controller {
             FlashMessageUtils.setErrorMessage(this, "密码不能为空！");
             redirect("/member/login");
         } else {
-
             Member dbMember = Member.findByUsername(member.getStr("username"));
-            if (EncryptionKit.md5Encrypt(member.getStr("password")).equals(dbMember.getStr("password"))) {
+            if (dbMember == null) {
+                FlashMessageUtils.setErrorMessage(this, "用户不存在！");
+                redirect("/member/login");
+            } else if (EncryptionKit.md5Encrypt(member.getStr("password")).equals(dbMember.getStr("password"))) {
                 FlashMessageUtils.setSuccessMessage(this, "登录成功！");
                 getSession().setAttribute(SiteCST.MEMBER_SESSION_LOGIN, dbMember);
                 FlashMessageUtils.setSuccessMessage(this, "登录成功！");
@@ -83,7 +85,7 @@ public class MemberController extends Controller {
         }
     }
 
-    public void logout(){
+    public void logout() {
         getSession().removeAttribute(SiteCST.MEMBER_SESSION_LOGIN);
         FlashMessageUtils.setSuccessMessage(this, "退出成功！");
         redirect("/");

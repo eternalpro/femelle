@@ -59,8 +59,8 @@
                 </a>
             </li>
 
-            <li class="">
-                <a href="#">
+            <li class="<c:if test='${menu eq "member"}'>active </c:if>">
+                <a href="${ctx}/admin/member">
                     <i class="icon-users"></i>
                     <span class="title">会员管理</span>
                 </a>
