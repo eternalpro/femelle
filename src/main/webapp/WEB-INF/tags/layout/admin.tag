@@ -51,7 +51,10 @@
 
             $('#setPassword').on('click', function(e){
                 e.preventDefault();
-
+                var $this = $(this);
+                $.get($this.attr('href'), function(data){
+                    $('div.modal').html(data).modal('show');
+                });
             });
 
         })();

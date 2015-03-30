@@ -104,7 +104,7 @@ public class AdminController extends Controller {
         String confirm_password = getPara("confirm_password");
 
         System dbPassword = System.dao.findByKey("password");
-        if(!dbPassword.getStr("value").equals(oldPassword)) {
+        if(!dbPassword.getStr("value").equals(EncryptionKit.md5Encrypt(oldPassword))) {
             renderText("原密码错误！");
         }else if(!password.equals(confirm_password)) {
             renderText("两次密码不一致！");
