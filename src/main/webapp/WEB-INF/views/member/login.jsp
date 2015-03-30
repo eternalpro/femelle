@@ -19,7 +19,7 @@
                     <c:set var="sidemenu" value="signup" scope="request"/>
                     <jsp:include page="sidebar.jsp"/>
                 </div>
-                <div class="bg-right margin100-b">
+                <div class="bg-right">
                     <div class="info atitle">
                         会员注册
                     </div>

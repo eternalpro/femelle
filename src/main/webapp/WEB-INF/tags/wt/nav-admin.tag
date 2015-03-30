@@ -27,11 +27,10 @@
                            data-close-others="true">
 						<span class="username username-hide-on-mobile">
 						管理员 </span>
-                            <img alt="" class="img-circle" src="${ctx}/resources/mt/img/avatar9.jpg"/>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>
-                                <a href="extra_profile.html">
+                                <a href="${ctx}/admin/password" id="setPassword">
                                     <i class="icon-user"></i> 密码设置 </a>
                             </li>
 

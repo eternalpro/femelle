@@ -64,7 +64,7 @@
                     success: function (data) {
                         toastr.success("保存成功！");
                         $('#brandImage').attr("src", "${ctx}/upload/" + data)
-                        $('#brandImage').closest('div').removeClass('hide');
+                        $('#brandImage').closest('a.fancybox').attr('href', "${ctx}/upload/" + data);
                     },
                     error: function (data) {
                         toastr.error('系统错误，请联系管理员！');
@@ -79,6 +79,7 @@
                         toastr.success("保存成功！");
                         $('#joinusImage').attr("src", "${ctx}/upload/" + data)
                         $('#joinusImage').closest('div').removeClass('hide');
+                        $('#joinusImage').closest('a.fancybox').attr('href', "${ctx}/upload/" + data);
                     },
                     error: function (data) {
                         toastr.error('系统错误，请联系管理员！');
@@ -93,6 +94,7 @@
                         toastr.success("保存成功！");
                         $('#affiliateImage').attr("src", "${ctx}/upload/" + data)
                         $('#affiliateImage').closest('div').removeClass('hide');
+                        $('#affiliateImage').closest('a.fancybox').attr('href', "${ctx}/upload/" + data);
                     },
                     error: function (data) {
                         toastr.error('系统错误，请联系管理员！');
@@ -106,6 +108,7 @@
                         toastr.success("保存成功！");
                         $('#shopImage').attr("src", "${ctx}/upload/" + data)
                         $('#shopImage').closest('div').removeClass('hide');
+                        $('#shopImage').closest('a.fancybox').attr('href', "${ctx}/upload/" + data);
                     },
                     error: function (data) {
                         toastr.error('系统错误，请联系管理员！');
@@ -119,6 +122,7 @@
                         toastr.success("保存成功！");
                         $('#vipImage').attr("src", "${ctx}/upload/" + data)
                         $('#vipImage').closest('div').removeClass('hide');
+                        $('#vipImage').closest('a.fancybox').attr('href', "${ctx}/upload/" + data);
                     },
                     error: function (data) {
                         toastr.error('系统错误，请联系管理员！');
@@ -133,6 +137,7 @@
                         toastr.success("保存成功！");
                         $('#tmallImage').attr("src", "${ctx}/upload/" + data)
                         $('#tmallImage').closest('div').removeClass('hide');
+                        $('#tmallImage').closest('a.fancybox').attr('href', "${ctx}/upload/" + data);
                     },
                     error: function (data) {
                         toastr.error('系统错误，请联系管理员！');

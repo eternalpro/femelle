@@ -94,5 +94,25 @@ public class AdminController extends Controller {
         redirect("/admin/login");
     }
 
+    public void password(){
 
+    }
+
+    public void savePassword(){
+        String oldPassword = getPara("old_password");
+        String password = getPara("password");
+        String confirm_password = getPara("confirm_password");
+
+        System dbPassword = System.dao.findByKey("password");
+        if(!dbPassword.getStr("value").equals(oldPassword)) {
+            renderText("原密码错误！");
+        }else if(!password.equals(confirm_password)) {
+            renderText("两次密码不一致！");
+        }else if(StringUtils.isBlank(password)){
+            renderText("密码不能为空！");
+        }else {
+            dbPassword.set("value", EncryptionKit.md5Encrypt(password)).update();
+            renderText("修改成功！");
+        }
+    }
 }

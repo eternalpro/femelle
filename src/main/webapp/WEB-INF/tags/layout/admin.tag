@@ -48,6 +48,12 @@
                     }
                 });
             });
+
+            $('#setPassword').on('click', function(e){
+                e.preventDefault();
+
+            });
+
         })();
     </script>
 </body>
