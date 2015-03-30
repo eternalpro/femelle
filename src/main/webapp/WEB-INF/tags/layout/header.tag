@@ -110,7 +110,7 @@
                                 <a href="${ctx}/member/faq">常见问题</a>
                             </li>
                             <li class="lastItem">
-                                <a style="border-bottom: 0px;" href="${ctx}/brand/affiliate">会员注册</a>
+                                <a style="border-bottom: 0px;" href="${ctx}/member/signup">会员注册</a>
                             </li>
                         </ul>
                     </li>

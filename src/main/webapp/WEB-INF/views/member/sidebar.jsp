@@ -3,5 +3,5 @@
 <ul class="bg-sidebar">
     <li <c:if test="${sidemenu eq 'callus'}">class="active"</c:if> ><a href="${ctx}/member/callus">&nbsp;&nbsp;● 联系我们</a></li>
     <li <c:if test="${sidemenu eq 'faq'}">class="active"</c:if> ><a href="${ctx}/member/faq">&nbsp;&nbsp;● 常见问题</a></li>
-    <li <c:if test="${sidemenu eq 'faq'}">class="active"</c:if> ><a href="${ctx}/member/signup">&nbsp;&nbsp;● 会员注册</a></li>
+    <li <c:if test="${sidemenu eq 'signup'}">class="active"</c:if> ><a href="${ctx}/member/signup">&nbsp;&nbsp;● 会员注册</a></li>
 </ul>
