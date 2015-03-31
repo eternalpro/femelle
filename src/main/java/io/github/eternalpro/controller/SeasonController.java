@@ -22,7 +22,9 @@ public class SeasonController extends Controller {
         Integer id = getParaToInt(0);
         int page = getParaToInt(1, 1);
         Page<Product> products = Product.pageTuijianProduct(id, page, 8);
-
+        if (id == null && products != null && products.getList().size() > 0) {  // 默认显示第一个
+            id = products.getList().get(0).getInt("id");
+        }
         setAttr("tuijianId", id);
         setAttr("products", products);
     }

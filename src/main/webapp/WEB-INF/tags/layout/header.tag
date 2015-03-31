@@ -27,7 +27,7 @@
             <div class="span12">
                 <ul class="menu">
                     <li class="active" data-target="s1">
-                        <a href="#">品牌介绍</a>
+                        <a href="${ctx}/brand">品牌介绍</a>
                         <ul class="s-menu s1">
                             <li>
                                 <a href="${ctx}/brand">品牌故事</a>
@@ -44,7 +44,7 @@
                         </ul>
                     </li>
                     <li data-target="s2">
-                        <a href="#">当季推荐</a>
+                        <a href="${ctx}/season/">当季推荐</a>
                         <ul class="s-menu s2">
                             <c:forEach items="${tuijians}" var="tuijian">
                             <li>
@@ -55,7 +55,7 @@
                         </ul>
                     </li>
                     <li data-target="s3">
-                        <a href="#">产品介绍</a>
+                        <a href="${ctx}/product/大衣">产品介绍</a>
                         <ul class="s-menu s3">
                             <li>
                                 <a href="${ctx}/product/大衣">大衣</a>
@@ -81,7 +81,7 @@
                         </ul>
                     </li>
                     <li data-target="s4">
-                        <a href="#">最新资讯</a>
+                        <a href="${ctx}/news">最新资讯</a>
                         <ul class="s-menu s4">
                             <li>
                                 <a href="${ctx}/news">时尚动态</a>
@@ -98,7 +98,7 @@
                         </ul>
                     </li>
                     <li data-target="s5">
-                        <a href="#">合作支持</a>
+                        <a href="${ctx}/support/vip">合作支持</a>
                         <ul class="s-menu s5">
                             <li>
                                 <a href="${ctx}/support/vip">唯品会</a>
@@ -109,7 +109,7 @@
                         </ul>
                     </li>
                     <li data-target="s6">
-                        <a style="border-right: 0px;" href="#">会员中心</a>
+                        <a style="border-right: 0px;" href="${ctx}/member/callus">会员中心</a>
                         <ul class="s-menu s6">
                             <li>
                                 <a href="${ctx}/member/callus">联系我们</a>
