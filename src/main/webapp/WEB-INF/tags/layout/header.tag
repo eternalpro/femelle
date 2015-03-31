@@ -1,5 +1,6 @@
 <%@tag pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
+<%@ attribute name="menu" description="菜单" required="false" %>
 <div class="fix-header">
     <div class="container margin20-t">
         <div class="row">
@@ -10,11 +11,11 @@
                     <c:choose>
                         <c:when test="${!empty(member_session_login)}">
                             欢迎回来： ${member_session_login.username} |
-                            <a href="${ctx}/member/logout" class="color-black"><strong>退出</strong></a>
+                            <a href="${ctx}/member/logout" class="color-black"><span>退出</span></a>
                         </c:when>
                         <c:otherwise>
-                            <a href="${ctx}/member/login" class="color-black"><strong>登录</strong></a> |
-                            <a href="${ctx}/member/signup" class="color-black"><strong>注册</strong></a>
+                            <a href="${ctx}/member/login" class="color-black"><span>登录</span></a> |
+                            <a href="${ctx}/member/signup" class="color-black"><span>注册</span></a>
                         </c:otherwise>
                     </c:choose>
                 </div>
@@ -26,7 +27,7 @@
         <div class="row">
             <div class="span12">
                 <ul class="menu">
-                    <li class="active" data-target="s1">
+                    <li class="<c:if test="${menu eq 'brand'}">active</c:if>" data-target="s1">
                         <a href="${ctx}/brand">品牌介绍</a>
                         <ul class="s-menu s1">
                             <li>

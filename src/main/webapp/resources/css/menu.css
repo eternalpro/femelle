@@ -35,7 +35,6 @@ ul.menu > li > a {
     padding-top: 2px;
     padding-bottom: 2px;
     border-right: 1px solid #D7D7D7;
-    font-weight: bold;
     display: inline-block;
     font-size: 16px;
 }
@@ -57,7 +56,6 @@ ul.s-menu {
 }
 
 ul.s-menu > li > a {
-    font-weight: bold;
     color: #6C6C6C;
     display: inline-block;
     text-decoration: none;

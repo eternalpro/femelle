@@ -221,8 +221,9 @@ img.arrowdown {
 }
 
 .bg-left h4 {
-    margin-left: 118px;
+    margin-left: 140px;
     margin-top: 25px;
+    font-weight: normal;
 }
 
 .bg-right {
@@ -270,29 +271,31 @@ img.arrowdown {
     width: 149px;
     padding-top: 20px;
     padding-left: 50px;
-
+    font-size: 16px;
 
 }
 
 .bg-sidebar li {
+    margin-left: -20px;
     list-style: none;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
 }
 
 .bg-sidebar li a {
     color: #6C6C6C;
     text-decoration: none;
+    letter-spacing: 5px;
 }
 
 .bg-sidebar li:hover {
     background: #ffffff;
-    width: 168px;
+    width: 188px;
 }
 
 .bg-sidebar .active {
     background: #ffffff;
-    width: 168px;
+    width: 188px;
 }
 
 .nav-shop a {
@@ -390,6 +393,11 @@ div.arrow-left {
     filter: alpha(opacity=20);
 }
 
+div.arrow-left > a >img {
+    width: 30px;
+    height: 60px;
+}
+
 div.arrow-right {
     position: fixed;
     display: none;
@@ -397,6 +405,11 @@ div.arrow-right {
     right: 50px;
     opacity: 0.2;
     filter: alpha(opacity=20);
+}
+
+div.arrow-right > a >img {
+    width: 30px;
+    height: 60px;
 }
 
 .picL {
