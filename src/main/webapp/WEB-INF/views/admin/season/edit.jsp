@@ -21,7 +21,7 @@
                     <input type="text" name="tuijian.title" class="form-control" id="title" placeholder="填写名称" value="${tuijian.title}">
                 </div>
                 <div class="form-group">
-                    <label for="title">说明 <small class="text-danger">请简要描述，不要超过100个字</small></label>
+                    <label for="title">说明 <small class="text-danger">请简要描述，不要超过14个字</small></label>
                     <textarea name="tuijian.memo" class="form-control" id="memo">${tuijian.memo}</textarea>
                 </div>
             </div>

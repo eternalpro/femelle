@@ -20,12 +20,12 @@
             <div class="form-group">
                 <label for="title">标题：</label>
                 <input type="text" class="form-control" name="fashionInfo.title" id="title" value="${fashionInfo.title}"
-                       placeholder="前台模块显示名称">
+                       placeholder="请输入10个字以内">
             </div>
             <div class="form-group">
                 <label for="content">内容：</label>
                 <input type="text" class="form-control" name="fashionInfo.content" id="content" value="${fashionInfo.content}"
-                       placeholder="前台模块显示描述">
+                       placeholder="请输入39~57个字">
             </div>
             <div class="form-group">
                 <label for="fashionFile">图片：</label>

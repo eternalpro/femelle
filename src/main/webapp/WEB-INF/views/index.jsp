@@ -60,7 +60,7 @@
                     <img src="${ctx}/resources/img/left.png" alt=""/>
                 </div>
                 <div class="span4 text-center">
-                    <h3>${modulenewsInfo.title}</h3>
+                    <div class="module-title">${modulenewsInfo.title}</div>
                 </div>
                 <div class="span4 margin20-t">
                     <img src="${ctx}/resources/img/right.png" alt=""/>
@@ -85,7 +85,6 @@
                         <li class="span3">
                             <a href="${ctx}/season/${tuijian.id}" class="thumbnail">
                                 <img src="${ctx}/upload/${tuijian.imagepath}" style="height: 300px;">
-
                                 <div class="text">
                                     <p>
                                             ${tuijian.memo}
@@ -106,21 +105,24 @@
                     <img src="${ctx}/resources/img/left.png" alt=""/>
                 </div>
                 <div class="span4 text-center">
-                    <h3>${moduleaboutInfo.title}</h3>
+                    <div class="module-title">${moduleaboutInfo.title}</div>
                 </div>
                 <div class="span4 margin20-t">
                     <img src="${ctx}/resources/img/right.png" alt=""/>
                 </div>
             </div>
 
-            <div class="row margin40-t">
-                <div class="span2"></div>
-                <div class="span8">
-                    <embed src="${videoInfo.filepath}" allowFullScreen="true" quality="high" class="span8" height="450"
-                           align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+            <c:if test="${!empty(videoInfo) && !empty(videoInfo.filepath)}">
+                <div class="row margin40-t">
+                    <div class="span2"></div>
+                    <div class="span8">
+                        <embed src="${videoInfo.filepath}" allowFullScreen="true" quality="high" class="span8"
+                               height="450"
+                               align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+                    </div>
+                    <div class="span2"></div>
                 </div>
-                <div class="span2"></div>
-            </div>
+            </c:if>
 
             <!-- 新闻热点 -->
             <div class="row margin40-t" style="margin-left: 0px">
@@ -129,14 +131,14 @@
                         <div class="thumbnail">
                             <img src="${ctx}/upload/${albumInfo.filepath}" alt="">
 
-                            <h2 class="text-center">${albumInfo.title}</h2>
+                            <h4 class="text-center">${albumInfo.title}</h4>
 
                             <div class="text-center pad10">
                                 <p class="text-left">
-                                    ${albumInfo.content}
+                                        ${albumInfo.content}
                                 </p>
                                 <a class="btn " href="${ctx}/album">
-                                    <strong class="margin30-l margin30-r">more+</strong>
+                                    <span class="margin30-l margin30-r">more+</span>
                                 </a>
                             </div>
 
@@ -146,16 +148,16 @@
                         <div class="thumbnail">
                             <img src="${ctx}/upload/${fashionInfo.filepath}" alt="">
 
-                            <h2 class="text-center">
-                                ${fashionInfo.title}
-                            </h2>
+                            <h4 class="text-center">
+                                    ${fashionInfo.title}
+                            </h4>
 
                             <div class="text-center pad10">
                                 <p class="text-left">
-                                    ${fashionInfo.content}
+                                        ${fashionInfo.content}
                                 </p>
                                 <a class="btn " href="${ctx}/news">
-                                    <strong class="margin30-l margin30-r">more+</strong>
+                                    <span class="margin30-l margin30-r">more+</span>
                                 </a>
                             </div>
                         </div>
@@ -164,15 +166,16 @@
                         <div class="thumbnail">
                             <img src="${ctx}/upload/${newsInfo.filepath}" alt="">
 
-                            <h2 class="text-center">
-                                ${newsInfo.title}
-                            </h2>
+                            <h4 class="text-center">
+                                    ${newsInfo.title}
+                            </h4>
+
                             <div class="text-center pad10">
                                 <p class="text-left">
-                                    ${newsInfo.content}
+                                        ${newsInfo.content}
                                 </p>
                                 <a class="btn " href="${ctx}/news/news">
-                                    <strong class="margin30-l margin30-r">more+</strong>
+                                    <span class="margin30-l margin30-r">more+</span>
                                 </a>
                             </div>
                         </div>
@@ -190,7 +193,7 @@
                 $(".rslides").responsiveSlides();
 
                 $("#picLsy li").hover(function () {
-                    $(this).find('.text:not(:animated)').animate({top: "150px"}, {easing: "easeInOutExpo"}, 60, function () {
+                    $(this).find('.text:not(:animated)').animate({top: "260px"}, {easing: "easeInOutExpo"}, 60, function () {
                     });
                 }, function () {
                     $(this).find('.text').animate({top: "300px"}, {easing: "easeInOutExpo"}, 50, function () {

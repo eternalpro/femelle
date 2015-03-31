@@ -3203,7 +3203,7 @@ button.close {
   *margin-left: .3em;
   font-size: 14px;
   line-height: 20px;
-  color: #000;
+  color: #6c6c6c;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -3215,7 +3215,7 @@ button.close {
   background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
   background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;*/
-  border: 2px solid #000;
+  border: 1px solid #c6c6c6;
 
   /*border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*/
   -webkit-border-radius: 0px;

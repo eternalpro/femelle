@@ -37,7 +37,7 @@ ul.menu > li > a {
     border-right: 1px solid #D7D7D7;
     font-weight: bold;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 ul.s-menu {
@@ -73,3 +73,4 @@ ul.s-menu > li > a:hover {
     color: #FE7700;
 
 }
+
