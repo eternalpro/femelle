@@ -11,6 +11,7 @@ import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
 import io.github.eternalpro.model.Recommend;
+import io.github.eternalpro.model.Tuijian;
 import io.github.eternalpro.service.ProductService;
 
 import java.io.UnsupportedEncodingException;
@@ -52,6 +53,17 @@ public class AdminProductController extends Controller {
         productService.saveProduct(product);
         FlashMessageUtils.setSuccessMessage(this, "保存成功！");
         redirect("/admin/product");
+    }
+
+    public void delete() {
+        Integer id = getParaToInt();
+        if (Product.findRecommend(id).size() > 0) {
+            FlashMessageUtils.setWarningMessage(this, "请先将搭配移除，再进行删除操作！");
+        }else{
+            FlashMessageUtils.setSuccessMessage(this, "删除成功！");
+            Product.dao.deleteById(id);
+        }
+        redirect("/admin/product/");
     }
 
     public void type() throws UnsupportedEncodingException {

@@ -1,6 +1,6 @@
 <%@tag pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
-<%@ attribute name="menu" description="菜单" required="false" %>
+<%@ attribute name="menu" description="菜单" required="true" %>
 <div class="fix-header">
     <div class="container margin20-t">
         <div class="row">
