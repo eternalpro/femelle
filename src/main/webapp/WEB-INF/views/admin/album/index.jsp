@@ -22,10 +22,14 @@
                         <div class="caption">
                             <i class="fa fa-gift font-green-sharp"></i>
                             <span class="caption-subject font-green-sharp bold uppercase">设置首页信息</span>
+                            <small class="text-danger">
+                                这是首页下方第一张图,建议尺寸1920*1080
+                            </small>
                         </div>
                     </div>
                     <div class="portlet-body">
-                        <form class="form-inline" id="albumForm" method="post" action="${ctx}/admin/site/saveAlbum" enctype="multipart/form-data">
+                        <form class="form-inline" id="albumForm" method="post" action="${ctx}/admin/site/saveAlbum"
+                              enctype="multipart/form-data">
                             <div class="form-group <c:if test='${empty(albumInfo.filepath)}'> hide </c:if>">
                                 <a href="${ctx}/upload/${albumInfo.filepath}" class="fancybox">
                                     <img src="${ctx}/upload/${albumInfo.filepath}" alt="" id="fashionImg"
@@ -35,13 +39,15 @@
 
                             <div class="form-group">
                                 <label for="title">标题：</label>
-                                <input type="text" class="form-control" name="albumInfo.title" id="title" value="${albumInfo.title}"
+                                <input type="text" class="form-control" name="albumInfo.title" id="title"
+                                       value="${albumInfo.title}"
                                        placeholder="请输入10个字以内">
                             </div>
 
                             <div class="form-group">
                                 <label for="content">内容：</label>
-                                <input type="text" class="form-control" name="albumInfo.content" id="content" value="${albumInfo.content}"
+                                <input type="text" class="form-control" name="albumInfo.content" id="content"
+                                       value="${albumInfo.content}"
                                        placeholder="请输入39~57个字">
                             </div>
 
@@ -59,16 +65,21 @@
                     <c:forEach items="${albums}" var="album">
                         <div class="col-sm-12 col-md-3">
                             <div class="portlet light">
-                                <img src="${ctx}/upload/${album.imagepath}" style="width: 100%; height: 150px; display: block;" />
+                                <a href="${ctx}/admin/album/viewItem/${album.id}" class="add-modal">
+                                    <img src="${ctx}/upload/${album.imagepath}"
+                                         style="width: 100%; height: 100px; display: block;"/>
+                                </a>
 
                                 <div class="caption">
                                     <p>
                                         <strong>${album.title}</strong>
+
                                     <p>
 
                                     <div class="btn-group btn-group-sm btn-group-solid">
-                                        <a href="${ctx}/admin/album/viewItem/${album.id}" class="btn green add-modal">
-                                            <i class="icon-eye"></i>
+
+                                        <a href="${ctx}/admin/album/edit/${album.id}" class="add-modal btn blue">
+                                            <i class="fa fa-edit"></i>
                                         </a>
                                         <a href="${ctx}/admin/album/addItem/${album.id}" class="btn blue add-modal">
                                             <i class="fa fa-plus"></i>
@@ -91,8 +102,8 @@
                                                 </a>
                                             </c:otherwise>
                                         </c:choose>
+
                                     </div>
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +117,7 @@
         <script>
             (function () {
 
-                new uploadPreview({ UpBtn: "albumFile", ImgShow: "fashionImg" });
+                new uploadPreview({UpBtn: "albumFile", ImgShow: "fashionImg"});
 
                 $('.add-modal').on('click', function (e) {
                     e.preventDefault();

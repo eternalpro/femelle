@@ -134,10 +134,10 @@
                             <h5 class="text-center">${albumInfo.title}</h5>
 
                             <div class="text-center pad10">
-                                <p class="text-left">
+                                <p class="text-center">
                                         ${albumInfo.content}
                                 </p>
-                                <a class="btn " href="${ctx}/album">
+                                <a class="btn margin10-t" href="${ctx}/album">
                                     <span class="margin30-l margin30-r">more+</span>
                                 </a>
                             </div>
@@ -153,10 +153,10 @@
                             </h5>
 
                             <div class="text-center pad10">
-                                <p class="text-left">
+                                <p class="text-center">
                                         ${fashionInfo.content}
                                 </p>
-                                <a class="btn " href="${ctx}/news">
+                                <a class="btn margin10-t" href="${ctx}/news">
                                     <span class="margin30-l margin30-r">more+</span>
                                 </a>
                             </div>
@@ -171,10 +171,10 @@
                             </h5>
 
                             <div class="text-center pad10">
-                                <p class="text-left">
+                                <p class="text-center">
                                         ${newsInfo.content}
                                 </p>
-                                <a class="btn " href="${ctx}/news/news">
+                                <a class="btn margin10-t" href="${ctx}/news/news">
                                     <span class="margin30-l margin30-r">more+</span>
                                 </a>
                             </div>

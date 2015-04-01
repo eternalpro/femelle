@@ -14,6 +14,9 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>展示图片：</label>
+                    <small class="text-danger">
+                        首页中部四张图，推荐尺寸950*1550
+                    </small>
                     <input type="file" class="form-control" name="tuijianFile">
                 </div>
                 <div class="form-group">
@@ -21,7 +24,7 @@
                     <input type="text" name="tuijian.title" class="form-control" id="title" placeholder="填写名称" value="${tuijian.title}">
                 </div>
                 <div class="form-group">
-                    <label for="title">说明 <small class="text-danger">请简要描述，不要超过24个字</small></label>
+                    <label for="title">说明 <small class="text-danger">请简要描述，24个汉字</small></label>
                     <textarea name="tuijian.memo" class="form-control" id="memo">${tuijian.memo}</textarea>
                 </div>
             </div>

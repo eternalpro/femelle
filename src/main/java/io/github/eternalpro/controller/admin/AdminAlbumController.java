@@ -28,7 +28,7 @@ public class AdminAlbumController extends Controller {
     }
 
     public void edit() {
-        Integer id = getParaToInt(1);
+        Integer id = getParaToInt();
         if (id != null && id != 0) {
             setAttr("album", Album.dao.findById(id));
         }

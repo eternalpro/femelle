@@ -7,7 +7,12 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">添加细节图</h4>
+                <h4 class="modal-title">
+                    添加细节图
+                    <small class="text-danger">
+                        推荐图片尺寸为1080*1920
+                    </small>
+                </h4>
             </div>
             <div class="modal-body">
 

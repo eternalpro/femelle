@@ -13,7 +13,7 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>封面图片：</label>
+                    <label>封面图片：</label><small class="text-danger">首页轮播图，建议尺寸：1920*1080</small>
                     <input type="file" class="form-control" name="albumFile">
                 </div>
                 <div class="form-group">

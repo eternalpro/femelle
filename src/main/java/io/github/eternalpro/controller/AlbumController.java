@@ -20,7 +20,7 @@ public class AlbumController extends Controller {
     @ActionKey("/album")
     public void index() {
         int page = getParaToInt(0, 1);
-        Page<Album> albumPage = Album.dao.paginate(page, 8, "select *", "from album");
+        Page<Album> albumPage = Album.dao.paginate(page, 6, "select *", "from album");
 
         Integer albumId = getParaToInt("albumId");
 

@@ -4,11 +4,11 @@
     <jsp:attribute name="css">
         <style>
             .bg-sidebar {
-                height: 1105px;
+                height: 905px;
             }
 
             .bg-right {
-                height: 1185px;
+                height: 970px;
             }
         </style>
     </jsp:attribute>
@@ -48,11 +48,11 @@
                         </div>
                     </div>
 
-                    <ul class="thumbnails margin20-t">
+                    <ul class="thumbnails margin20-t product-items">
                         <c:forEach items="${albumPage.list}" var="product">
-                            <li style="width: 180px; height: 270px;">
+                            <li style="width: 255px; height: 170px;">
                                 <a href="#" class="thumbnail image-a" data-id="${product.id}">
-                                    <img src="${ctx}/upload/${product.imagepath}" style="height: 250px;"/>
+                                    <img src="${ctx}/upload/${product.imagepath}" style="height: 150px;"/>
                                 </a>
                             </li>
                         </c:forEach>
