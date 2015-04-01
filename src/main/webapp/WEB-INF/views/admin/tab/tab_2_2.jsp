@@ -6,7 +6,7 @@
         <div class="form-body">
             <div class="form-group">
                 <label>展示图片：</label>
-                <input type="file" class="form-control" name="tmallFile">
+                <input type="file" class="form-control" name="tmallFile" id="tmallFile">
             </div>
 
             <div class="form-group <c:if test='${empty(tmallInfo.filepath)}'> hide </c:if>">

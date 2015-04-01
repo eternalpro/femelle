@@ -57,6 +57,14 @@
     <jsp:attribute name="js">
         <script>
             (function () {
+
+                new uploadPreview({ UpBtn: "brandFile", ImgShow: "brandImage" });
+                new uploadPreview({ UpBtn: "joinusFile", ImgShow: "joinusImage" });
+                new uploadPreview({ UpBtn: "affiliateFile", ImgShow: "affiliateImage" });
+                new uploadPreview({ UpBtn: "shopFile", ImgShow: "shopImage" });
+                new uploadPreview({ UpBtn: "vipFile", ImgShow: "vipImage" });
+                new uploadPreview({ UpBtn: "tmallFile", ImgShow: "tmallImage" });
+
                 /**
                  * 保存品牌故事
                  */
@@ -100,6 +108,7 @@
                         toastr.error('系统错误，请联系管理员！');
                     }
                 });
+
                 /**
                  * 保存 门店位置
                  */
@@ -114,6 +123,8 @@
                         toastr.error('系统错误，请联系管理员！');
                     }
                 });
+
+
                 /**
                  * 保存 唯品会
                  */
@@ -128,6 +139,8 @@
                         toastr.error('系统错误，请联系管理员！');
                     }
                 });
+
+
 
                 /**
                  * 保存 天猫

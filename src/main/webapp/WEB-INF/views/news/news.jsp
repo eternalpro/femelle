@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
-<layout:front>
+<layout:front menu="news">
     <jsp:attribute name="css">
         <style>
 

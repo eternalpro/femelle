@@ -44,7 +44,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li data-target="s2">
+                    <li class="<c:if test="${menu eq 'season'}">active</c:if>" data-target="s2">
                         <a href="${ctx}/season/">当季推荐</a>
                         <ul class="s-menu s2">
                             <c:forEach items="${tuijians}" var="tuijian">
@@ -55,7 +55,7 @@
 
                         </ul>
                     </li>
-                    <li data-target="s3">
+                    <li class="<c:if test="${menu eq 'product'}">active</c:if>" data-target="s3">
                         <a href="${ctx}/product/大衣">产品介绍</a>
                         <ul class="s-menu s3">
                             <li>
@@ -81,7 +81,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li data-target="s4">
+                    <li class="<c:if test="${menu eq 'news'}">active</c:if>" data-target="s4">
                         <a href="${ctx}/news">最新资讯</a>
                         <ul class="s-menu s4">
                             <li>
@@ -98,7 +98,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li data-target="s5">
+                    <li class="<c:if test="${menu eq 'support'}">active</c:if>" data-target="s5">
                         <a href="${ctx}/support/vip">合作支持</a>
                         <ul class="s-menu s5">
                             <li>
@@ -109,7 +109,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li data-target="s6">
+                    <li class="<c:if test="${menu eq 'member'}">active</c:if>" data-target="s6">
                         <a style="border-right: 0px;" href="${ctx}/member/callus">会员中心</a>
                         <ul class="s-menu s6">
                             <li>

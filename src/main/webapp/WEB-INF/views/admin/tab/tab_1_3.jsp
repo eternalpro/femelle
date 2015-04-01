@@ -6,14 +6,12 @@
         <div class="form-body">
             <div class="form-group">
                 <label>展示图片：</label>
-                <input type="file" class="form-control" name="joinusFile">
+                <input type="file" class="form-control" name="joinusFile" id="joinusFile">
             </div>
             <div class="form-group <c:if test='${empty(joinusInfo.filepath)}'> hide </c:if>">
                 <label>预览：</label>
-                <a class="fancybox" href="${ctx}/upload/${joinusInfo.filepath}">
                     <img id="joinusImage" class="form-control" src="${ctx}/upload/${joinusInfo.filepath}" alt=""
                      style="width: 80px; height: 60px;"/>
-                </a>
             </div>
             <div class="form-group">
                 <label>标题：</label>

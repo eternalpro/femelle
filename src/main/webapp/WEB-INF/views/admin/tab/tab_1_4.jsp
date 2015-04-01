@@ -7,14 +7,12 @@
         <div class="form-body">
             <div class="form-group">
                 <label>展示图片：</label>
-                <input type="file" class="form-control" name="affiliateFile">
+                <input type="file" class="form-control" name="affiliateFile" id="affiliateFile">
             </div>
             <div class="form-group <c:if test='${empty(affiliateInfo.filepath)}'> hide </c:if>">
                 <label>预览：</label>
-                <a class="fancybox" href="${ctx}/upload/${affiliateInfo.filepath}">
                     <img id="affiliateImage" class="form-control" src="${ctx}/upload/${affiliateInfo.filepath}" alt=""
                      style="width: 80px; height: 60px;"/>
-                </a>
             </div>
             <div class="form-group">
                 <label>标题：</label>

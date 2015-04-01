@@ -23,8 +23,8 @@
                        placeholder="请输入10个字以内">
             </div>
             <div class="form-group">
-                <label for="content">内容：</label>
-                <input type="text" class="form-control" name="fashionInfo.content" id="content" value="${fashionInfo.content}"
+                <label>内容：</label>
+                <input type="text" class="form-control" name="fashionInfo.content" value="${fashionInfo.content}"
                        placeholder="请输入39~57个字">
             </div>
             <div class="form-group">

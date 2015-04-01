@@ -6,14 +6,14 @@
         <div class="form-body">
             <div class="form-group">
                 <label>展示图片：</label>
-                <input type="file" class="form-control" name="shopFile">
+                <input type="file" class="form-control" name="shopFile" id="shopFile">
             </div>
             <div class="form-group <c:if test='${empty(shopInfo.filepath)}'> hide </c:if>">
                 <label>预览：</label>
-                <a class="fancybox" href="${ctx}/upload/${shopInfo.filepath}">
+
                     <img id="shopImage" class="form-control" src="${ctx}/upload/${shopInfo.filepath}" alt=""
                      style="width: 80px; height: 60px;"/>
-                </a>
+
             </div>
             <div class="form-group">
                 <label>标题：</label>

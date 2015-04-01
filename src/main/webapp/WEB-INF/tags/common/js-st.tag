@@ -22,6 +22,7 @@
 <script src="${ctx}/resources/mt/js/toastr.js" type="text/javascript"></script>
 <script src="${ctx}/resources/mt/js/jquery.form.js" type="text/javascript"></script>
 <script src="${ctx}/resources/mt/fancybox/jquery.fancybox.js"></script>
+<script src="${ctx}/resources/js/uploadPreview.min.js"></script>
 <script>
     ctx = '${ctx}';
     var success = '${FLASH_SUCCESS}';

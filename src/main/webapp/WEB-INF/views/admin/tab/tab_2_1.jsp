@@ -6,15 +6,13 @@
         <div class="form-body">
             <div class="form-group">
                 <label>展示图片：</label>
-                <input type="file" class="form-control" name="vipFile">
+                <input type="file" class="form-control" name="vipFile" id="vipFile">
             </div>
 
             <div class="form-group <c:if test='${empty(vipInfo.filepath)}'> hide </c:if>">
                 <label>预览：</label>
-                <a class="fancybox" href="${ctx}/upload/${vipInfo.filepath}">
                     <img id="vipImage" class="form-control" src="${ctx}/upload/${vipInfo.filepath}" alt=""
                          style="width: 80px; height: 60px;"/>
-                </a>
             </div>
 
             <%--<div class="form-group">

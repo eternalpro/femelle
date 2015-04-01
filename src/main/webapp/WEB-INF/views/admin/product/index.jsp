@@ -101,7 +101,7 @@
                                                                         <i class="fa fa-edit"></i>
                                                                     </a>
                                                                     <a href="${ctx}/admin/product/delete/${product.id}"
-                                                                       class="btn btn-icon-only btn-circle red product-delete">
+                                                                       class="btn btn-icon-only btn-circle red product-delete delete-data">
                                                                         <i class="fa fa-remove"></i>
                                                                     </a>
                                                                 </td>
