@@ -74,16 +74,8 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            $(document).ready(function(){
-                $('.bg-sidebar').css('height', '${fn:length(images)}' * 450);
-                $('.bg-right').css('height', '${fn:length(images)}' * 450 + 78);
+            loadPage();
 
-                var height = $('.bg-right').height();
-                if(height < 500)
-                    height = 500;
-                $('.bg-sidebar').css('height', height);
-                $('.bg-right').css('height', height + 78);
-            });
         </script>
     </jsp:attribute>
 </layout:front>

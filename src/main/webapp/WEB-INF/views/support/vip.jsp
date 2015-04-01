@@ -2,9 +2,6 @@
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <layout:front menu="support">
     <jsp:attribute name="css">
-        <style>
-
-        </style>
     </jsp:attribute>
     <jsp:attribute name="main">
         <div class="bg">
@@ -15,13 +12,11 @@
                     <jsp:include page="sidebar.jsp"/>
                 </div>
                 <div class="bg-right">
+
                     <img class="image" src="${ctx}/upload/${vipInfo.filepath}" alt="" />
-                    <%--<div class="info atitle">
-                        ${vipInfo.title}
-                    </div>--%>
+
                     <div class="info acontent-noborder">
                         ${vipInfo.content}
-
                         <div class="link text-left margin200-l margin50-b margin50-t">
                             <p>唯品: <a href="http://brand.vip.com/alphafemelle" target="_blank">http://brand.vip.com/alphafemelle</a></p>
                             <p>天猫: <a href="http://famila.tmall.com" target="_blank">http://famila.tmall.com</a></p>
@@ -31,13 +26,11 @@
             </div>
         </div>
     </jsp:attribute>
+
     <jsp:attribute name="js">
         <script>
-            var height = $('.bg-right').height();
-            if(height < 500)
-                height = 500;
-            $('.bg-sidebar').css('height', height);
-            $('.bg-right').css('height', height + 78);
+            loadPage();
+
         </script>
     </jsp:attribute>
 </layout:front>

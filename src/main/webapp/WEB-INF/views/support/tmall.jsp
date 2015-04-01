@@ -2,9 +2,6 @@
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <layout:front menu="support">
     <jsp:attribute name="css">
-        <style>
-
-        </style>
     </jsp:attribute>
     <jsp:attribute name="main">
         <div class="bg">
@@ -33,11 +30,8 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            var height = $('.bg-right').height();
-            if(height < 500)
-                height = 500;
-            $('.bg-sidebar').css('height', height);
-            $('.bg-right').css('height', height + 78);
+            loadPage();
+
         </script>
     </jsp:attribute>
 </layout:front>
