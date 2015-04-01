@@ -22,7 +22,7 @@
                                 <div class="form-body">
                                     <div class="form-group">
                                         <label>描述文字：</label>
-                                        <textarea class="form-control editor" name="provisionInfo.content" style="height:200px;">${provisionInfo.content}</textarea>
+                                        <textarea class="form-control editor" name="provisionInfo.content" style="height:400px;">${provisionInfo.content}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-actions">

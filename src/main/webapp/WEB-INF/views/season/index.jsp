@@ -3,7 +3,13 @@
 <layout:front menu="season">
     <jsp:attribute name="css">
         <style>
+            .bg-sidebar {
+                height: 1213px;
+            }
 
+            .bg-right {
+                height: 1280px;
+            }
         </style>
     </jsp:attribute>
     <jsp:attribute name="main">
@@ -55,8 +61,6 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            loadPage();
-
             (function () {
 
                 var loadGA = function (id) {

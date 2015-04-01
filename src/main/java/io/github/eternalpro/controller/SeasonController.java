@@ -7,6 +7,7 @@ import com.jfinal.plugin.activerecord.Page;
 import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
 import io.github.eternalpro.model.Tuijian;
+import io.github.eternalpro.service.ProductService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,15 +17,21 @@ import java.util.List;
  */
 @ControllerBind(controllerKey = "/season", viewPath = "season")
 public class SeasonController extends Controller {
+    private ProductService productService = new ProductService();
 
     @ActionKey("/season")
     public void index() {
         Integer id = getParaToInt(0);
+
+        if(id == null){
+            List<Tuijian> tuijians = Tuijian.findTuijianY();
+            if(tuijians != null && tuijians.size() > 0)
+                id = tuijians.get(0).getInt("id");
+        }
+
         int page = getParaToInt(1, 1);
         Page<Product> products = Product.pageTuijianProduct(id, page, 8);
-        if (id == null && products != null && products.getList().size() > 0) {  // 默认显示第一个
-            id = products.getList().get(0).getInt("id");
-        }
+        productService.addFirstImageToProduct(products.getList());
         setAttr("tuijianId", id);
         setAttr("products", products);
     }
@@ -32,11 +39,9 @@ public class SeasonController extends Controller {
 
     public void loadGalleria(){
         Integer productId = getParaToInt();
-        Product product = Product.dao.findById(productId);
         List<Image> images = Image.dao.getImagesByProduct(productId);
 
         List<String> imagePaths = new ArrayList<>();
-        imagePaths.add(product.getStr("imagepath"));
         for (Image image : images) {
             imagePaths.add(image.getStr("path"));
         }

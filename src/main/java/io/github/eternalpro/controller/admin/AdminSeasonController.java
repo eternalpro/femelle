@@ -9,6 +9,7 @@ import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.News;
 import io.github.eternalpro.model.Product;
 import io.github.eternalpro.model.Tuijian;
+import io.github.eternalpro.service.ProductService;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ import java.util.List;
  */
 @ControllerBind(controllerKey = "/admin/season", viewPath = "admin/season")
 public class AdminSeasonController extends Controller{
+    private ProductService productService = new ProductService();
 
     @ActionKey("/admin/season")
     public void index() {
@@ -62,6 +64,9 @@ public class AdminSeasonController extends Controller{
     public void addProduct(){
         Integer id = getParaToInt();
         List<Product> products = Product.findNoTuijianProduct(id);
+
+        productService.addFirstImageToProduct(products);
+
         setAttr("products", products);
         setAttr("tuijianId", id);
     }
@@ -76,6 +81,7 @@ public class AdminSeasonController extends Controller{
     public void viewProduct(){
         Integer id = getParaToInt();
         List<Product> products = Product.findTuijianProduct(id);
+        productService.addFirstImageToProduct(products);
         setAttr("products", products);
     }
 

@@ -59,7 +59,7 @@
                                                             <tr>
                                                                 <td>
                                                                     <a href="${ctx}/upload/${tuijian.imagepath}" class="fancybox">
-                                                                        <img src="${ctx}/upload/${tuijian.imagepath}" alt="" style="width:40px; height: 40px;;"/>
+                                                                        <img src="${ctx}/upload/${tuijian.imagepath}" alt="" style="height: 60px;;"/>
                                                                     </a>
                                                                 </td>
                                                                 <td>
