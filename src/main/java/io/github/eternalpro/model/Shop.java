@@ -1,5 +1,6 @@
 package io.github.eternalpro.model;
 
+import com.jfinal.ext.plugin.tablebind.TableBind;
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Model;
 import com.jfinal.plugin.activerecord.Record;
@@ -10,6 +11,7 @@ import java.util.List;
  * 门店
  * Created by gefangshuai on 2015-03-24-0024.
  */
+@TableBind(tableName = "shop", pkName = "id")
 public class Shop extends Model<Shop>{
     public static final Shop dao = new Shop();
 

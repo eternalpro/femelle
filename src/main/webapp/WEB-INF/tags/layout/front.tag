@@ -7,8 +7,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>法米拉服装服饰官网</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name=“robots” CONTENT=“INDEX,FOLLOW”>
+    <meta name="keywords" content="法米拉,服装,服饰,女装,femelle" />
+    <meta name="description" content="法米拉,服装,服饰,女装,femelle" />
     <common:css></common:css>
     <jsp:invoke fragment="css"/>
 </head>

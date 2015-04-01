@@ -1,5 +1,6 @@
 package io.github.eternalpro.model;
 
+import com.jfinal.ext.plugin.tablebind.TableBind;
 import com.jfinal.plugin.activerecord.Model;
 import com.jfinal.plugin.activerecord.Page;
 
@@ -8,6 +9,7 @@ import java.util.List;
 /**
  * Created by gefangshuai on 2015/3/27.
  */
+@TableBind(tableName = "product", pkName = "id")
 public class Product extends Model<Product> {
     public static final Product dao = new Product();
 
