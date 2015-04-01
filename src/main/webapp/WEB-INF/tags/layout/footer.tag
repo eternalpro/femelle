@@ -1,16 +1,41 @@
 <%@tag pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <!-- footer -->
-<div class="border margin50-t margin50-b"></div>
-<div class="container margin50-b footer">
-    <div class="row">
-        <div class="span12 text-center">
-            <h3 style="font-size: 16px; font-weight: normal;;">关注我们</h3>
-            <a href="http://weibo.com/alphafemelle"><img src="${ctx}/resources/img/weibo.png" alt=""/></a>
-            <a href="#" class="weixin" data-id="weixin-d1"><img src="${ctx}/resources/img/wechat.png" alt=""/></a>
+<div class="border margin50-t"></div>
+<div class="footer">
+    <div class="container" style="width: 980px;">
+        <div class="margin40-t pull-left">
             <div>
-                <img id="weixin-d1"  src="${ctx}/resources/img/weixb2.png" alt="" style="margin-top: -350px; margin-left: 30px; display: none;"/>
+                北京法米拉服饰有限公司（版权所有）
+            |
+                地址：北京昌平区小口镇天通苑三区2号楼25门
             </div>
+            <div>
+                ICP 备案号： 京ICP备13045393号-1
+            </div>
+        </div>
+        <div class="margin40-t pull-right  text-right">
+            <p style="font-size: 23px;">
+                alpha-femelle.com
+            </p>
+
+            <p>
+                电话：101-61760758
+            </p>
+
+            <p>
+                传真：101-61760758
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <div class="container" style="width: 1124px;">
+        <div class="margin10-t pull-left">
+            &copy;2015 alpha-femelle.com
+        </div>
+        <div class="margin10-t pull-right">
         </div>
     </div>
 </div>

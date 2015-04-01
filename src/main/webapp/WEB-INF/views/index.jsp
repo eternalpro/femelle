@@ -193,7 +193,7 @@
                 $(".rslides").responsiveSlides();
 
                 $("#picLsy li").hover(function () {
-                    $(this).find('.text:not(:animated)').animate({top: "260px"}, {easing: "easeInOutExpo"}, 60, function () {
+                    $(this).find('.text:not(:animated)').animate({top: "245px"}, {easing: "easeInOutExpo"}, 60, function () {
                     });
                 }, function () {
                     $(this).find('.text').animate({top: "300px"}, {easing: "easeInOutExpo"}, 50, function () {

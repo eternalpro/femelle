@@ -88,6 +88,10 @@ img.arrowdown {
     margin-left: 10px;
 }
 
+.margin10-t {
+    margin-top: 10px;
+}
+
 .margin10-b {
     margin-bottom: 10px;
 }
@@ -433,16 +437,16 @@ div.arrow-right > a >img {
 }
 
 .picL li .text {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    background: #000;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    background: #fff;
     position: absolute;
-    color: #ffffff;
+    color: #000;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 200px;
-    height: 40px;
+    width: 180px;
+    height: 70px;
     top: 300px;
     font-size: 14px;
     font-family: "宋体";
@@ -501,4 +505,25 @@ div.arrow-right > a >img {
 .btn-reset {
     background: #8896a0;
     color: #ffffff;
+}
+
+.footer {
+    padding-left: 150px;
+    padding-right: 150px;
+    background: #4A4A48;
+    height: 150px;
+    color: #969696;
+    font-size: 12px;
+}
+
+.footer-bottom {
+    padding-left: 150px;
+    padding-right: 150px;
+    background: #3E3C3A;
+    height: 40px;
+    color: #969696;
+}
+
+.text-right {
+    text-align: right;
 }

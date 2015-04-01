@@ -46,9 +46,9 @@
 
                         </div>
                     </div>
-                    <ul class="thumbnails margin20-t">
+                    <ul class="thumbnails margin20-t product-items">
                         <c:forEach items="${products.list}" var="product">
-                            <li style="width: 180px; height: 270px;">
+                            <li style="width: 190px; height: 270px;">
                                 <a href="#" class="thumbnail image-a" data-id="${product.id}">
                                     <img src="${ctx}/upload/${product.imagepath}" style="height: 250px;"/>
                                 </a>
