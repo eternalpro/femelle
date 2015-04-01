@@ -8,7 +8,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">
-                    添加细节图
+                    添加商品图
                     <small class="text-danger">
                         推荐图片尺寸为1080*1920
                     </small>
@@ -17,19 +17,19 @@
             <div class="modal-body">
 
                 <div class="form-group">
-                    <label for="imageFile1">1. 细节图</label>
+                    <label for="imageFile1">1. 商品图</label>
                     <input type="file" name="productDetail1" class="form-control" id="imageFile1" placeholder="填写名称" value="${product.title}">
                 </div>
                 <div class="form-group">
-                    <label for="imageFile2">2. 细节图</label>
+                    <label for="imageFile2">2. 商品图</label>
                     <input type="file" name="productDetail2" class="form-control" id="imageFile2" placeholder="填写名称" value="${product.title}">
                 </div>
                 <div class="form-group">
-                    <label for="imageFile3">3. 细节图</label>
+                    <label for="imageFile3">3. 商品图</label>
                     <input type="file" name="3" class="form-control" id="imageFile3" placeholder="填写名称" value="${product.title}">
                 </div>
                 <div class="form-group">
-                    <label for="imageFile4">4. 细节图</label>
+                    <label for="imageFile4">4. 商品图</label>
                     <input type="file" name="productDetail4" class="form-control" id="imageFile4" placeholder="填写名称" value="${product.title}">
                 </div>
             </div>
