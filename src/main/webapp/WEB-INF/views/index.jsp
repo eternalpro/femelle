@@ -131,7 +131,7 @@
                         <div class="thumbnail">
                             <img src="${ctx}/upload/${albumInfo.filepath}" alt="">
 
-                            <h4 class="text-center">${albumInfo.title}</h4>
+                            <h5 class="text-center">${albumInfo.title}</h5>
 
                             <div class="text-center pad10">
                                 <p class="text-left">
@@ -148,9 +148,9 @@
                         <div class="thumbnail">
                             <img src="${ctx}/upload/${fashionInfo.filepath}" alt="">
 
-                            <h4 class="text-center">
+                            <h5 class="text-center">
                                     ${fashionInfo.title}
-                            </h4>
+                            </h5>
 
                             <div class="text-center pad10">
                                 <p class="text-left">
@@ -166,9 +166,9 @@
                         <div class="thumbnail">
                             <img src="${ctx}/upload/${newsInfo.filepath}" alt="">
 
-                            <h4 class="text-center">
+                            <h5 class="text-center">
                                     ${newsInfo.title}
-                            </h4>
+                            </h5>
 
                             <div class="text-center pad10">
                                 <p class="text-left">

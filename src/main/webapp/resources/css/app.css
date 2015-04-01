@@ -1,6 +1,7 @@
 body {
     color: #6C6C6C;
     font-family: '微软雅黑', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
 }
 
 .border {
@@ -447,6 +448,6 @@ div.arrow-right > a >img {
 }
 
 .module-title {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
 }
