@@ -465,3 +465,40 @@ div.arrow-right > a >img {
 .product-items li {
     margin-left: 5px;
 }
+
+.bold-no{
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.form-div {
+    box-shadow: 0px 0px 1px 1px #c6c6c6;
+    margin-left: 260px;
+    width: 280px;
+    background: #fffcfb;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-top: 20px;
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+.btn-form {
+    width: 140px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.btn-sign {
+    background: #6C6C6C;
+    color: #ffffff;
+}
+
+.btn-reset {
+    background: #8896a0;
+    color: #ffffff;
+}
