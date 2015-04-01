@@ -14,10 +14,10 @@
                     <c:set var="sidemenu" value="${type}" scope="request"/>
                     <jsp:include page="sidebar.jsp"/>
                 </div>
-                <div class="bg-right">
-                    <ul class="thumbnails">
+                <div class="bg-right pad5">
+                    <ul class="thumbnails product-items">
                         <c:forEach items="${products}" var="product">
-                            <li style="width: 180px; height: 270px;">
+                            <li style="width: 190px; height: 270px;">
                                 <a href="${ctx}/product/item/${product.id}" class="thumbnail">
                                     <img src="${ctx}/upload/${product.imagepath}" style="height: 250px;"/>
                                 </a>
