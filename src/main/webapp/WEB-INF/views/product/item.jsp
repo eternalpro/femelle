@@ -48,22 +48,8 @@
                                     ${product.description}
                             </div>
                             <div class="guanzhu">
-                                <p>
-                                    <a href="http://weibo.com/alphafemelle">
-                                        <img src="${ctx}/resources/img/weibo.png" alt=""/>
-                                        &nbsp;微博关注
-                                    </a>
-                                </p>
-
-                                <p>
-                                    <a href="#" class="weixin" data-id="weixin2">
-                                        <img src="${ctx}/resources/img/wechat.png" alt=""/>
-                                        &nbsp;微信关注
-                                    </a>
-                                    <div >
-                                        <img class="weixinImg" id="weixin2" src="${ctx}/resources/img/weixb2.png" alt="" style="display: none; margin-top: -300px; margin-right: 200px; "/>
-                                    </div>
-                                </p>
+                                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
                             </div>
                         </div>
                     </div>
@@ -88,11 +74,16 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            var height = $('.bg-right').height();
-            if(height < 500)
-                height = 500;
-            $('.bg-sidebar').css('height', height);
-            $('.bg-right').css('height', height + 78);
+            $(document).ready(function(){
+                $('.bg-sidebar').css('height', '${fn:length(images)}' * 450);
+                $('.bg-right').css('height', '${fn:length(images)}' * 450 + 78);
+
+                var height = $('.bg-right').height();
+                if(height < 500)
+                    height = 500;
+                $('.bg-sidebar').css('height', height);
+                $('.bg-right').css('height', height + 78);
+            });
         </script>
     </jsp:attribute>
 </layout:front>

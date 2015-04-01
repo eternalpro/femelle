@@ -4,14 +4,12 @@ import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
 import com.jfinal.plugin.activerecord.Db;
-import com.jfinal.plugin.activerecord.DbKit;
 import com.jfinal.plugin.activerecord.Page;
 import com.jfinal.upload.UploadFile;
 import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
 import io.github.eternalpro.model.Recommend;
-import io.github.eternalpro.model.Tuijian;
 import io.github.eternalpro.service.ProductService;
 
 import java.io.UnsupportedEncodingException;
@@ -29,6 +27,7 @@ public class AdminProductController extends Controller {
     public void index() {
         int page = getParaToInt("page", 1);
         Page<Product> products = Product.dao.paginate(page, 5, "select *", "from product");
+        productService.addFirstImageToProduct(products.getList());
         setAttr("types", Product.Type.values());
         productService.abstractProducts(products.getList(), 78);
         setAttr("products", products);
@@ -88,6 +87,7 @@ public class AdminProductController extends Controller {
     public void addRecommend(){
         Integer id = getParaToInt();
         List<Product> products = Product.findNotRecommend(id);
+        productService.addFirstImageToProduct(products);
         setAttr("products", products);
         setAttr("mainid", id);
         renderJsp("addRecommend.jsp");

@@ -68,6 +68,7 @@
                                                     <table class="table table-striped table-hover dataTable no-footer">
                                                         <thead>
                                                         <tr>
+                                                            <th width="40"></th>
                                                             <th width="160">名称</th>
                                                             <th width="80">分类</th>
                                                             <th width="380">描述</th>
@@ -77,7 +78,7 @@
                                                         <tbody>
                                                         <c:forEach items="${products.list}" var="product">
                                                             <tr>
-                                                                <%--<td>
+                                                                <td>
                                                                     <c:if test="${!empty(product.imagepath)}">
                                                                         <a href="${ctx}/upload/${product.imagepath}"
                                                                            class="fancybox">
@@ -86,7 +87,7 @@
                                                                                  style="width: 60px; height: 40px;"/>
                                                                         </a>
                                                                     </c:if>
-                                                                </td>--%>
+                                                                </td>
                                                                 <td>
                                                                         ${product.title}
 

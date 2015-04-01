@@ -6,6 +6,7 @@ import com.jfinal.ext.route.ControllerBind;
 import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.Image;
 import io.github.eternalpro.model.Product;
+import io.github.eternalpro.service.ProductService;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -16,6 +17,7 @@ import java.util.List;
  */
 @ControllerBind(controllerKey = "/product", viewPath = "product")
 public class ProductController extends Controller {
+    ProductService productService = new ProductService();
 
     @ActionKey("product")
     public void type() throws UnsupportedEncodingException {
@@ -23,11 +25,7 @@ public class ProductController extends Controller {
 
         List<Product> products = Product.dao.find("select * from product where type = ?", URLDecoder.decode(type, "utf-8"));
 
-        for (Product product : products) {
-            List<Image> images = Image.dao.getImagesByProduct(product.getInt("id"));
-            if (images.size() > 0)
-                product.set("imagepath", images.get(0).getStr("path"));
-        }
+        productService.addFirstImageToProduct(products);
 
         setAttr("types", Product.Type.values());
         setAttr("type", URLDecoder.decode(type, "utf-8"));
@@ -42,6 +40,7 @@ public class ProductController extends Controller {
         List<Image> images = Image.dao.getImagesByProduct(id);
 
         List<Product> recommends = Product.findRecommend(id);
+        productService.addFirstImageToProduct(recommends);
 
         setAttr("types", Product.Type.values());
         setAttr("recommends", recommends);
