@@ -27,7 +27,9 @@
                                         <tr>
                                             <td width="100" ><img src="${ctx}/upload/${news.imagepath}" alt=""/></td>
                                             <td class="border-left" style="border-left: 1px solid #DDD;">
-                                                <strong>${news.title}</strong>
+                                                <a href="${ctx}/news/view/${news.id}">
+                                                    <strong>${news.title}</strong>
+                                                </a>
                                                 <div>
                                                         ${news.content}
                                                 </div>

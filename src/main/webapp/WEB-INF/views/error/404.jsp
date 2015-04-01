@@ -24,7 +24,7 @@
         Actually, the page you are looking for does not exist.
     </p>
     <p>
-        <a href="${ctx}/admin">
+        <a href="${ctx}">
             Return home </a>
         <br>
     </p>

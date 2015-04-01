@@ -28,7 +28,9 @@
                                     <tr>
                                         <td width="100" ><img src="${ctx}/upload/${fashion.imagepath}" alt=""/></td>
                                         <td class="border-left" style="border-left: 1px solid #DDD;">
-                                            <strong>${fashion.title}</strong>
+                                            <a href="${ctx}/news/view/${fashion.id}">
+                                                <strong>${fashion.title}</strong>
+                                            </a>
                                             <div>
                                                 ${fashion.content}
                                             </div>

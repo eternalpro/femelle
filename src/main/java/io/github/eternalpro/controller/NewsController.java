@@ -36,4 +36,10 @@ public class NewsController extends Controller{
         setAttr("newsInfo", newsInfo);
         setAttr("newses", newses);
     }
+
+    public void view(){
+        Integer id = getParaToInt();
+        News news = News.dao.findById(id);
+        setAttr("news", news);
+    }
 }
