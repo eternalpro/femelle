@@ -15,12 +15,12 @@
                 <form role="form" action="${ctx}/admin/site/saveHomeModule" method="post">
                     <div class="form-body">
                         <div class="form-group">
-                            <label>模块一描述：</label>
+                            <label>模块一描述：</label><small class="text-danger">输入“&lt;br&gt;英文”可将“英文”换行显示</small>
                             <input type="text" class="form-control" name="modulenews" value="${modulenewsInfo.title}" placeholder="建议控制在10个字以内">
                         </div>
 
                         <div class="form-group">
-                            <label>模块二描述：</label>
+                            <label>模块二描述：</label><small class="text-danger">输入“&lt;br&gt;英文”可将“英文”换行显示</small>
                             <input type="text" class="form-control" name="moduleabout" value="${moduleaboutInfo.title}" placeholder="建议控制在10个字以内">
                         </div>
                         <div class="form-group">
