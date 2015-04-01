@@ -14,7 +14,7 @@
                     <c:set var="sidemenu" value="${type}" scope="request"/>
                     <jsp:include page="sidebar.jsp"/>
                 </div>
-                <div class="bg-right pad5">
+                <div class="bg-right">
                     <ul class="thumbnails product-items">
                         <c:forEach items="${products}" var="product">
                             <li style="width: 190px; height: 270px;">
