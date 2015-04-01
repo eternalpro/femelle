@@ -33,6 +33,10 @@
                                     <a href="#tab_3" data-toggle="tab" aria-expanded="false">
                                         会员中心 </a>
                                 </li>
+                                <li class="">
+                                    <a href="#tab_4" data-toggle="tab" aria-expanded="false">
+                                        服务条款 </a>
+                                </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">
@@ -46,6 +50,9 @@
                                 </div>
                                 <div class="tab-pane" id="tab_3">
                                     <jsp:include page="tab/tab_3.jsp"/>
+                                </div>
+                                <div class="tab-pane" id="tab_4">
+                                    <jsp:include page="tab/tab_4.jsp"/>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +187,17 @@
                     }
                 });
 
-
+                /**
+                 * 保存 服务条款
+                 */
+                $('#provisionForm').ajaxForm({
+                    success: function (data) {
+                        toastr.success("保存成功！");
+                    },
+                    error: function (data) {
+                        toastr.error('系统错误，请联系管理员！');
+                    }
+                });
             })();
         </script>
     </jsp:attribute>

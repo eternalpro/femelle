@@ -53,7 +53,10 @@ public class IndexController extends Controller{
 
     }
 
-
+    public void provision(){
+        SiteInfo provisionInfo = SiteInfo.findByModule(Module.MODULE_PROVISION);
+        setAttr("provisionInfo", provisionInfo);
+    }
 
 
     public void demo() {

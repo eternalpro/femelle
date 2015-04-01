@@ -11,4 +11,8 @@ public class Member extends Model<Member>{
     public static Member findByUsername(String username) {
         return dao.findFirst("select * from member where username = ?", username);
     }
+
+    public static Member findByEmail(String email) {
+        return dao.findFirst("select * from member where email = ?", email);
+    }
 }

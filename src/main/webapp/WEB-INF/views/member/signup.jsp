@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="span12">
                     <div class="form-div">
-                        <form>
+                        <form action="${ctx}/member/saveMember" method="post">
                             <fieldset>
                                 <legend>会员注册</legend>
                                 <label>账号</label>
@@ -33,6 +33,10 @@
                                 </select>
                                 <label>邮箱</label>
                                 <input type="text" name="member.email" class="input-xlarge" >
+                                <label class="checkbox">
+                                    <input type="checkbox" name="agree"> 同意条款
+                                    <a href="${ctx}/provision" id="provision" target="_blank">&lt;查看服务条款&gt;</a>
+                                </label>
 
                                 <p class="margin20-t">
                                     <button type="submit" class="btn pad20-l pad20-r btn-form btn-sign" >注册</button>

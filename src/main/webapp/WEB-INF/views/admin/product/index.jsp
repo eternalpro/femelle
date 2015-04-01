@@ -84,7 +84,7 @@
                                                                            class="fancybox">
                                                                             <img src="${ctx}/upload/${product.imagepath}"
                                                                                  alt=""
-                                                                                 style="width: 60px; height: 40px;"/>
+                                                                                 style="height: 60px;"/>
                                                                         </a>
                                                                     </c:if>
                                                                 </td>

@@ -40,7 +40,11 @@ public class MemberController extends Controller {
         String password_confirm = getPara("password_confirm");
         Member member = getModel(Member.class);
 
-        if (StringUtils.isBlank(password_confirm) || StringUtils.isBlank(member.getStr("password"))) {
+        String agree = getPara("agree");
+        if(!"on".equals(agree)) {
+            FlashMessageUtils.setErrorMessage(this, "请同意服务条款！");
+            redirect("/member/signup");
+        }else if (StringUtils.isBlank(password_confirm) || StringUtils.isBlank(member.getStr("password"))) {
             FlashMessageUtils.setErrorMessage(this, "请填写密码！");
             redirect("/member/signup");
         } else if (StringUtils.isBlank(member.getStr("username"))) {
@@ -48,6 +52,9 @@ public class MemberController extends Controller {
             redirect("/member/signup");
         } else if (Member.findByUsername(member.getStr("username")) != null) {
             FlashMessageUtils.setErrorMessage(this, "用户名已存在！");
+            redirect("/member/signup");
+        } else if (Member.findByEmail(member.getStr("email")) != null) {
+            FlashMessageUtils.setErrorMessage(this, "邮箱已被注册！");
             redirect("/member/signup");
         } else if (password_confirm.equals(member.getStr("password"))) {
             member.set("password", EncryptionKit.md5Encrypt(member.getStr("password")));

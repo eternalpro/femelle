@@ -11,8 +11,8 @@
             <div class="container">
                 <div class="span12">
                     <div class="form-div">
-                        <form>
-                            <fieldset>
+                        <form action="${ctx}/member/loginMember" method="post">
+                        <fieldset>
                                 <legend>会员登录</legend>
                                 <label>账号</label>
                                 <input type="text" name="member.username"  class="input-xlarge">

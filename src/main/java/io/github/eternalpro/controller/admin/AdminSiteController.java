@@ -155,4 +155,14 @@ public class AdminSiteController extends Controller {
         FlashMessageUtils.setSuccessMessage(this, "保存成功！");
         redirect("/admin/album");
     }
+
+    /**
+     * 保存服务条款
+     */
+    public void saveProvision() {
+        SiteInfo provisionInfo = getModel(SiteInfo.class, "provisionInfo");
+        siteInfoService.saveProvisionInfo(provisionInfo);
+        renderNull();
+
+    }
 }

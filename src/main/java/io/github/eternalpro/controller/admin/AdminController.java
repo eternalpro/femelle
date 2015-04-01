@@ -37,6 +37,7 @@ public class AdminController extends Controller {
         SiteInfo tmallInfo = SiteInfo.findByModule(Module.MODULE_TMALL);
         SiteInfo callusInfo = SiteInfo.findByModule(Module.MODULE_CALLUS);
         SiteInfo faqInfo = SiteInfo.findByModule(Module.MODULE_FAQ);
+        SiteInfo provisionInfo = SiteInfo.findByModule(Module.MODULE_PROVISION);
 
         setAttr("modulenewsInfo", modulenewsInfo);
         setAttr("moduleaboutInfo", moduleaboutInfo);
@@ -49,6 +50,7 @@ public class AdminController extends Controller {
         setAttr("tmallInfo", tmallInfo);
         setAttr("callusInfo", callusInfo);
         setAttr("faqInfo", faqInfo);
+        setAttr("provisionInfo", provisionInfo);
 
         setAttr("success", getAttr("success"));
     }

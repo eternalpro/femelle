@@ -114,6 +114,10 @@ public class SiteInfoService {
     public void saveAlbum(SiteInfo albumInfo) {
         saveSite(albumInfo, Module.MODULE_ALBUM);
     }
+
+    public void saveProvisionInfo(SiteInfo provisionInfo) {
+        saveSite(provisionInfo, Module.MODULE_PROVISION);
+    }
     private void saveSite(SiteInfo siteInfo, String module) {
         SiteInfo siteInfoDB = SiteInfo.findByModule(module);
         if (siteInfoDB != null) {
