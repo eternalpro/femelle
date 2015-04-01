@@ -59,19 +59,14 @@
                     <c:forEach items="${albums}" var="album">
                         <div class="col-sm-12 col-md-3">
                             <div class="portlet light">
-                                <a href="${ctx}/admin/album/viewItem/${album.id}" class="add-modal">
-                                    <img src="${ctx}/upload/${album.imagepath}"
-                                         style="width: 100%; height: 150px; display: block;">
-                                </a>
+                                <img src="${ctx}/upload/${album.imagepath}" style="width: 100%; height: 150px; display: block;" />
 
                                 <div class="caption">
                                     <p>
                                         <strong>${album.title}</strong>
-
                                     <p>
 
                                     <div class="btn-group btn-group-sm btn-group-solid">
-
                                         <a href="${ctx}/admin/album/viewItem/${album.id}" class="btn green add-modal">
                                             <i class="icon-eye"></i>
                                         </a>
@@ -81,6 +76,7 @@
                                         <a href="${ctx}/admin/album/delete/${album.id}" class="delete-data btn red">
                                             <i class="fa fa-remove"></i>
                                         </a>
+
                                         <c:choose>
                                             <c:when test="${album.ismain eq 'y'}">
                                                 <a href="${ctx}/admin/album/set/n-${album.id}"
@@ -109,6 +105,9 @@
     <jsp:attribute name="js">
         <script>
             (function () {
+
+                new uploadPreview({ UpBtn: "albumFile", ImgShow: "fashionImg" });
+
                 $('.add-modal').on('click', function (e) {
                     e.preventDefault();
                     var $this = $(this);

@@ -45,6 +45,7 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
+
             var height = $('.bg-right').height();
             if(height < 500)
                 height = 500;

@@ -11,10 +11,8 @@
     <div class="portlet-body">
         <form class="form-inline" id="fashionForm" method="post" action="${ctx}/admin/site/saveFashion" enctype="multipart/form-data">
             <div class="form-group <c:if test='${empty(fashionInfo.filepath)}'> hide </c:if>">
-                <a href="${ctx}/upload/${fashionInfo.filepath}" class="fancybox">
-                    <img src="${ctx}/upload/${fashionInfo.filepath}" alt="" id="fashionImg"
-                         style="width: 60px; height: 40px;"/>
-                </a>
+                <img src="${ctx}/upload/${fashionInfo.filepath}" alt="" id="fashionImg"
+                     style="width: 60px; height: 40px;"/>
             </div>
 
             <div class="form-group">

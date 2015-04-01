@@ -43,6 +43,9 @@
         <script>
             (function () {
 
+                new uploadPreview({ UpBtn: "fashionFile", ImgShow: "fashionImg" });
+                new uploadPreview({ UpBtn: "newsFile", ImgShow: "newsImg" });
+
                 $('.news-edit').on('click', function (e) {
                     e.preventDefault();
                     var $this = $(this);
@@ -51,6 +54,8 @@
                     })
                 });
 
+
+
                 $('.news-delete').on('click', function (e) {
                     e.preventDefault();
                     var $this = $(this);
@@ -58,34 +63,6 @@
                         location.href = $this.attr('href');
                     }
                 });
-
-                <%--/**--%>
-                 <%--* 保存时尚表单--%>
-                 <%--*/--%>
-                <%--$('#saveFashion').on('click', function (e) {--%>
-                    <%--e.preventDefault();--%>
-                    <%--$('#fashionForm').ajaxSubmit({--%>
-                        <%--success: function (data) {--%>
-                            <%--$('#fashionImg').attr('src', '${ctx}/upload/'+data);--%>
-                            <%--$('#fashionImg').closest('div').removeClass('hide');--%>
-                            <%--toastr.success('保存成功！');--%>
-                        <%--}--%>
-                    <%--});--%>
-                <%--});--%>
-
-                <%--/**--%>
-                 <%--* 保存新闻表单--%>
-                 <%--*/--%>
-                <%--$('#saveNews').on('click', function (e) {--%>
-                    <%--e.preventDefault();--%>
-                    <%--$('#newsForm').ajaxSubmit({--%>
-                        <%--success: function (data) {--%>
-                            <%--$('#newsImg').attr('src', '${ctx}/upload/'+data)--%>
-                            <%--$('#newsImg').closest('div').removeClass('hide');--%>
-                            <%--toastr.success('保存成功！');--%>
-                        <%--}--%>
-                    <%--});--%>
-                <%--});--%>
 
             })();
         </script>
