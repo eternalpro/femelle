@@ -13,9 +13,10 @@
     </div>
     <div class="portlet-body">
         <form class="form-inline" id="fashionForm" method="post" action="${ctx}/admin/site/saveFashion" enctype="multipart/form-data">
-            <div class="form-group <c:if test='${empty(fashionInfo.filepath)}'> hide </c:if>">
+            <div class="form-group">
+                <label for="title">预览：</label>
                 <img src="${ctx}/upload/${fashionInfo.filepath}" alt="" id="fashionImg"
-                     style="width: 60px; height: 40px;"/>
+                     style="height: 40px;"/>
             </div>
 
             <div class="form-group">
@@ -71,7 +72,7 @@
                             <td>
                                 <a href="${ctx}/upload/${fashion.imagepath}" class="fancybox">
                                     <img src="${ctx}/upload/${fashion.imagepath}" alt=""
-                                         style="width: 50px; height: 40px;"/>
+                                         style="height: 40px;"/>
                                 </a></td>
                             <td>${fashion.title}</td>
                             <td>${fashion.content}</td>

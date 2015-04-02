@@ -9,10 +9,12 @@
                 <input type="file" class="form-control" name="brandFile" id="brandFile">
             </div>
 
-            <div class="form-group <c:if test='${empty(brandInfo.filepath)}'> hide </c:if>">
+            <div class="form-group">
                 <label>预览：</label>
-                    <img id="brandImage" class="form-control" src="${ctx}/upload/${brandInfo.filepath}" alt=""
-                         style="width: 80px; height: 60px;"/>
+                <div>
+                    <img id="brandImage" src="${ctx}/upload/${brandInfo.filepath}" alt=""
+                         style="height: 60px;"/>
+                </div>
             </div>
 
             <div class="form-group">

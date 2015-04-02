@@ -9,12 +9,13 @@
                 <input type="file" class="form-control" name="tmallFile" id="tmallFile">
             </div>
 
-            <div class="form-group <c:if test='${empty(tmallInfo.filepath)}'> hide </c:if>">
+            <div class="form-group">
                 <label>预览：</label>
-                <a class="fancybox" href="${ctx}/upload/${tmallInfo.filepath}">
-                    <img id="tmallImage" class="form-control" src="${ctx}/upload/${tmallInfo.filepath}" alt=""
-                         style="width: 80px; height: 60px;"/>
-                </a>
+                <div>
+                    <img id="tmallImage" src="${ctx}/upload/${tmallInfo.filepath}" alt=""
+                         style="height: 60px;"/>
+                </div>
+
             </div>
 
            <%-- <div class="form-group">

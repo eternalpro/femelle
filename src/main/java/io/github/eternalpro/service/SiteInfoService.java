@@ -121,7 +121,7 @@ public class SiteInfoService {
     private void saveSite(SiteInfo siteInfo, String module) {
         SiteInfo siteInfoDB = SiteInfo.findByModule(module);
         if (siteInfoDB != null) {
-            if (StringUtils.isBlank(siteInfoDB.getStr("filepath")))
+            if (StringUtils.isBlank(siteInfo.getStr("filepath")))
                 siteInfo.set("filepath", siteInfoDB.get("filepath"));
             siteInfoDB.setAttrs(siteInfo).update();
         } else {

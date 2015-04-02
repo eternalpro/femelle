@@ -9,10 +9,12 @@
                 <input type="file" class="form-control" name="vipFile" id="vipFile">
             </div>
 
-            <div class="form-group <c:if test='${empty(vipInfo.filepath)}'> hide </c:if>">
+            <div class="form-group">
                 <label>预览：</label>
-                    <img id="vipImage" class="form-control" src="${ctx}/upload/${vipInfo.filepath}" alt=""
-                         style="width: 80px; height: 60px;"/>
+                <div>
+                    <img id="vipImage" src="${ctx}/upload/${vipInfo.filepath}" alt=""
+                         style="height: 60px;"/>
+                </div>
             </div>
 
             <%--<div class="form-group">

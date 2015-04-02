@@ -17,8 +17,16 @@
                     <small class="text-danger">
                         首页中部四张图，推荐尺寸950*1550
                     </small>
-                    <input type="file" class="form-control" name="tuijianFile">
+                    <input type="file" class="form-control" name="tuijianFile" id="tuijianFile">
                 </div>
+
+                <div class="form-group">
+                    <label for="title">预览图</label>
+                    <div>
+                        <img src="${ctx}/upload/${tuijian.imagepath}" alt=""  id="tuijianImg" style="height: 60px;"/>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label for="title">名称</label>
                     <input type="text" name="tuijian.title" class="form-control" id="title" placeholder="填写名称" value="${tuijian.title}">
@@ -36,3 +44,6 @@
         </div>
     </form>
 </div>
+<script>
+    new uploadPreview({ UpBtn: "tuijianFile", ImgShow: "tuijianImg" });
+</script>

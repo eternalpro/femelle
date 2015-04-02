@@ -30,11 +30,10 @@
                     <div class="portlet-body">
                         <form class="form-inline" id="albumForm" method="post" action="${ctx}/admin/site/saveAlbum"
                               enctype="multipart/form-data">
-                            <div class="form-group <c:if test='${empty(albumInfo.filepath)}'> hide </c:if>">
-                                <a href="${ctx}/upload/${albumInfo.filepath}" class="fancybox">
-                                    <img src="${ctx}/upload/${albumInfo.filepath}" alt="" id="fashionImg"
-                                         style="width: 60px; height: 40px;"/>
-                                </a>
+                            <div class="form-group">
+                                <label for="title">预览：</label>
+                                <img src="${ctx}/upload/${albumInfo.filepath}" alt="" id="fashionImg"
+                                     style="height: 40px;"/>
                             </div>
 
                             <div class="form-group">

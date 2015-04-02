@@ -8,11 +8,12 @@
                 <label>展示图片：</label>
                 <input type="file" class="form-control" name="shopFile" id="shopFile">
             </div>
-            <div class="form-group <c:if test='${empty(shopInfo.filepath)}'> hide </c:if>">
+            <div class="form-group">
                 <label>预览：</label>
-
-                    <img id="shopImage" class="form-control" src="${ctx}/upload/${shopInfo.filepath}" alt=""
-                     style="width: 80px; height: 60px;"/>
+                <div>
+                    <img id="shopImage" src="${ctx}/upload/${shopInfo.filepath}" alt=""
+                         style="height: 60px;"/>
+                </div>
 
             </div>
             <div class="form-group">

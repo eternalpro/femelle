@@ -14,7 +14,14 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>封面图片：</label><small class="text-danger">首页轮播图，建议尺寸：1920*1080</small>
-                    <input type="file" class="form-control" name="albumFile">
+                    <input type="file" class="form-control" name="albumFile" id="aFile">
+                </div>
+                <div class="form-group">
+                    <label for="title">预览：</label>
+                    <div>
+                        <img src="${ctx}/upload/${album.imagepath}" alt="" id="fImg"
+                             style="height: 60px;"/>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="title">标题</label>
@@ -30,5 +37,5 @@
     </form>
 </div>
 <script>
-
+    new uploadPreview({UpBtn: "aFile", ImgShow: "fImg"});
 </script>

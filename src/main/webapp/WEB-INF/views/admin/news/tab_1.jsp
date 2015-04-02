@@ -15,12 +15,13 @@
     <div class="portlet-body">
         <form class="form-inline" id="newsForm" method="post" action="${ctx}/admin/site/saveNews"
               enctype="multipart/form-data">
-            <div class="form-group <c:if test='${empty(newsInfo.filepath)}'> hide </c:if>">
-                <a href="${ctx}/upload/${newsInfo.filepath}" class="fancybox">
-                    <img src="${ctx}/upload/${newsInfo.filepath}" alt="" id="newsImg"
-                         style="width: 60px; height: 40px;"/>
-                </a>
+
+            <div class="form-group">
+                <label for="title">预览：</label>
+                <img src="${ctx}/upload/${newsInfo.filepath}" alt="" id="newsImg"
+                     style="height: 40px;"/>
             </div>
+
             <div class="form-group">
                 <label for="title">标题：</label>
                 <input type="text" class="form-control" name="newsInfo.title" id="title" placeholder="请输入10个字以内" value="${newsInfo.title}">
@@ -73,7 +74,7 @@
                             <td>
                                 <a href="${ctx}/upload/${news.imagepath}" class="fancybox">
                                     <img src="${ctx}/upload/${news.imagepath}" alt=""
-                                         style="width: 50px; height: 40px;"/>
+                                         style="height: 40px;"/>
                                 </a>
                             </td>
                             <td>${news.title}</td>

@@ -9,10 +9,12 @@
                 <label>展示图片：</label>
                 <input type="file" class="form-control" name="affiliateFile" id="affiliateFile">
             </div>
-            <div class="form-group <c:if test='${empty(affiliateInfo.filepath)}'> hide </c:if>">
+            <div class="form-group">
                 <label>预览：</label>
-                    <img id="affiliateImage" class="form-control" src="${ctx}/upload/${affiliateInfo.filepath}" alt=""
-                     style="width: 80px; height: 60px;"/>
+                <div>
+                    <img id="affiliateImage" src="${ctx}/upload/${affiliateInfo.filepath}" alt=""
+                         style="height: 60px;"/>
+                </div>
             </div>
             <div class="form-group">
                 <label>标题：</label>

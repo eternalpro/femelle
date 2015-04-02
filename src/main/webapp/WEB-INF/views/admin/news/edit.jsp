@@ -15,14 +15,15 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>展示图片：</label>
-                    <input type="file" class="form-control" name="newsFile">
+                    <input type="file" class="form-control" name="newsFile" id="newsFile1">
                 </div>
-                <c:if test="${!empty(news.imagepath)}">
-                    <div class="form-group">
-                        <label>预览：</label>
-                        <img src="${ctx}/upload/${news.imagepath}" class="form-control" alt="" style="width: 80px; height: 60px;"/>
+
+                <div class="form-group">
+                    <label>预览：</label>
+                    <div>
+                        <img src="${ctx}/upload/${news.imagepath}" id="newsImg1" alt="" style="height: 60px;"/>
                     </div>
-                </c:if>
+                </div>
                 <div class="form-group">
                     <label for="title">标题</label>
                     <input type="text" name="news.title" class="form-control" id="title" placeholder="填写标题" value="${news.title}">
@@ -42,6 +43,7 @@
     </form>
 </div>
 <script>
+    new uploadPreview({ UpBtn: "newsFile1", ImgShow: "newsImg1" });
     KindEditor.ready(function(K) {
         window.editor = K.create('#content', {
             items : [ 'formatblock', 'fontname', 'fontsize',

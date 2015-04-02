@@ -41,7 +41,7 @@
 
             <div class="hide" id="weixinDiv">
                 <img src="${ctx}/resources/img/weixb2.png" alt=""
-                     style="position: absolute;right: 90px; bottom: -35px;"/>
+                     style="position: absolute;right: 115px; bottom: -35px;"/>
             </div>
             <a href="#" id="weixinShow">
                 <img src="${ctx}/resources/img/weixin.png">

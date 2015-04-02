@@ -14,7 +14,7 @@
         </a>
         <div class="page-actions">
             <div class="btn-group">
-                <a  class="btn btn-primary btn-sm dropdown-toggle" href="${ctx}">
+                <a  class="btn btn-primary btn-sm dropdown-toggle" href="/">
                     <i class="fa fa-arrow-circle-o-left"></i><span class="hidden-sm hidden-xs">返回前台</span>
                 </a>
             </div>

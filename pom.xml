@@ -64,7 +64,7 @@
                         </connector>
                     </connectors>
                     <webApp>
-                        <contextPath>/femelle</contextPath>
+                        <contextPath>/</contextPath>
                     </webApp>
                     <systemProperties>
                         <systemProperty>
