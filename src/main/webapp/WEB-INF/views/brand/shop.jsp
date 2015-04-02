@@ -3,7 +3,12 @@
 <layout:front menu="brand">
     <jsp:attribute name="css">
         <style>
-
+            .bg-sidebar {
+                height: 1134px;
+            }
+            .bg-right {
+                height: 1200px;
+            }
         </style>
     </jsp:attribute>
     <jsp:attribute name="main">
@@ -26,14 +31,15 @@
                         <br/>
 
                         <div class="tabbable tabs-left">
-                            <ul class="nav nav-tabs nav-shop" style="background: white;width: 200px;">
+                            <ul class="nav nav-tabs nav-shop" style="background: white;width: 200px;height: 560px; overflow: auto;overflow-x:hidden">
                                 <c:forEach items="${provinces}" var="p">
                                     <li <c:if test="${currentP eq p.province}">class="active"</c:if> >
-                                        <a href="#" data-province="${p.province}" class="loadShop">${p.province} > </a>
+                                        <a href="#" style="font-size: 12px;" data-province="${p.province}" class="loadShop">${p.province} > </a>
                                     </li>
                                 </c:forEach>
                             </ul>
-                            <div class="tab-content">
+
+                            <div class="tab-content"  style="height: 560px; overflow: auto">
                                 <div class="tab-pane active" id="shopContent">
 
                                 </div>
@@ -46,15 +52,12 @@
     </jsp:attribute>
     <jsp:attribute name="js">
         <script>
-            loadPage();
 
             (function () {
-
                 var loadShopInfo = function (province) {
                     $.get('${ctx}/brand/loadShops/' + encodeURI(province), function(data){
-                        $('#shopContent').html(data)
-                        $('ul.bg-sidebar').height($('.bg-right').height() - 75);
-                        $('ul.nav-shop').css('min-height', $('#shopContent').height());
+                        $('#shopContent').html(data);
+                        var height = $('.tab-content').height();
                     });
                 };
                 loadShopInfo('${currentP}');
@@ -66,6 +69,8 @@
                     $this.closest('ul').find('li').removeClass('active');
                     $this.closest('li').addClass('active');
                 });
+
+
             })();
         </script>
     </jsp:attribute>

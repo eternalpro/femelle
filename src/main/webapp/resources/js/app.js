@@ -13,7 +13,6 @@ var loadPage = function () {
 
     $$(function(){
         var height = $('.bg-right').height();
-        console.log(height);
         if (height < 500)
             height = 500;
         $('.bg-sidebar').css('height', height - 15);
