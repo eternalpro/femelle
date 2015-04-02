@@ -527,3 +527,10 @@ div.arrow-right > a >img {
 .text-right {
     text-align: right;
 }
+
+div.logo-b {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+    background: url("../img/logo-b.png") no-repeat;
+}

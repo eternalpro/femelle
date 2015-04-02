@@ -6,8 +6,7 @@ var loadPage = function () {
     var $$ = function(func){
         if (document.addEventListener) {
             window.addEventListener("load", func, false);
-        }
-        else if (document.attachEvent) {
+        } else if (document.attachEvent) {
             window.attachEvent("onload", func);
         }
     };

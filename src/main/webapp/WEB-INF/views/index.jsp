@@ -215,9 +215,9 @@
                     var $this = $(this);
                     var top = $(document).scrollTop();
                     if ($this.hasClass('flip')) {
-                        $('html').animatescroll({scrollSpeed: 3000, easing: 'easeInQuad'});
+                        $('html').animatescroll({scrollSpeed: 1500, easing: 'easeInQuad'});
                     } else {
-                        $('div.footer').animatescroll({scrollSpeed: 3000, easing: 'easeInQuad'});
+                        $('div.footer').animatescroll({scrollSpeed: 1500, easing: 'easeInQuad'});
                     }
                 });
             })();
