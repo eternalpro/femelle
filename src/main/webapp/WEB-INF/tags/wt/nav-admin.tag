@@ -3,7 +3,7 @@
 <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
     <div class="page-header-inner">
         <div class="page-logo">
-            <a href="${ctx}/admin">
+            <a href="/admin">
                 <h2>后台管理</h2>
             </a>
             <div class="menu-toggler sidebar-toggler">

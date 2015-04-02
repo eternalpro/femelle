@@ -5,7 +5,7 @@
     <div class="container margin20-t">
         <div class="row">
             <div class="span12">
-                <a class="logo pull-left" href="${ctx}"></a>
+                <a class="logo pull-left" href="/"></a>
 
                 <div class="pull-right margin40-t">
                     <c:choose>

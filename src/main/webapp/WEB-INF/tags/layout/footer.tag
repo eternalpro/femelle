@@ -16,7 +16,7 @@
                 ICP 备案号： 京ICP备13045393号-1
             </div>
         </div>
-        <div class="pull-right margin40-t text-right">
+        <div class="pull-right margin60-t text-right">
             <p style="font-size: 23px;">
                 alpha-femelle.com
             </p>
