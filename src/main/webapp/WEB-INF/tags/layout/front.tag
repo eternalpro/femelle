@@ -36,16 +36,14 @@
             $('.xialaguang').removeClass('navhover');
         });
 
-        $('#weixinShow').on('click', function(e){
+
+        $('#wwA').on('mouseover', function(e){
             e.preventDefault();
+            $('#wwImg').show();
         });
-        $('#weixinShow').on('mouseover', function(e){
+        $('#wwA').on('mouseleave', function(e){
             e.preventDefault();
-            $('#weixinDiv').show(400);
-        });
-        $('#weixinShow').on('mouseleave', function(e){
-            e.preventDefault();
-            $('#weixinDiv').hide(400);
+            $('#wwImg').hide();
         });
     </script>
     <jsp:invoke fragment="js"/>

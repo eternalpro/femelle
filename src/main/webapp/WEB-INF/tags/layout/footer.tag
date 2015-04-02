@@ -38,12 +38,11 @@
         </div>
         <div class="margin10-t pull-right">
 
-
-            <div class="hide" id="weixinDiv">
-                <img src="${ctx}/resources/img/weixb2.png" alt=""
-                     style="position: absolute;right: 115px; bottom: -35px;"/>
+            <div id="wwImg" class="hide">
+                <img src="${ctx}/resources/img/weixb2.png"
+                     style="position: absolute; margin-top: -265px; right: 85px;"/>
             </div>
-            <a href="#" id="weixinShow">
+            <a href="#" id="wwA">
                 <img src="${ctx}/resources/img/weixin.png">
             </a>
             &nbsp;
