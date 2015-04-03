@@ -8,9 +8,9 @@
         <div class="pull-left">
             <div class="logo-b"></div>
             <div>
-                北京法米拉服饰有限公司（版权所有）
+                北京法米拉服装服饰有限公司（版权所有）
                 |
-                地址：北京昌平区小口镇天通苑三区2号楼25门
+                地址：北京市昌平区天通苑东三区２-２５
             </div>
             <div>
                 ICP 备案号： 京ICP备13045393号-1
@@ -18,15 +18,11 @@
         </div>
         <div class="pull-right margin60-t text-right">
             <p style="font-size: 23px;">
-                alpha-femelle.com
+                www.alpha-femelle.com
             </p>
 
             <p>
-                电话：101-61760758
-            </p>
-
-            <p>
-                传真：101-61760758
+                客服邮箱：service@alpha-femelle.com
             </p>
         </div>
     </div>
