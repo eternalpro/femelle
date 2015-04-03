@@ -36,15 +36,18 @@
 
             <div id="wwImg" class="hide">
                 <img src="${ctx}/resources/img/weixb2.png"
-                     style="position: absolute; margin-top: -265px; right: 85px;"/>
+                     style="position: absolute; margin-top: -265px; right: 95px;"/>
             </div>
-            <a href="#" id="wwA">
-                <img src="${ctx}/resources/img/weixin.png">
-            </a>
-            &nbsp;
-            <a href="http://weibo.com/alphafemelle" target="_blank">
-                <img src="${ctx}/resources/img/weib.png" alt=""/>
-            </a>
+            <div class="pull-left">
+                <a href="#" id="wwA">
+                    <img src="${ctx}/resources/img/weixin.png">
+                </a>
+            </div>
+            <div class="pull-left margin10-l">
+                <a href="http://weibo.com/alphafemelle" target="_blank">
+                    <img src="${ctx}/resources/img/weib.png" alt=""/>
+                </a>
+            </div>
         </div>
     </div>
 </div>
