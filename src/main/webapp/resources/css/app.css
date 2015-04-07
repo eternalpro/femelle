@@ -508,12 +508,13 @@ div.arrow-right > a >img {
 }
 
 .footer {
-    padding-left: 150px;
-    padding-right: 150px;
     background: #4A4A48;
     height: 150px;
     color: #969696;
     font-size: 12px;
+    overflow: hidden;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 .footer-bottom {
@@ -522,10 +523,15 @@ div.arrow-right > a >img {
     background: #3E3C3A;
     height: 40px;
     color: #969696;
+    overflow: hidden;
 }
 
 .text-right {
     text-align: right;
+}
+
+.container {
+    width: 900px!important;
 }
 
 div.logo-b {
