@@ -46,7 +46,18 @@
             e.preventDefault();
             $('#wwImg').hide();
         });
+
+      /*  var setFootWidth = function(){
+            var $width = screen.width - 300;
+            $('.footer').css('width', $width);
+            $('.footer-bottom').css('width', $width);
+            $('.bg').css('width', $width + 300);
+        };
+        setFootWidth();*/
+
+
     </script>
+
     <jsp:invoke fragment="js"/>
 </body>
 </html>
