@@ -508,6 +508,7 @@ div.arrow-right > a >img {
 }
 
 .footer {
+    margin-top: 5px;
     background: #4A4A48;
     height: 150px;
     color: #969696;
