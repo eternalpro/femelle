@@ -87,7 +87,9 @@ public class SiteInfoService {
         saveSite(fashionInfo, NewsCST.FASHION);
 
     }
-
+    public void saveFashionImage(SiteInfo fashionImageInfo) {
+        saveSite(fashionImageInfo, NewsCST.FASHION_IMAGE);
+    }
     /**
      * 保存新闻资讯
      *
@@ -96,7 +98,9 @@ public class SiteInfoService {
     public void saveNews(SiteInfo newsInfo) {
         saveSite(newsInfo, NewsCST.NEWS);
     }
-
+    public void saveNewsImage(SiteInfo newsImageInfo) {
+        saveSite(newsImageInfo, NewsCST.NEWS_IMAGE);
+    }
     public void saveVIP(SiteInfo vipInfo) {
         saveSite(vipInfo, Module.MODULE_VIP);
     }

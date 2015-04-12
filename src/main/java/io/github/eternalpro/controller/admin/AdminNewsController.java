@@ -32,10 +32,14 @@ public class AdminNewsController extends Controller{
         newsService.abstractNews(fashions, 80);
 
         SiteInfo newsInfo = SiteInfo.findByModule(NewsCST.NEWS);
+        SiteInfo newsImageInfo = SiteInfo.findByModule(NewsCST.NEWS_IMAGE);
         SiteInfo fashionInfo = SiteInfo.findByModule(NewsCST.FASHION);
+        SiteInfo fashionImageInfo = SiteInfo.findByModule(NewsCST.FASHION_IMAGE);
 
         setAttr("newsInfo", newsInfo);
+        setAttr("newsImageInfo", newsImageInfo);
         setAttr("fashionInfo", fashionInfo);
+        setAttr("fashionImageInfo", fashionImageInfo);
 
         setAttr("newses", newses);
         setAttr("fashions", fashions);

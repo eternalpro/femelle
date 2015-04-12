@@ -15,7 +15,7 @@
                     <jsp:include page="sidebar.jsp"/>
                 </div>
                 <div class="bg-right">
-                    <img class="image" src="${ctx}/upload/${fashionInfo.filepath}" alt=""/>
+                    <img class="image" src="${ctx}/upload/${fashionImageInfo.filepath}" alt=""/>
 
                     <div class="info atitle">
                             ${fashionInfo.title}

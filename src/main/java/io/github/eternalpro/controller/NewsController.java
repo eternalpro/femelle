@@ -21,19 +21,23 @@ public class NewsController extends Controller{
     @ActionKey("/news")
     public void fashion() {
         SiteInfo fashionInfo = SiteInfo.findByModule(NewsCST.FASHION);
+        SiteInfo fashionImageInfo = SiteInfo.findByModule(NewsCST.FASHION_IMAGE);
         List<News> fashions = News.dao.findMainByFlag(NewsCST.FASHION);
 
         newsService.abstractNews(fashions, 120);
 
         setAttr("fashionInfo", fashionInfo);
+        setAttr("fashionImageInfo", fashionImageInfo);
         setAttr("fashions", fashions);
     }
 
     public void news(){
         SiteInfo newsInfo = SiteInfo.findByModule(NewsCST.NEWS);
+        SiteInfo newsImageInfo = SiteInfo.findByModule(NewsCST.NEWS_IMAGE);
         List<News> newses = News.dao.findMainByFlag(NewsCST.NEWS);
         newsService.abstractNews(newses, 120);
         setAttr("newsInfo", newsInfo);
+        setAttr("newsImageInfo", newsImageInfo);
         setAttr("newses", newses);
     }
 

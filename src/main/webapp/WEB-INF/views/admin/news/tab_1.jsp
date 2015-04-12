@@ -44,6 +44,33 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-gift font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">设置新闻资讯页图片</span>
+            <small class="text-danger">
+                推荐图片尺寸为19200*1080
+            </small>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <form class="form-inline" id="newsImageForm" method="post" action="${ctx}/admin/site/saveNewsImage" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">预览：</label>
+                <img src="${ctx}/upload/${newsImageInfo.filepath}" alt="" id="newsImage"
+                     style="height: 40px;"/>
+            </div>
+
+            <div class="form-group">
+                <label for="newsImageFile">图片：</label>
+                <input type="file" name="newsImageFile" id="newsImageFile" class="form-control"/>
+            </div>
+            <button type="submit" id="saveNewsImage" class="btn btn-primary">保存</button>
+        </form>
+    </div>
+</div>
+
+<div class="portlet light">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-gift font-green-sharp"></i>
             <span class="caption-subject font-green-sharp bold uppercase">新闻资讯列表</span>
         </div>
         <div class="actions">

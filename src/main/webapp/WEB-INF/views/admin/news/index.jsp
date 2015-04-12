@@ -44,7 +44,9 @@
             (function () {
 
                 new uploadPreview({ UpBtn: "fashionFile", ImgShow: "fashionImg" });
+                new uploadPreview({ UpBtn: "fashionImageFile", ImgShow: "fashionImage" });
                 new uploadPreview({ UpBtn: "newsFile", ImgShow: "newsImg" });
+                new uploadPreview({ UpBtn: "newsImageFile", ImgShow: "newsImage" });
 
                 $('.news-edit').on('click', function (e) {
                     e.preventDefault();

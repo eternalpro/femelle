@@ -96,6 +96,19 @@ public class AdminSiteController extends Controller {
     }
 
     /**
+     * 保存时尚动态图片信息
+     */
+    public void saveFashionImage(){
+        UploadFile uploadFile = getFile("fashionImageFile");
+        SiteInfo fashionImageInfo = getModel(SiteInfo.class, "fashionImageInfo");
+        if(uploadFile != null)
+            fashionImageInfo.set("filepath", uploadFile.getFileName());
+        siteInfoService.saveFashionImage(fashionImageInfo);
+        FlashMessageUtils.setSuccessMessage(this, "保存成功！");
+        redirect("/admin/news");
+    }
+
+    /**
      * 保存新闻资讯信息
      */
     public void saveNews(){
@@ -108,6 +121,19 @@ public class AdminSiteController extends Controller {
         redirect("/admin/news?#tab_1");
     }
 
+
+    /**
+     * 保存新闻资讯信息
+     */
+    public void saveNewsImage(){
+        UploadFile uploadFile = getFile("newsImageFile");
+        SiteInfo newsImageInfo = getModel(SiteInfo.class, "newsImageInfo");
+        if(uploadFile != null)
+            newsImageInfo.set("filepath", uploadFile.getFileName());
+        siteInfoService.saveNewsImage(newsImageInfo);
+        FlashMessageUtils.setSuccessMessage(this, "保存成功！");
+        redirect("/admin/news?#tab_1");
+ }
     /**
      * 保存新闻资讯信息
      */

@@ -42,6 +42,33 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-gift font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">设置时尚动态页图片</span>
+            <small class="text-danger">
+                推荐图片尺寸为19200*1080
+            </small>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <form class="form-inline" id="fashionImageForm" method="post" action="${ctx}/admin/site/saveFashionImage" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">预览：</label>
+                <img src="${ctx}/upload/${fashionImageInfo.filepath}" alt="" id="fashionImage"
+                     style="height: 40px;"/>
+            </div>
+
+            <div class="form-group">
+                <label for="fashionImageFile">图片：</label>
+                <input type="file" name="fashionImageFile" id="fashionImageFile" class="form-control"/>
+            </div>
+            <button type="submit" id="saveFashionImage" class="btn btn-primary">保存</button>
+        </form>
+    </div>
+</div>
+
+<div class="portlet light">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-gift font-green-sharp"></i>
             <span class="caption-subject font-green-sharp bold uppercase">时尚动态列表</span>
         </div>
         <div class="actions">
