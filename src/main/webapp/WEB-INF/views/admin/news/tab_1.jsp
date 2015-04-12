@@ -46,7 +46,7 @@
             <i class="fa fa-gift font-green-sharp"></i>
             <span class="caption-subject font-green-sharp bold uppercase">设置新闻资讯页图片</span>
             <small class="text-danger">
-                推荐图片尺寸为19200*1080
+                推荐图片尺寸为1920*1080
             </small>
         </div>
     </div>
