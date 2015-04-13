@@ -15,7 +15,7 @@
 
                     <select multiple class="form-control selectpicker" name="addresses">
                         <c:forEach items="${members}" var="m">
-                            <option value="${m.email}">${m.username} | ${m.email}</option>
+                            <option value="${m.email}">${m.username} - ${m.email}</option>
                         </c:forEach>
                     </select>
 
