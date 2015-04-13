@@ -65,6 +65,13 @@
                     <span class="title">会员管理</span>
                 </a>
             </li>
+
+            <li class="<c:if test='${menu eq "mail"}'>active </c:if>">
+                <a href="${ctx}/admin/mail">
+                    <i class="icon-envelope"></i>
+                    <span class="title">邮件设置</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

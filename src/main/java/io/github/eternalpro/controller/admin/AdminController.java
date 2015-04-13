@@ -9,6 +9,7 @@ import com.jfinal.kit.EncryptionKit;
 import com.jfinal.plugin.auth.SessionKit;
 import io.github.eternalpro.constant.Module;
 import io.github.eternalpro.constant.SiteCST;
+import io.github.eternalpro.constant.SystemCST;
 import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.*;
 import io.github.eternalpro.model.System;
@@ -71,7 +72,7 @@ public class AdminController extends Controller {
         FlashMessageUtils.createFlash(this);
         String password = getPara("password");
         if (StringUtils.isNotBlank(password)) {
-            if (System.dao.findByKey("password").getStr("value").equals(EncryptionKit.md5Encrypt(password))) {
+            if (System.dao.findByKey(SystemCST.PASSWORD).getStr("value").equals(EncryptionKit.md5Encrypt(password))) {
                 getSession().setAttribute(SiteCST.SESSION_LOGIN, true);
                 FlashMessageUtils.setSuccessMessage(this, "管理员，欢迎回来！");
                 redirect("/admin");
@@ -105,7 +106,7 @@ public class AdminController extends Controller {
         String password = getPara("password");
         String confirm_password = getPara("confirm_password");
 
-        System dbPassword = System.dao.findByKey("password");
+        System dbPassword = System.dao.findByKey(SystemCST.PASSWORD);
         if(!dbPassword.getStr("value").equals(EncryptionKit.md5Encrypt(oldPassword))) {
             renderText("原密码错误！");
         }else if(!password.equals(confirm_password)) {

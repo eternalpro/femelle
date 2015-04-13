@@ -13,4 +13,13 @@ public class System extends Model<System>{
     public System findByKey(String key) {
         return dao.findFirst("select * from system where name = ?", key);
     }
+
+    public void saveValue(String key, String value) {
+        System system = dao.findByKey(key);
+        if(system == null)
+            system = new System();
+        system.set("name", key);
+        system.set("value", value);
+        system.save();
+    }
 }

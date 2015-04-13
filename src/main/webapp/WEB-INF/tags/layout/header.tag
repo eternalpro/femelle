@@ -82,10 +82,10 @@
                         </ul>
                     </li>
                     <li class="<c:if test="${menu eq 'news'}">active</c:if>" data-target="s4">
-                        <a href="${ctx}/news">最新资讯</a>
+                        <a href="${ctx}/news/news">最新资讯</a>
                         <ul class="s-menu s4">
                             <li>
-                                <a href="${ctx}/news">时尚动态</a>
+                                <a href="${ctx}/news/news">最新资讯</a>
                             </li>
                             <li>
                                 <a href="${ctx}/news/video">宣传视频</a>
@@ -93,8 +93,9 @@
                             <li>
                                 <a href="${ctx}/album">搭配图集</a>
                             </li>
+
                             <li class="lastItem">
-                                <a style="border-bottom: 0px;" href="${ctx}/news/news">新闻资讯</a>
+                                <a style="border-bottom: 0px;" href="${ctx}/news">时尚动态</a>
                             </li>
                         </ul>
                     </li>

@@ -24,10 +24,10 @@
                                     </div>
 
                                     <div class="actions">
-                                       <%-- <a href="${ctx}/admin/shop/edit/0" class="btn btn-circle btn-sm shop-edit" id="addShop">
-                                            <i class="fa fa-plus"></i> 添加 </a>--%>
+                                       <a href="${ctx}/admin/member/writeMail" class="btn btn-circle btn-sm shop-edit blue" id="addShop">
+                                            <i class="icon-envelope"></i> 推送邮件 </a>
 
-                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title="">
+                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="">
                                         </a>
                                     </div>
 
@@ -38,6 +38,9 @@
                                             <table class="table table-striped table-hover dataTable no-footer">
                                                 <thead>
                                                 <tr>
+                                                    <th width="30" class="table-checkbox">
+                                                        <input type="checkbox">
+                                                    </th>
                                                     <th width="10">用户名</th>
                                                     <th width="10">性别</th>
                                                     <th width="80">邮箱</th>
@@ -49,6 +52,9 @@
                                                 <tbody>
                                                 <c:forEach items="${members}" var="member">
                                                     <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="mail-checkbox mail-group-checkbox">
+                                                        </td>
                                                         <td>${member.username}</td>
                                                         <td>${member.gender}</td>
                                                         <td>${member.email}</td>

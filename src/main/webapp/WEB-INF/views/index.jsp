@@ -146,24 +146,6 @@
                     </li>
                     <li class="span4">
                         <div class="thumbnail">
-                            <img src="${ctx}/upload/${fashionInfo.filepath}" alt="">
-
-                            <h5 class="text-center">
-                                    ${fashionInfo.title}
-                            </h5>
-
-                            <div class="text-center pad10">
-                                <p class="text-center">
-                                        ${fashionInfo.content}
-                                </p>
-                                <a class="btn margin10-t" href="${ctx}/news">
-                                    <span class="margin30-l margin30-r">more+</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="span4">
-                        <div class="thumbnail">
                             <img src="${ctx}/upload/${newsInfo.filepath}" alt="">
 
                             <h5 class="text-center">
@@ -175,6 +157,24 @@
                                         ${newsInfo.content}
                                 </p>
                                 <a class="btn margin10-t" href="${ctx}/news/news">
+                                    <span class="margin30-l margin30-r">more+</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <img src="${ctx}/upload/${fashionInfo.filepath}" alt="">
+
+                            <h5 class="text-center">
+                                    ${fashionInfo.title}
+                            </h5>
+
+                            <div class="text-center pad10">
+                                <p class="text-center">
+                                        ${fashionInfo.content}
+                                </p>
+                                <a class="btn margin10-t" href="${ctx}/news">
                                     <span class="margin30-l margin30-r">more+</span>
                                 </a>
                             </div>

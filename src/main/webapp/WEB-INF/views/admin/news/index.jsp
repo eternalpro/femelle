@@ -18,19 +18,19 @@
                             <ul class="nav nav-tabs">
                                 <li class="active">
                                     <a href="#tab_0" data-toggle="tab" aria-expanded="true">
-                                        时尚动态 </a>
+                                        新闻资讯 </a>
                                 </li>
                                 <li class="">
                                     <a href="#tab_1" data-toggle="tab" aria-expanded="false">
-                                        新闻资讯 </a>
+                                        时尚动态 </a>
                                 </li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">
-                                    <jsp:include page="tab_0.jsp"/>
+                                    <jsp:include page="tab_1.jsp"/>
                                 </div>
                                 <div class="tab-pane" id="tab_1">
-                                    <jsp:include page="tab_1.jsp"/>
+                                    <jsp:include page="tab_0.jsp"/>
                                 </div>
                             </div>
                         </div>

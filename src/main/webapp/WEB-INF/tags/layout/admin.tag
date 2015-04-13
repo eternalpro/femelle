@@ -33,6 +33,7 @@
 
             Metronic.init(); // init metronic core components
             Layout.init(); // init current layout
+
             KindEditor.ready(function(K) {
                 window.editor = K.create('.editor', {
                     items : [ 'formatblock', 'fontname', 'fontsize',
