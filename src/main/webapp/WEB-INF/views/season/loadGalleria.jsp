@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
-<div id="galleria" style="height: 500px;;">
+<div id="galleria" style="height: 500px;">
 
     <c:forEach items="${imagePaths}" var="path">
         <a href="${ctx}/upload/${path}">

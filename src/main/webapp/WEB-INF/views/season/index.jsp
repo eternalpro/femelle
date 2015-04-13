@@ -3,13 +3,7 @@
 <layout:front menu="season">
     <jsp:attribute name="css">
         <style>
-            .bg-sidebar {
-                height: 1213px;
-            }
 
-            .bg-right {
-                height: 1280px;
-            }
 
             .thumbnail {
                 display: block;
@@ -67,9 +61,9 @@
                     </div>
                     <ul class="thumbnails margin20-t product-items">
                         <c:forEach items="${products.list}" var="product">
-                            <li style="width: 190px;">
+                            <li style="width: 380px; ">
                                 <a href="#" class="thumbnail image-a" data-id="${product.id}">
-                                    <img src="${ctx}/upload/${product.imagepath}" style="height: 320px;"/>
+                                    <img src="${ctx}/upload/${product.imagepath}" style="height: 650px;"/>
                                 </a>
 
                                 <p class="text-center">
@@ -87,6 +81,7 @@
     <jsp:attribute name="js">
         <script>
             (function () {
+                loadPage(500);
 
                 var loadGA = function (id) {
                     $.get('${ctx}/season/loadGalleria/' + id, function (data) {
