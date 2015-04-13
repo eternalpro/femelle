@@ -4,7 +4,7 @@
 <div class="border margin50-t"></div>
 <div class="footer">
     <div class="pull-left">
-        <div class="logo-b"></div>
+        <a href="${ctx}/"><div class="logo-b"></div></a>
         <div>
             北京法米拉服装服饰有限公司（版权所有）
             |
@@ -29,7 +29,6 @@
         &copy;2015 alpha-femelle.com
     </div>
     <div class="margin10-t pull-right">
-
         <div id="wwImg" class="hide">
             <img src="${ctx}/resources/img/weixb2.png"
                  style="position: absolute; margin-top: -265px; right: 95px;"/>

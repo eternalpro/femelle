@@ -47,7 +47,7 @@
                     <li class="<c:if test="${menu eq 'season'}">active</c:if>" data-target="s2">
                         <a href="${ctx}/season/">当季推荐</a>
                         <ul class="s-menu s2">
-                            <c:forEach items="${tuijians}" var="tuijian">
+                            <c:forEach items="${tuijians}" var="tuijian" varStatus="i">
                             <li>
                                 <a href="${ctx}/season/${tuijian.id}">${tuijian.title}</a>
                             </li>
@@ -58,7 +58,7 @@
                     <li class="<c:if test="${menu eq 'product'}">active</c:if>" data-target="s3">
                         <a href="${ctx}/product/大衣">产品介绍</a>
                         <ul class="s-menu s3">
-                            <c:forEach items="${types}" var="type">
+                            <c:forEach items="${gTypes}" var="type">
                                 <li>
                                     <a href="${ctx}/product/${type}">${type}</a>
                                 </li>

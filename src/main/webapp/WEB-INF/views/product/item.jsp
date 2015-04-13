@@ -3,7 +3,24 @@
 <layout:front menu="product">
     <jsp:attribute name="css">
         <style>
+            .thumbnail {
+                display: block;
+                padding: 4px;
+                line-height: 20px;
+                border: 0px solid #ddd;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
 
+                border-radius: 0px;
+                -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.055);
+                -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.055);
+
+                box-shadow: 0 0px 0px rgba(0, 0, 0, 0.055);
+                -webkit-transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+            }
         </style>
     </jsp:attribute>
     <jsp:attribute name="main">

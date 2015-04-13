@@ -32,6 +32,7 @@ public class SeasonController extends Controller {
         int page = getParaToInt(1, 1);
         Page<Product> products = Product.pageTuijianProduct(id, page, 8);
         productService.addFirstImageToProduct(products.getList());
+
         setAttr("tuijianId", id);
         setAttr("products", products);
     }
