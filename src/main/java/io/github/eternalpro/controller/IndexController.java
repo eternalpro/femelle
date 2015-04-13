@@ -46,6 +46,9 @@ public class IndexController extends Controller{
 
         List<Album> albums = Album.findTuijianY();
 
+        Product.Type[] types = Product.Type.values();
+
+        setAttr("types", types);
         setAttr("albums", albums);
 
         List<Tuijian> tuijians = Tuijian.findTuijianY();
