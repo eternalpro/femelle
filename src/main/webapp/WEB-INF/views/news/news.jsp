@@ -25,7 +25,7 @@
                                 <c:forEach items="${newses}" var="news">
                                     <table class="table-news table table-hover ">
                                         <tr>
-                                            <td width="100" ><img src="${ctx}/upload/${news.imagepath}" alt=""/></td>
+                                            <td width="350" ><img src="${ctx}/upload/${news.imagepath}" alt=""/></td>
                                             <td class="border-left" style="border-left: 1px solid #DDD;">
                                                 <a href="${ctx}/news/view/${news.id}">
                                                     <strong>${news.title}</strong>
