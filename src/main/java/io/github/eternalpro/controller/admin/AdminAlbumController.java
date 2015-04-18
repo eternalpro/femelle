@@ -22,7 +22,7 @@ public class AdminAlbumController extends Controller {
     @ActionKey("/admin/album")
     public void index() {
         SiteInfo albumInfo = SiteInfo.findByModule(Module.MODULE_ALBUM);
-        List<Album> albums = Album.dao.find("select * from album");
+        List<Album> albums = Album.dao.find("select * from album order by id desc");
         setAttr("albums", albums);
         setAttr("albumInfo", albumInfo);
     }

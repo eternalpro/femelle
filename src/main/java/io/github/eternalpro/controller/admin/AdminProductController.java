@@ -26,7 +26,7 @@ public class AdminProductController extends Controller {
     @ActionKey("/admin/product")
     public void index() {
         int page = getParaToInt("page", 1);
-        Page<Product> products = Product.dao.paginate(page, 5, "select *", "from product");
+        Page<Product> products = Product.dao.paginate(page, 5, "select *", "from product  order by id desc");
         productService.addFirstImageToProduct(products.getList());
         setAttr("types", Product.Type.values());
         productService.abstractProducts(products.getList(), 78);

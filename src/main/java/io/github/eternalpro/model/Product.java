@@ -40,6 +40,7 @@ public class Product extends Model<Product> {
      * 衣服类型
      */
     public enum Type{
+        上衣,
         大衣,
         针织衫,
         风衣,

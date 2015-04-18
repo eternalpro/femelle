@@ -25,8 +25,8 @@ public class AdminNewsController extends Controller{
 
     @ActionKey("/admin/news")
     public void index() {
-        List<News> newses = News.dao.find("select * from news where flag = ?", NewsCST.NEWS);
-        List<News> fashions = News.dao.find("select * from news where flag = ?", NewsCST.FASHION);
+        List<News> newses = News.dao.find("select * from news where flag = ?  order by id desc", NewsCST.NEWS);
+        List<News> fashions = News.dao.find("select * from news where flag = ?  order by id desc", NewsCST.FASHION);
 
         newsService.abstractNews(newses, 80);
         newsService.abstractNews(fashions, 80);

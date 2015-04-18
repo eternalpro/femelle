@@ -39,7 +39,7 @@
                                     <img src="${ctx}/upload/${product.imagepath}" style="height: 650px;"/>
                                 </a>
 
-                                <p style="padding-left: 5px;display:block;overflow:hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;">
+                                <p style="padding-left: 5px;display:block;overflow:hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis; text-align: center">
                                     <small>${product.title}</small>
                                 </p>
                             </li>
