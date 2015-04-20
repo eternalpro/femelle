@@ -54,4 +54,11 @@
         var $this = $(this);
         $('#'+ $this.data('id')).hide();
     });
+
+    if($('.galleria-image-nav-right')){
+        setInterval(function(){
+            $('.galleria-image-nav-right').click();
+        }, 3000);
+    }
+
 </script>
