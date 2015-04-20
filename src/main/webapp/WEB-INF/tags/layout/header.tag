@@ -45,7 +45,7 @@
                         </ul>
                     </li>
                     <li class="<c:if test="${menu eq 'season'}">active</c:if>" data-target="s2">
-                        <a href="${ctx}/season/">当季推荐</a>
+                        <a href="${ctx}/season/${tuijians[0].id}">当季推荐</a>
                         <ul class="s-menu s2">
                             <c:forEach items="${tuijians}" var="tuijian" varStatus="i">
                             <li>

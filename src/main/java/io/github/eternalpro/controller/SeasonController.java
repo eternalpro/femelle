@@ -49,4 +49,18 @@ public class SeasonController extends Controller {
 
         setAttr("imagePaths", imagePaths);
     }
+
+    public void loadGalleriaForTuijian(){
+        Integer id = getParaToInt();
+        List<Product> products = Product.findTuijianProduct(id);
+        List<String> imagePaths = new ArrayList<>();
+        for (Product product : products) {
+            List<Image> pImages = Image.dao.getImagesByProduct(product.getInt("id"));
+            for (Image pImage : pImages) {
+                imagePaths.add(pImage.getStr("path"));
+            }
+        }
+        setAttr("imagePaths", imagePaths);
+        renderJsp("loadGalleria.jsp");
+    }
 }

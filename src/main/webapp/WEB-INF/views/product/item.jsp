@@ -78,7 +78,7 @@
                             <c:forEach items="${recommends}" var="product">
                                 <li style="width: 350px; ">
                                     <a href="${ctx}/product/item/${product.id}" class="thumbnail">
-                                        <img src="${ctx}/upload/${product.imagepath}" style="height: 620px;"/>
+                                        <img src="${ctx}/upload/${product.imagepath}" />
                                     </a>
                                 </li>
                             </c:forEach>

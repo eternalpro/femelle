@@ -62,8 +62,8 @@
                     <ul class="thumbnails margin20-t product-items">
                         <c:forEach items="${products.list}" var="product">
                             <li style="width: 380px; ">
-                                <a href="#" class="thumbnail image-a" data-id="${product.id}">
-                                    <img src="${ctx}/upload/${product.imagepath}" style="height: 650px;"/>
+                                <a href="${ctx}/product/item/${product.id}" class="thumbnail image-a" data-id="${product.id}">
+                                    <img src="${ctx}/upload/${product.imagepath}" />
                                 </a>
 
                                 <p class="text-center">
@@ -84,18 +84,18 @@
                 loadPage(500);
 
                 var loadGA = function (id) {
-                    $.get('${ctx}/season/loadGalleria/' + id, function (data) {
+                    $.get('${ctx}/season/loadGalleriaForTuijian/' + id, function (data) {
                         $('#gc').html(data);
                     });
                 };
 
-                $('a.image-a').on('click', function (e) {
+               /* $('a.image-a').on('click', function (e) {
                     e.preventDefault();
                     var $this = $(this);
                     var id = $this.data('id');
                     loadGA(id);
-                });
-                loadGA('${products.list[0].id}');
+                });*/
+                loadGA('${tuijianId}');
             })();
         </script>
     </jsp:attribute>

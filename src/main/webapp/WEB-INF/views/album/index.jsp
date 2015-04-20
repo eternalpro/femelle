@@ -50,9 +50,9 @@
 
                     <ul class="thumbnails margin20-t product-items">
                         <c:forEach items="${albumPage.list}" var="product">
-                            <li style="width: 255px; height: 170px;">
+                            <li style="width: 255px; ">
                                 <a href="#" class="thumbnail image-a" data-id="${product.id}">
-                                    <img src="${ctx}/upload/${product.imagepath}" style="height: 150px;"/>
+                                    <img src="${ctx}/upload/${product.imagepath}" "/>
                                 </a>
                             </li>
                         </c:forEach>

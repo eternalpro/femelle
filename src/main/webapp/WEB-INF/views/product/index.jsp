@@ -36,7 +36,7 @@
                         <c:forEach items="${products}" var="product">
                             <li style="width: 380px; ">
                                 <a href="${ctx}/product/item/${product.id}" class="thumbnail">
-                                    <img src="${ctx}/upload/${product.imagepath}" style="height: 650px;"/>
+                                    <img src="${ctx}/upload/${product.imagepath}" />
                                 </a>
 
                                 <p style="padding-left: 5px;display:block;overflow:hidden;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis; text-align: center">
