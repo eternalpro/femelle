@@ -15,7 +15,7 @@
                 <div class="form-group">
                     <label>展示图片：</label>
                     <small class="text-danger">
-                        首页中部四张图，推荐尺寸950*1550
+                        首页中部四张图，推荐尺寸190*310
                     </small>
                     <input type="file" class="form-control" name="tuijianFile" id="tuijianFile">
                 </div>
