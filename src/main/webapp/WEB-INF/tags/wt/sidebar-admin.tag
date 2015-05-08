@@ -23,8 +23,8 @@
                 </a>
             </li>
 
-            <li class="">
-                <a href="#">
+            <li <c:if test="${menu eq 'video'}">class="active" </c:if>>
+                <a href="${ctx}/admin/video">
                     <i class="icon-eye"></i>
                     <span class="title">宣传视频</span>
                 </a>

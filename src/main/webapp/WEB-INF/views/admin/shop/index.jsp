@@ -85,7 +85,7 @@
                     })
                 });
 
-                $('.shop-delete').on('click', function(){
+                $('.shop-delete').on('click', function(e){
                     e.preventDefault();
                     var $this = $(this);
                     if(confirm('确定要删除吗？')){
