@@ -73,7 +73,7 @@
                                 <a href="${ctx}/news/news">最新资讯</a>
                             </li>
                             <li>
-                                <a href="${ctx}/news/video">宣传视频</a>
+                                <a href="${ctx}/video">宣传视频</a>
                             </li>
                             <li>
                                 <a href="${ctx}/album">搭配图集</a>

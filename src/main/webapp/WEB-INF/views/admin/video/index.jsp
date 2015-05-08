@@ -37,9 +37,9 @@
                                         <c:forEach items="${videos}" var="video">
                                             <div class="col-sm-6 col-md-4">
                                                 <div class="thumbnail">
-                                                    <embed src="${video.url}" allowFullScreen="true" quality="high"
-                                                           width="100%"
-                                                           align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" wmode="opaque"></embed>
+                                                    <a href="${ctx}/admin/video/show/${video.id}" class="video-edit">
+                                                        <img src="${ctx}/upload/${video.imagepath}" alt=""/>
+                                                    </a>
                                                     <div class="caption">
                                                         <p>${video.description}</p>
                                                         <div class="btn-group btn-group-sm btn-group-solid">

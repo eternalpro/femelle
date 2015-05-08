@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <div class="modal-dialog ">
-    <form action="${ctx}/admin/video/save" method="post" id="videoForm">
+    <form action="${ctx}/admin/video/save" method="post" id="videoForm" enctype="multipart/form-data">
         <c:if test="${!empty(video)}">
             <input type="hidden" name="video.id" value="${video.id}"/>
         </c:if>
@@ -13,6 +13,11 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
+                    <label>封面图片：</label><small class="text-danger">建议尺寸：150*120</small>
+                    <input type="file" class="form-control" name="imageFile" id="aFile">
+                </div>
+                <div class="form-group">
+
                     <label>视频地址</label>
                     <input type="text" name="video.url" class="form-control" value="${video.url}">
                     <p class="help-block">请填写“flash地址”，点击 <a href="${ctx}/images/readme.jpg" class="fancybox"><strong class="text-danger">这里</strong></a> 查看帮助。</p>
