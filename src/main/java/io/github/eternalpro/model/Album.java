@@ -13,6 +13,6 @@ public class Album extends Model<Album>{
     public static final Album dao = new Album();
 
     public static List<Album> findTuijianY() {
-        return dao.find("select * from album where ismain = 'y'");
+        return dao.find("select * from album where ismain = 'y'  order by id desc");
     }
 }

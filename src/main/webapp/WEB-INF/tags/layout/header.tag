@@ -49,7 +49,7 @@
                         <ul class="s-menu s2">
                             <c:forEach items="${tuijians}" var="tuijian" varStatus="i">
                             <li>
-                                <a href="${ctx}/season/${tuijian.id}">${tuijian.title}</a>
+                                <a <c:if test="${(i.index+1) eq fn:length(tuijians)}">style="border-bottom: 0px;"</c:if> href="${ctx}/season/${tuijian.id}">${tuijian.title}</a>
                             </li>
                             </c:forEach>
 
@@ -58,9 +58,9 @@
                     <li class="<c:if test="${menu eq 'product'}">active</c:if>" data-target="s3">
                         <a href="${ctx}/product/大衣">产品介绍</a>
                         <ul class="s-menu s3">
-                            <c:forEach items="${gTypes}" var="type">
+                            <c:forEach items="${gTypes}" var="type" varStatus="i">
                                 <li>
-                                    <a href="${ctx}/product/${type}">${type}</a>
+                                    <a <c:if test="${(i.index+1) eq fn:length(gTypes)}">style="border-bottom: 0px;"</c:if> href="${ctx}/product/${type}">${type}</a>
                                 </li>
                             </c:forEach>
 

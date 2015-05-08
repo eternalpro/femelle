@@ -13,10 +13,10 @@ public class Image extends Model<Image> {
     public static final Image dao = new Image();
 
     public List<Image> getImagesByProduct(Integer productId) {
-        return Image.dao.find("select * from image where productid = ?", productId);
+        return Image.dao.find("select * from image where productid = ?  order by id desc", productId);
     }
 
     public List<Image> getImagesByAlbum(Integer albumId) {
-        return Image.dao.find("select * from image where albumid = ?", albumId);
+        return Image.dao.find("select * from image where albumid = ?  order by id desc", albumId);
     }
 }

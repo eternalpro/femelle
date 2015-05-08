@@ -14,7 +14,7 @@ public class News extends Model<News> {
     public static final News dao = new News();
 
     public List<News> findMainByFlag(String fashion) {
-        return dao.find("select * from news where flag = ? and isMain = 'y' ", fashion);
+        return dao.find("select * from news where flag = ? and isMain = 'y'  order by id desc", fashion);
     }
 
     public News findByIdAndFlag(Integer id, String flag) {

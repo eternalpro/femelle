@@ -13,10 +13,10 @@ public class Tuijian extends Model<Tuijian> {
     public static final Tuijian dao = new Tuijian();
 
     public static List<Tuijian> findTuijianY() {
-        return dao.find("select * from tuijian where ismain = 'y'");
+        return dao.find("select * from tuijian where ismain = 'y'  order by id desc");
     }
 
     public static List<Tuijian> findTuijianN() {
-        return dao.find("select * from tuijian where ismain <> 'y'");
+        return dao.find("select * from tuijian where ismain <> 'y'  order by id desc");
     }
 }

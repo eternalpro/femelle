@@ -23,7 +23,7 @@ public class ProductController extends Controller {
     public void type() throws UnsupportedEncodingException {
         String type = getPara();
 
-        List<Product> products = Product.dao.find("select * from product where type = ?", URLDecoder.decode(type, "utf-8"));
+        List<Product> products = Product.dao.find("select * from product where type = ?  order by id desc", URLDecoder.decode(type, "utf-8"));
 
         productService.addFirstImageToProduct(products);
 

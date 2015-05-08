@@ -14,25 +14,25 @@ public class Product extends Model<Product> {
     public static final Product dao = new Product();
 
     public static List<Product> findRecommend(Integer id) {
-        return dao.find("select * from product where id in (select productid from recommend where mainid = ?)", id);
+        return dao.find("select * from product where id in (select productid from recommend where mainid = ?)  order by id desc", id);
     }
 
     public static List<Product> findNotRecommend(Integer id) {
-        return dao.find("select * from product where id <> ? and id not in (select productid from recommend where mainid = ?)", id, id);
+        return dao.find("select * from product where id <> ? and id not in (select productid from recommend where mainid = ?) order by id desc", id, id);
     }
 
     public static List<Product> findTuijianProduct(Integer tuijianId) {
-        return dao.find("select * from product where tuijianid = ?", tuijianId);
+        return dao.find("select * from product where tuijianid = ? order by id desc", tuijianId);
     }
 
     public static Page<Product> pageTuijianProduct(Integer tuijianId, int pageNumber, int pageSize) {
-        return dao.paginate(pageNumber, pageSize, "select * ", "from product where tuijianid = ?", tuijianId);
+        return dao.paginate(pageNumber, pageSize, "select * ", "from product where tuijianid = ? order by id desc", tuijianId);
 
 
     }
 
     public static List<Product> findNoTuijianProduct(Integer tuijianId) {
-        return dao.find("select * from product where tuijianid is null");
+        return dao.find("select * from product where tuijianid is null order by id desc");
     }
 
 

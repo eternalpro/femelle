@@ -26,7 +26,7 @@
                             <c:forEach items="${fashions}" var="fashion">
                                 <table class="table-news table table-hover ">
                                     <tr>
-                                        <td width="350" ><img src="${ctx}/upload/${fashion.imagepath}" alt=""/></td>
+                                        <td width="350" ><img src="${ctx}/upload/${fashion.imagepath}" style="width: 350px;" alt=""/></td>
                                         <td class="border-left" style="border-left: 1px solid #DDD;">
                                             <a href="${ctx}/news/view/${fashion.id}">
                                                 <strong>${fashion.title}</strong>
