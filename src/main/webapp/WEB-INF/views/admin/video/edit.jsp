@@ -24,7 +24,8 @@
                 </div>
                 <div class="form-group">
                     <label for="address">视频描述</label>
-                    <input type="text" name="video.description" class="form-control" id="address" placeholder="填写详细地址信息" value="${video.description}">
+                    <textarea class="form-control editor" id="address" name="video.description"
+                              style="height:200px;">${video.description}</textarea>
                 </div>
 
             </div>
@@ -35,3 +36,20 @@
         </div>
     </form>
 </div>
+<script>
+    KindEditor.ready(function(K) {
+        window.editor = K.create('.editor', {
+            items : [ 'formatblock', 'fontname', 'fontsize',
+                '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+                'underline', 'strikethrough', '|', 'justifyleft',
+                'justifycenter', 'justifyright', '|',
+                'insertorderedlist', 'insertunorderedlist',
+                'indent', 'outdent'],
+            langType : 'zh_CN',
+            width : '100%',
+            afterBlur: function(){  //利用该方法处理当富文本编辑框失焦之后，立即同步数据
+                KindEditor.sync(".editor") ;
+            }
+        });
+    });
+</script>

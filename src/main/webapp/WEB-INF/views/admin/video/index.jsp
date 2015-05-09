@@ -42,15 +42,13 @@
                                                     </a>
                                                     <div class="caption">
                                                         <p>${video.description}</p>
-                                                        <div class="btn-group btn-group-sm btn-group-solid">
-                                                            <a href="${ctx}/admin/video/edit/${video.id}" class="add-modal btn blue video-edit">
-                                                                <i class="fa fa-edit"></i>
+                                                            <a href="${ctx}/admin/video/edit/${video.id}" class="add-modal btn-sm btn blue video-edit">
+                                                                <i class="fa fa-edit"></i> 编辑
                                                             </a>
 
-                                                            <a href="${ctx}/admin/video/delete/${video.id}" class="btn red video-delete">
-                                                                <i class="fa fa-remove"></i>
+                                                            <a href="${ctx}/admin/video/delete/${video.id}" class="btn red btn-sm video-delete">
+                                                                <i class="fa fa-remove"></i> 删除
                                                             </a>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
