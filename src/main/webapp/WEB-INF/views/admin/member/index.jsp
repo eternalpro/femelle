@@ -24,8 +24,8 @@
                                     </div>
 
                                     <div class="actions">
-                                       <a href="${ctx}/admin/member/writeMail" class="btn btn-circle btn-sm shop-edit blue" id="addShop">
-                                            <i class="icon-envelope"></i> 推送邮件 </a>
+                                       <%--<a href="${ctx}/admin/member/writeMail" class="btn btn-circle btn-sm shop-edit blue" id="addShop">
+                                            <i class="icon-envelope"></i> 推送邮件 </a>--%>
 
                                         <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="">
                                         </a>

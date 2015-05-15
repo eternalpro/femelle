@@ -20,6 +20,15 @@ public class System extends Model<System>{
             system = new System();
         system.set("name", key);
         system.set("value", value);
-        system.save();
+        system.saveOrUpdate();
+    }
+
+    public void saveOrUpdate(){
+        Integer id = this.get("id");
+        if (id != null && id > 0) {
+            update();
+        }else{
+            save();
+        }
     }
 }

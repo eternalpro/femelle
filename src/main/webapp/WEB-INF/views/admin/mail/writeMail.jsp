@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/taglibs.jsp" %>
 <div class="modal-dialog modal-lg">
-    <form action="${ctx}/admin/member/pushMail" method="post" id="shopForm">
+    <form action="${ctx}/admin/mail/pushMail" method="post" id="shopForm">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -9,17 +9,6 @@
                 <h4 class="modal-title">编辑邮件信息</h4>
             </div>
             <div class="modal-body">
-
-                <div class="form-group">
-                    <label>收件人 <small class="text-danger">按住键盘Ctrl可进行多选</small></label>
-
-                    <select multiple class="form-control selectpicker" name="addresses">
-                        <c:forEach items="${members}" var="m">
-                            <option value="${m.email}">${m.username} - ${m.email}</option>
-                        </c:forEach>
-                    </select>
-
-                </div>
 
                 <div class="form-group">
                     <label for="subject">主题</label>
@@ -35,7 +24,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="submit" class="btn btn-primary">保存</button>
+                <button type="submit" class="btn btn-primary">发送</button>
             </div>
         </div>
     </form>

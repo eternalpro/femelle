@@ -79,6 +79,9 @@
                     <li>
                         <a href="${ctx}/admin/mail/welcomeTemplate">设置欢迎邮件模板</a>
                     </li>
+                    <li>
+                        <a href="${ctx}/admin/mail/listEmails">推送订阅邮件</a>
+                    </li>
                 </ul>
             </li>
         </ul>

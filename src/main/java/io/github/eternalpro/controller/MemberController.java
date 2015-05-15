@@ -65,6 +65,9 @@ public class MemberController extends Controller {
         } else if (password_confirm.equals(member.getStr("password"))) {
             member.set("password", EncryptionKit.md5Encrypt(member.getStr("password")));
             member.save();
+
+            Email.dao.saveEmail(member.getStr("email"));
+
             String subject = System.dao.findByKey(SystemCST.MAIL_WELCOME_TEMPLATE_SUBJECT).get("value");
             String content = System.dao.findByKey(SystemCST.MAIL_WELCOME_TEMPLATE_TEXT).get("value");
 
