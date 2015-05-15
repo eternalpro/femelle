@@ -6,8 +6,8 @@
             <div class="page-content">
                 <div class="page-head">
                     <div class="page-title">
-                        <h1>邮件服务器设置
-                            <small>设置邮件服务器信息</small>
+                        <h1>设置欢迎邮件模板
+                            <small>自定义欢迎邮件信息，当用户注册成功后收到此邮件</small>
                         </h1>
                     </div>
                 </div>
@@ -24,37 +24,21 @@
                                     </div>
                                 </div>
                                 <div class="portlet-body">
-                                    <form class="form-horizontal" role="form" method="post" action="${ctx}/admin/mail/save">
+                                    <form class="form-horizontal" role="form" method="post" action="${ctx}/admin/mail/saveWelcomeTemplate">
                                         <div class="form-body">
                                             <div class="form-group">
-                                                <label class="col-md-3 control-label">邮件服务主机名</label>
+                                                <label class="col-md-3 control-label">邮件标题</label>
                                                 <div class="col-md-9">
-                                                    <input type="text" name="mailHost" class="form-control input-inline input-large" placeholder="如：smtp.163.com" value="${mailHost.value}">
-                                                    <span class="help-inline">发件者邮箱服务协议，仅支持SMTP. </span>
+                                                    <input type="text" name="mailSubject" class="form-control input-inline input-large" placeholder="" value="${subject.value}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-3 control-label">发件者邮箱</label>
+                                                <label class="col-md-3 control-label">邮件内容</label>
                                                 <div class="col-md-9">
-                                                    <input type="text" name="mailAddress" class="form-control input-inline input-large" placeholder="请填写发件邮箱地址" value="${mailAddress.value}">
+                                                    <textarea class="form-control editor" name="mailContent" style="height: 400px; display: none;">${content.value}</textarea>
                                                     <span class="help-inline"></span>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="col-md-3 control-label">发件者用户名</label>
-                                                <div class="col-md-9">
-                                                    <input type="text" name="mailUsername" class="form-control input-inline input-large" placeholder="请填写发件用户名" value="${mailUsername.value}">
-                                                    <span class="help-inline"></span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-md-3 control-label">发件者密码</label>
-                                                <div class="col-md-9">
-                                                    <input type="text" name="mailPassword" class="form-control input-inline input-large" placeholder="请填写发件密码"  value="${mailPassword.value}">
-                                                    <span class="help-inline"></span>
-                                                </div>
-                                            </div>
-
                                         </div>
                                         <div class="form-actions">
                                             <div class="row">

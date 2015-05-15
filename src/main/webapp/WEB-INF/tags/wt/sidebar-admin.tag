@@ -67,10 +67,19 @@
             </li>
 
             <li class="<c:if test='${menu eq "mail"}'>active </c:if>">
-                <a href="${ctx}/admin/mail">
+                <a href="#">
                     <i class="icon-envelope"></i>
                     <span class="title">邮件设置</span>
+                    <span class="arrow <c:if test='${menu eq "mail"}'>open </c:if>"></span>
                 </a>
+                <ul class="sub-menu" style="display: <c:if test='${menu ne "mail"}'>none </c:if>;">
+                    <li>
+                        <a href="${ctx}/admin/mail">邮件服务器设置</a>
+                    </li>
+                    <li>
+                        <a href="${ctx}/admin/mail/welcomeTemplate">设置欢迎邮件模板</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>

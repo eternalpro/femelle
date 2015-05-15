@@ -42,4 +42,22 @@ public class AdminMailController extends Controller{
         redirect("/admin/mail");
 
     }
+
+    public void welcomeTemplate() {
+        System subject = System.dao.findByKey(SystemCST.MAIL_WELCOME_TEMPLATE_SUBJECT);
+        System content = System.dao.findByKey(SystemCST.MAIL_WELCOME_TEMPLATE_TEXT);
+        setAttr("subject", subject);
+        setAttr("content", content);
+    }
+
+    public void saveWelcomeTemplate() {
+        String mailSubject = getPara("mailSubject");
+        String mailContent = getPara("mailContent");
+
+        System.dao.saveValue(SystemCST.MAIL_WELCOME_TEMPLATE_SUBJECT, mailSubject);
+        System.dao.saveValue(SystemCST.MAIL_WELCOME_TEMPLATE_TEXT, mailContent);
+
+        FlashMessageUtils.setSuccessMessage(this, "保存成功！");
+        redirect("/admin/mail/welcomeTemplate");
+    }
 }

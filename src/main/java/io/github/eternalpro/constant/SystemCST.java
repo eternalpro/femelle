@@ -10,6 +10,6 @@ public class SystemCST {
     public static final String MAIL_PASSWORD = "mail.password"; // 邮件密码
     public static final String MAIL_ADDRESS = "mail.address";   // 邮件地址
 
-    public static final String MAIL_TEMPLATE_SUBJECT = "mail.template.subject"; // 邮件模版主题
-    public static final String MAIL_TEMPLATE_TEXT = "mail.template.text"; // 邮件模版内容
+    public static final String MAIL_WELCOME_TEMPLATE_SUBJECT = "mail.welcome.template.subject"; // 邮件模版主题
+    public static final String MAIL_WELCOME_TEMPLATE_TEXT = "mail.welcome.template.text"; // 邮件模版内容
 }
