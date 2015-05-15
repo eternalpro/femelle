@@ -540,7 +540,7 @@ div.logo-b {
 .galleria-theme-classic {
     position: relative;
     overflow: hidden;
-    background: rgba(163, 161, 161, 0.63);
+    background: #C9C9C9;
 }
 .galleria-theme-classic .galleria-thumbnails-container {
     height: 50px;
@@ -552,5 +552,5 @@ div.logo-b {
     padding-right: 10px;
     padding-top: 10px;
     z-index: 2;
-    background: rgba(142, 139, 139, 0.66);
+    background: #C9C9C9;
 }

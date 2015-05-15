@@ -47,6 +47,6 @@ public class Product extends Model<Product> {
         连衣裙,
         短裙,
         裤子,
-        皮革
+        皮草
     }
 }
