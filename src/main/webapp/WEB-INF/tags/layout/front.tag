@@ -5,7 +5,7 @@
 <%@ attribute name="js" fragment="true" description="需要引入的额外的js信息或自定义的js，注意：用jsp:attribute调用，不要把此标签设置到属性上" %>
 <%@ attribute name="menu" description="菜单" required="true" %>
 <!DOCTYPE html>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
 <head>
     <title>法米拉服装服饰官网</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -14,6 +14,7 @@
     <meta name="description" content="法米拉,服装,服饰,女装,femelle" />
     <meta property="wb:webmaster" content="a5ed3baea38174d0" />
     <meta property="qc:admins" content="15622575776140015655544563757" />
+    <meta property="wb:webmaster" content="a5ed3baea38174d0" />
     <common:css></common:css>
     <jsp:invoke fragment="css"/>
 </head>
@@ -56,7 +57,12 @@
         };
         setFootWidth();*/
 
-
+        $('#memLogout').on('click', function(e){
+            e.preventDefault();
+            var $this =$(this);
+            QC.Login.signOut();
+            location.href = $this.attr('href');
+        });
     </script>
 
     <jsp:invoke fragment="js"/>

@@ -11,6 +11,10 @@
 <script src="${ctx}/resources/galleria/themes/classic/galleria.classic.min.js"></script>
 <script src="${ctx}/resources/slide/responsiveslides.js"></script>
 <script src="${ctx}/resources/js/app.js"></script>
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js"
+        data-appid="101213785" data-redirecturi="http://www.alpha-femelle.com/member/qq"
+        charset="utf-8"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3572668826" type="text/javascript" charset="utf-8"></script>
 <script>
     ctx = '${ctx}';
     var success = '${FLASH_SUCCESS}';
@@ -59,6 +63,11 @@
         setInterval(function(){
             $('.galleria-image-nav-right').click();
         }, 3000);
+    }
+
+    // 微博退出成功！
+    function weiboLoginout(){
+        location.href='${ctx}/member/logout';
     }
 
 </script>

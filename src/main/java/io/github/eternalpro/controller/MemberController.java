@@ -81,7 +81,6 @@ public class MemberController extends Controller {
                 FlashMessageUtils.setErrorMessage(this, "用户不存在！");
                 redirect("/member/login");
             } else if (EncryptionKit.md5Encrypt(member.getStr("password")).equals(dbMember.getStr("password"))) {
-                FlashMessageUtils.setSuccessMessage(this, "登录成功！");
                 getSession().setAttribute(SiteCST.MEMBER_SESSION_LOGIN, dbMember);
                 FlashMessageUtils.setSuccessMessage(this, "登录成功！");
                 redirect("/");
@@ -92,9 +91,29 @@ public class MemberController extends Controller {
         }
     }
 
+    public void socialLogin(){
+        String nickname = getPara("nickname");
+        String social = getPara("social");
+        Member member = new Member();
+        member.set("username", nickname);
+        member.put("social", social);
+
+        if ("qq".equals(social)) {
+            member.put("figureurl", getPara("figureurl"));
+        }
+
+        getSession().setAttribute(SiteCST.MEMBER_SESSION_LOGIN, member);
+        FlashMessageUtils.setSuccessMessage(this, "登录成功！");
+        redirect("/");
+    }
+
     public void logout() {
         getSession().removeAttribute(SiteCST.MEMBER_SESSION_LOGIN);
         FlashMessageUtils.setSuccessMessage(this, "退出成功！");
         redirect("/");
+    }
+
+    public void qq(){
+
     }
 }

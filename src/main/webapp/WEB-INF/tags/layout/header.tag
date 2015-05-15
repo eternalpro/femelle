@@ -10,8 +10,20 @@
                 <div class="pull-right margin40-t">
                     <c:choose>
                         <c:when test="${!empty(member_session_login)}">
-                            欢迎回来： ${member_session_login.username} |
-                            <a href="${ctx}/member/logout" class="color-black"><span>退出</span></a>
+                            <c:choose>
+                                <c:when test="${member_session_login.social eq 'weibo'}">
+                                    <wb:login-button type="3,2" onlogout="weiboLoginout"></wb:login-button>
+                                </c:when>
+                                <c:when test="${member_session_login.social eq 'qq'}">
+                                    <img src="${member_session_login.figureurl}" alt=""/>
+                                    <a href="#">${member_session_login.username}</a>
+                                    <a href="${ctx}/member/logout" id="memLogout" class="color-black"><span>退出</span></a>
+                                </c:when>
+                                <c:otherwise>
+                                    ${member_session_login.username} |
+                                    <a href="${ctx}/member/logout" id="memLogout" class="color-black"><span>退出</span></a>
+                                </c:otherwise>
+                            </c:choose>
                         </c:when>
                         <c:otherwise>
                             <a href="${ctx}/member/login" class="color-black"><span>登录</span></a> |
