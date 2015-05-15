@@ -7,6 +7,7 @@ import com.jfinal.kit.EncryptionKit;
 import com.jfinal.plugin.activerecord.Record;
 import io.github.eternalpro.constant.Module;
 import io.github.eternalpro.constant.NewsCST;
+import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.*;
 import org.apache.commons.lang3.StringUtils;
 
@@ -63,6 +64,14 @@ public class IndexController extends Controller{
 
 
     public void demo() {
+    }
+
+    public void subscribe(){
+        String email = getPara("email");
+        if (StringUtils.isNotBlank(email)) {
+            Email.dao.saveEmail(email);
+        }
+        renderNull();
     }
 
 
