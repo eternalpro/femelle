@@ -31,7 +31,7 @@
                                 <div class="portlet-body">
                                     <div class="row">
                                         <c:forEach items="${emails}" var="email" varStatus="i">
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             ${i.index + 1}. ${email.email}&nbsp;
                                             <a href="${ctx}/admin/mail/deleteMail/${email.id}" class="text-danger delete-data">删除</a>
                                         </div>

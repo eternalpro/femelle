@@ -3,17 +3,20 @@ package io.github.eternalpro.controller;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.route.ControllerBind;
 import com.jfinal.kit.EncryptionKit;
+import com.jfinal.kit.PathKit;
 import io.github.eternalpro.constant.Module;
 import io.github.eternalpro.constant.SiteCST;
 import io.github.eternalpro.constant.SystemCST;
 import io.github.eternalpro.core.FlashMessageUtils;
 import io.github.eternalpro.model.*;
 import io.github.eternalpro.model.System;
+import io.github.eternalpro.service.MemberService;
 import io.github.eternalpro.utils.mail.MailService;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.mail.Address;
 import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 
 /**
@@ -21,6 +24,7 @@ import javax.mail.internet.InternetAddress;
  */
 @ControllerBind(controllerKey = "/member", viewPath = "member")
 public class MemberController extends Controller {
+    private MemberService memberService = new MemberService();
 
     public void callus() {
         SiteInfo callusInfo = SiteInfo.findByModule(Module.MODULE_CALLUS);
@@ -118,6 +122,7 @@ public class MemberController extends Controller {
 
         if ("qq".equals(social)) {
             member.put("figureurl", getPara("figureurl"));
+
         }
 
         getSession().setAttribute(SiteCST.MEMBER_SESSION_LOGIN, member);
@@ -133,5 +138,48 @@ public class MemberController extends Controller {
 
     public void qq() {
 
+    }
+
+    public void forgetPassword(){
+        String email = getPara("email");
+        Member member = Member.dao.findByEmail(email);
+        if(member != null){
+            try {
+                memberService.sendResetPasswordEmail(email);
+            } catch (Exception e) {
+                FlashMessageUtils.setErrorMessage(this, "服务器错误，请稍后重试！");
+            }
+            FlashMessageUtils.setSuccessMessage(this, "系统已向您发送了一封重置密码的邮件，请注意查收！");
+        }else{
+            FlashMessageUtils.setErrorMessage(this, "你的邮箱地址输入不正确！");
+        }
+        redirect("/member/login");
+    }
+
+    public void resetPassword(){
+        String p = getPara();
+        String email = getPara("email");
+        if(!p.equals(EncryptionKit.sha1Encrypt(email))){
+            FlashMessageUtils.setErrorMessage(this, "连接无效！");
+            redirect("/");
+        }else {
+            setAttr("email", email);
+        }
+    }
+
+    public void savePassword(){
+        String email = getPara("email");
+        String password = getPara("password");
+        String confirmPassword = getPara("confirmPassword");
+        if (password != null && password.equals(confirmPassword)) {
+            Member member = Member.findByEmail(email);
+            member.set("password", EncryptionKit.md5Encrypt(password));
+            member.update();
+            FlashMessageUtils.setSuccessMessage(this, "密码重置成功，请登录！");
+            redirect("/member/login");
+        }else{
+            FlashMessageUtils.setErrorMessage(this, "密码重置失败！");
+            redirect("/");
+        }
     }
 }

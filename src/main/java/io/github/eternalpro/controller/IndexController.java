@@ -74,5 +74,20 @@ public class IndexController extends Controller{
         renderNull();
     }
 
+    /**
+     * 取消订阅
+     */
+    public void unsubscribe(){
+
+    }
+
+    public void deleteEmail(){
+        String email = getPara("email");
+        if (StringUtils.isNotBlank(email)) {
+            Email.dao.deleteByEmail(email);
+        }
+        FlashMessageUtils.setSuccessMessage(this, "取消订阅成功，谢谢关注！");
+        redirect("/");
+    }
 
 }

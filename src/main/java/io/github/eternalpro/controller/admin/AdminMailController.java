@@ -105,9 +105,9 @@ public class AdminMailController extends Controller{
         Address[] addressArray = new Address[addressList.size()];
 
         if (StringUtils.isBlank(mailSubject)) {
-            FlashMessageUtils.setErrorMessage(this, "请定义邮件模版主题！");
+            FlashMessageUtils.setErrorMessage(this, "请填写邮件的主题！");
         } else if (StringUtils.isBlank(mailText)) {
-            FlashMessageUtils.setErrorMessage(this, "请定义邮件模版内容！");
+            FlashMessageUtils.setErrorMessage(this, "请填写邮件的内容！");
         } else {
             try {
                 MailService.getInstance().sendMail(mailSubject, mailText, addressList.toArray(addressArray));

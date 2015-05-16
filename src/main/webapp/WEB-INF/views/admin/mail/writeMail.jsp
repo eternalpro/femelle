@@ -18,7 +18,18 @@
                 <div class="form-group">
                     <label for="content">内容</label>
                     <textarea class="form-control editor" id="content" name="mailText"
-                              style="height:300px;"></textarea>
+                              style="height:300px;">
+                        <p>这里填写邮件正文</p>
+                        <p>--------</p>
+                        <p>
+                            如果您不希望以后再收到来自 法米拉服装服饰 的通知，请单击 <a href="http://www.alpha-femelle.com/unsubscribe">此处</a> 取消订阅。
+                        </p>
+                    </textarea>
+                    <span class="help-block">
+                        <span class="text-danger">*</span>
+                        取消订阅链接: http://www.alpha-femelle.com/unsubscribe
+                        。如不将订阅连接添加到邮件正文中，可能引起用户的不满。
+                    </span>
                 </div>
 
             </div>

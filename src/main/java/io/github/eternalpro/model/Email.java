@@ -22,7 +22,7 @@ public class Email extends Model<Email>{
     }
 
     public void saveEmail(String email) {
-        Email dbEmail = Email.dao.findFirst("select * from email where email = ?", email);
+        Email dbEmail = Email.dao.findByEmail(email);
         if(dbEmail == null) {
             dbEmail = new Email();
             dbEmail.set("email", email);
@@ -32,5 +32,14 @@ public class Email extends Model<Email>{
 
     public List<Email> findAll() {
         return dao.find("select * from email order by id desc");
+    }
+
+    public Email findByEmail(String email) {
+        return dao.findFirst("select * from email where email = ?", email);
+    }
+
+    public void deleteByEmail(String email) {
+        Email email1 = dao.findByEmail(email);
+        dao.deleteById(email1.get("id"));
     }
 }
